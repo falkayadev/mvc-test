@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>walletCo.</title>
+    <link rel="stylesheet" href="../../dist/output.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="text-white font-poppins">
+    <header class="fixed w-full z-30">
+      <div class="bg-primary-2 p-8">
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center">
+            <!-- Logo Section -->
+            <div>
+              <a href="../index.html" class="text-white text-2xl font-comfortaa"
+                >walletCo</a
+              >
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-20">
+              <a href="./transfer.html" class="text-white hover:text-primary-5"
+                >Transfer</a
+              >
+              <a href="#" class="text-white hover:text-primary-5">Deposit</a>
+              <a href="#" class="text-white hover:text-primary-5">Withdraw</a>
+            </div>
+
+            <!-- User Bar-->
+            <div class="flex items-center gap-3 relative">
+              <!-- Greetings -->
+              <div>
+                <p class="z-30 relative">Hi, John!</p>
+              </div>
+              <!-- Greetings End -->
+
+              <!-- Avatar Menu Button-->
+              <div>
+                <button
+                  class="block w-20 h-20 rounded-full bg-primary-3 duration-300"
+                >
+                  <img
+                    id="avatar"
+                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    alt="profile foto"
+                    class="rounded-full border hover:border-primary-5 z-30 hover:scale-[102%] relative"
+                    draggable="false"
+                    onclick="document.getElementById('dropBar').classList.toggle('hidden');"
+                  />
+                </button>
+
+                <!-- DropBar Box -->
+
+                <div
+                  class="w-screen md:w-80 absolute -right-8 md:right-0 bg-gray-50 text-primary-2 mt-2 py-6 px-2 rounded-lg shadow-xl hidden border border-primary-2"
+                  id="dropBar"
+                >
+                  <!-- Dropbar Box User Preview -->
+                  <div class="flex justify-center items-center gap-4 p-4">
+                    <div>
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                        alt="avatar"
+                        class="w-14 h-14 rounded-full border hover:border-primary-5 hover:scale-[102%] relative z-30"
+                      />
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <p class="text-lg">
+                        John Doe
+                        <i
+                          class="fa-solid fa-circle-check text-green-300 text-xl"
+                        ></i>
+                        <i
+                          class="fa-solid fa-circle-xmark text-red-300 text-xl hidden"
+                          style="display: none"
+                        ></i>
+                      </p>
+
+                      <p class="text-xs">ID-721328</p>
+                    </div>
+                  </div>
+
+                  <!-- Dropbar Box User Preview End -->
+
+                  <!-- Dropbar Items -->
+                  <div class="flex flex-col px-8 mt-4 gap-2 text-white">
+                    <!-- ITEM 1 -->
+                    <div
+                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-circle-user"></i>
+                      <a href="./account.html">Account Details</a>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div
+                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-clock-rotate-left"></i>
+                      <a href="#">Transaction</a>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div
+                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-gear"></i>
+                      <a href="#">Settings</a>
+                    </div>
+
+                    <!-- ITEM 4 -->
+                    <div
+                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-circle-question"></i>
+                      <a href="#">Help</a>
+                    </div>
+
+                    <!-- ITEM 5 -->
+                    <div
+                      class="bg-red-400 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-door-open"></i>
+                      <a href="../index.html">Log Out</a>
+                    </div>
+                  </div>
+                  <!-- Dropbar Items End -->
+                </div>
+                <!-- DropBar Box End -->
+              </div>
+              <!-- Avatar Menu Button End -->
+            </div>
+            <!-- User Bar End -->
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-28">
+      <!-- Wallet -->
+      <section id="account" class="py-16">
+        <h2 class="text-primary-2 text-4xl text-center mb-4">Wallets</h2>
+
+        <!-- Buttons -->
+        <section id="buttons" class="mb-8">
+          <div
+            class="container mx-auto w-[90%] md:w-full grid grid-cols-3 gap-8 lg:gap-20"
+          >
+            <div
+              class="bg-primary-2 hover:bg-primary-3 rounded-3xl hover:scale-[102%] transition-all"
+            >
+              <a
+                href="./transfer.html"
+                class="w-full h-full flex lg:flex-row flex-col justify-center items-center gap-3 py-4"
+              >
+                <i class="fa-solid fa-arrows-rotate text-lg lg:text-2xl"></i>
+                <p class="text-lg lg:text-2xl">Transfer</p>
+              </a>
+            </div>
+            <div
+              class="bg-primary-2 hover:bg-primary-3 rounded-3xl hover:scale-[102%] transition-all"
+            >
+              <a
+                href="./deposit.html"
+                class="w-full h-full flex lg:flex-row flex-col justify-center items-center gap-3 py-4"
+              >
+                <i class="fa-brands fa-get-pocket text-lg lg:text-2xl"></i>
+                <p class="text-lg lg:text-2xl">Deposit</p>
+              </a>
+            </div>
+            <div
+              class="bg-primary-2 hover:bg-primary-3 rounded-3xl hover:scale-[102%] transition-all"
+            >
+              <a
+                href="./withdraw.html"
+                class="w-full h-full flex lg:flex-row flex-col justify-center items-center gap-3 py-4"
+              >
+                <i class="fa-solid fa-credit-card text-lg lg:text-2xl"></i>
+                <p class="text-lg lg:text-2xl">Withdraw</p>
+              </a>
+            </div>
+          </div>
+        </section>
+        <!-- Buttons End -->
+
+        <!-- Wallet Cards Start -->
+        <section
+          class="grid grid-cols-1 gap-20 md:grid-cols-2 xl:grid-cols-3 container mx-auto"
+        >
+          <!-- CHF Account Card -->
+          <div
+            class="w-[90%] mx-auto md:w-full md:mx-0 h-96 relative cursor-pointer shadow-lg hover:shadow-xl transition-all rounded-3xl"
+            onclick="toggleCard(this)"
+          >
+            <div
+              class="w-full h-full card-transform transition-transform duration-700 hover:scale-[102%]"
+            >
+              <div
+                class="w-full h-full card-face front bg-primary-2 rounded-3xl flex items-center justify-center"
+              >
+                <div
+                  class="w-full h-full flex flex-col justify-center items-center"
+                >
+                  <h2 class="text-6xl w-full bg-primary-3 mb-6 py-4">
+                    <svg
+                      version="1.0"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="512.000000pt"
+                      height="512.000000pt"
+                      viewBox="0 0 512.000000 512.000000"
+                      preserveAspectRatio="xMidYMid meet"
+                      class="w-20 h-20 mx-auto"
+                    >
+                      <g
+                        transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                        fill="#fff"
+                        stroke="none"
+                      >
+                        <path
+                          d="M2315 5109 c-597 -61 -1141 -318 -1563 -739 -1002 -1000 -1002 -2620
+0 -3620 406 -405 901 -648 1493 -732 119 -17 512 -16 635 1 579 80 1088 330
+1490 733 404 405 648 902 732 1493 17 118 17 512 0 630 -85 593 -327 1088
+-734 1495 -393 394 -891 643 -1453 726 -122 18 -477 26 -600 13z m575 -314
+c897 -138 1632 -798 1854 -1666 55 -216 70 -336 70 -569 0 -302 -47 -559 -150
+-820 -302 -760 -969 -1291 -1784 -1416 -140 -22 -471 -25 -605 -6 -359 51
+-689 176 -974 370 -532 360 -878 909 -977 1552 -25 159 -25 481 0 640 99 643
+445 1192 977 1552 322 219 661 337 1094 382 81 8 393 -4 495 -19z"
+                        />
+                        <path
+                          d="M2110 3315 l0 -905 -455 0 -455 0 0 -150 0 -150 455 0 455 0 0 -530
+0 -530 150 0 150 0 0 530 0 530 450 0 450 0 0 150 0 150 -450 0 -450 0 0 150
+0 150 600 0 600 0 0 150 0 150 -600 0 -600 0 0 455 0 455 600 0 600 0 0 150 0
+150 -750 0 -750 0 0 -905z"
+                        />
+                      </g>
+                    </svg>
+                  </h2>
+                  <p class="text-2xl font-thin">Balance</p>
+                  <p class="text-4xl">₣ 1.349,10</p>
+                  <div
+                    class="text-sm font-semibold text-center text-white hover:text-primary-4 mt-4 w-full h-14 flex items-center transBut"
+                  >
+                    <button onclick="showHistory('chfHistory')" class="w-full">
+                      CLICK FOR RECENT TRANSACTION HISTORY
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-face back absolute inset-0 bg-primary-2 rounded-2xl flex flex-col items-center justify-center transform rotate-y-180"
+              >
+                <h2 class="text-3xl text-center w-full bg-primary-3 mb-4">
+                  Recent Transactions
+                </h2>
+                <div class="w-[90%] bg-white text-primary-2 rounded-xl">
+                  <!-- Last 1 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">GSM Bill</p>
+                      <p class="text-xs">03.09.2024 20.02</p>
+                    </div>
+                    <p class="text-base font-semibold">₣59.99</p>
+                  </div>
+                  <!-- Last 2 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">Python E-Book</p>
+                      <p class="text-xs">03-02-2024 14:02</p>
+                    </div>
+                    <p class="text-base font-semibold">₣19.99</p>
+                  </div>
+                  <!-- Last 3 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">MaxFit Membership</p>
+                      <p class="text-xs">12-10-2024 16.12</p>
+                    </div>
+                    <p class="text-base font-semibold">₣49.99</p>
+                  </div>
+                  <!-- Recent Trans End -->
+                </div>
+              </div>
+            </div>
+            <!-- Plus Minus Franc -->
+            <div
+              class="flex justify-center w-72 lg:w-80 mx-auto bg-primary-3 rounded-b-2xl border-b-4 border-primary-2 divide-x-2 divide-primary-2"
+            >
+              <div
+                class="basis-1/2 text-center text-3xl text-primary-2 bg-green-300/90 rounded-b-xl rounded-ee-none group-[plus]"
+              >
+                <a href="#"><i class="fa-solid fa-plus"></i></a>
+              </div>
+              <div
+                class="basis-1/2 text-center text-3xl text-primary-2 bg-red-300/90 rounded-b-xl rounded-es-none"
+              >
+                <i class="fa-solid fa-minus"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- CHF Account Card End -->
+
+          <!-- EUR Account Card -->
+          <div
+            class="w-[90%] mx-auto md:w-full md:mx-0 h-96 relative cursor-pointer shadow-lg hover:shadow-xl transition-all rounded-3xl"
+            onclick="toggleCard(this)"
+          >
+            <div
+              class="w-full h-full card-transform transition-transform duration-700 hover:scale-[102%]"
+            >
+              <div
+                class="w-full h-full card-face front bg-primary-2 rounded-2xl flex items-center justify-center"
+              >
+                <div
+                  class="w-full h-full flex flex-col justify-center items-center"
+                >
+                  <h2
+                    class="text-4xl text-center w-full bg-primary-3 mb-6 py-4"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="w-24 h-24 mx-auto"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M14.25 7.756a4.5 4.5 0 100 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </h2>
+                  <p class="text-2xl font-thin">Balance</p>
+                  <p class="text-4xl">€ 2.229,40</p>
+                  <div
+                    class="text-sm font-semibold text-center text-white hover:text-primary-4 mt-4 w-full h-14 flex items-center transBut"
+                  >
+                    <button onclick="showHistory('eurHistory')" class="w-full">
+                      CLICK FOR RECENT TRANSACTION HISTORY
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-face back absolute inset-0 bg-primary-2 rounded-2xl flex flex-col items-center justify-center transform rotate-y-180"
+              >
+                <h2 class="text-3xl text-center w-full bg-primary-3 mb-4">
+                  Recent Transactions
+                </h2>
+                <div class="w-[90%] bg-white text-primary-2 rounded-xl">
+                  <!-- Last 1 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">GSM Bill</p>
+                      <p class="text-xs">03.09.2024 20.02</p>
+                    </div>
+                    <p class="text-base font-semibold">€59.99</p>
+                  </div>
+                  <!-- Last 2 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">Python E-Book</p>
+                      <p class="text-xs">03-02-2024 14:02</p>
+                    </div>
+                    <p class="text-base font-semibold">€19.99</p>
+                  </div>
+                  <!-- Last 3 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">MaxFit Membership</p>
+                      <p class="text-xs">12-10-2024 16.12</p>
+                    </div>
+                    <p class="text-base font-semibold">€49.99</p>
+                  </div>
+                  <!-- Recent Trans End -->
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-center w-72 lg:w-80 mx-auto bg-primary-3 rounded-b-2xl border-b-4 border-primary-2 divide-x-2 divide-primary-2"
+            >
+              <div
+                class="basis-1/2 text-center text-3xl text-primary-2 bg-green-300/90 rounded-b-xl rounded-ee-none"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div
+                class="basis-1/2 text-center text-3xl text-primary-2 bg-red-300/90 rounded-b-xl rounded-es-none"
+              >
+                <i class="fa-solid fa-minus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- EUR Account Card End -->
+
+          <!-- TRY Account Card -->
+          <div
+            class="w-[90%] h-96 mx-auto md:w-full md:mx-0 relative cursor-pointer shadow-lg hover:shadow-xl transition-all rounded-3xl"
+            onclick="toggleCard(this)"
+          >
+            <div
+              class="w-full h-full card-transform transition-transform duration-700 hover:scale-[102%]"
+            >
+              <div
+                class="w-full h-full card-face front bg-primary-2 rounded-2xl flex items-center justify-center"
+              >
+                <div
+                  class="w-full h-full flex flex-col justify-center items-center"
+                >
+                  <h2
+                    class="text-4xl text-center w-full bg-primary-3 mb-6 py-4"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      class="w-24 h-24 mx-auto"
+                    >
+                      <path
+                        d="M11.474237,6.056782c0,2.481599,0,4.443218,0,5.943218s0,4.445847,0,5.917981c0,0,3.925342,1.037329,5.860148-4.417981M7.5,10.5c2.053102-.405363,5.838591-.952155,7.94164-1.414826M7.5,13.5L15.44164,12M21,12c0,4.970563-4.029437,9-9,9s-9-4.029437-9-9s4.029437-9,9-9s9,4.029437,9,9Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </h2>
+                  <p class="text-2xl font-thin">Balance</p>
+                  <p class="text-4xl">₺1.349,10</p>
+                  <div
+                    class="text-sm font-semibold text-center text-white hover:text-primary-4 mt-4 w-full h-14 flex items-center transBut"
+                  >
+                    <button onclick="showHistory('tryHistory')" class="w-full">
+                      CLICK FOR RECENT TRANSACTION HISTORY
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="card-face back absolute inset-0 bg-primary-2 rounded-2xl flex flex-col items-center justify-center transform rotate-y-180"
+              >
+                <h2 class="text-3xl text-center w-full bg-primary-3 mb-4">
+                  Recent Transactions
+                </h2>
+                <div class="w-[90%] bg-white text-primary-2 rounded-xl">
+                  <!-- Last 1 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">GSM Bill</p>
+                      <p class="text-xs">03.09.2024 20.02</p>
+                    </div>
+                    <p class="text-base font-semibold">₺59.99</p>
+                  </div>
+                  <!-- Last 2 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">Python E-Book</p>
+                      <p class="text-xs">03-02-2024 14:02</p>
+                    </div>
+                    <p class="text-base font-semibold">₺19.99</p>
+                  </div>
+                  <!-- Last 3 Trans -->
+                  <div class="p-4 flex justify-between items-center">
+                    <div class="flex flex-col">
+                      <p class="text-xs">WALL-ID-34920123</p>
+                      <p class="text-base font-semibold">MaxFit Membership</p>
+                      <p class="text-xs">12-10-2024 16.12</p>
+                    </div>
+                    <p class="text-base font-semibold">₺49.99</p>
+                  </div>
+                  <!-- Recent Trans End -->
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-center w-72 lg:w-80 mx-auto bg-primary-3 rounded-b-2xl border-b-4 border-primary-2 divide-x-2 divide-primary-2"
+            >
+              <div
+                class="basis-1/2 text-center text-3xl text-primary-2 bg-green-300/90 rounded-b-xl rounded-ee-none"
+              >
+                <i class="fa-solid fa-plus"></i>
+              </div>
+              <div
+                class="basis-1/2 text-center text-3xl text-primary-2 bg-red-300/90 rounded-b-xl rounded-es-none"
+              >
+                <i class="fa-solid fa-minus"></i>
+              </div>
+            </div>
+          </div>
+          <!-- TRY Account Card End -->
+        </section>
+        <!-- Wallet Cards End -->
+      </section>
+      <!-- Wallet End -->
+
+      <!-- TRANSACTION SECTION -->
+      <section id="transaction" class="py-16">
+        <h2 class="text-primary-2 text-3xl text-center mb-8">
+          Last Transaction History
+        </h2>
+
+        <!-- CHF History -->
+        <div class="container mx-auto rounded-3xl shadow-lg" id="chfHistory">
+          <div
+            class="bg-primary-2 border-4 border-primary-3 rounded-3xl w-[90%] md:w-full md:mx-0 mx-auto h-96"
+          >
+            <div
+              class="h-full rounded-3xl py-10 space-y-2 shadow-lg flex flex-col justify-center overflow-auto"
+            >
+              <div
+                id="item"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc" class="flex flex-col w-[160px]">
+                  <p>Restauran Da Paolo CHF</p>
+                  <div id="itemDescDate" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount" class="flex justify-center items-center">
+                  <p class="text-red-300">-$96.50</p>
+                </div>
+              </div>
+              <div
+                id="item2"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc2" class="flex flex-col w-[160px]">
+                  <p>Cash Inflow</p>
+                  <div id="itemDescDate2" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount2">
+                  <p class="text-green-300">+$22.50</p>
+                </div>
+              </div>
+              <div
+                id="item3"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc3" class="flex flex-col">
+                  <p>Python E-Book</p>
+                  <div
+                    id="itemDescDate3"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount3">
+                  <p class="text-red-300">-$14.90</p>
+                </div>
+              </div>
+              <div
+                id="item4"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc4" class="flex flex-col w-[160px]">
+                  <p>GYM Membership</p>
+                  <div id="itemDescDate4" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount4">
+                  <p class="text-red-300">-$46.40</p>
+                </div>
+              </div>
+              <div
+                id="item5"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc5" class="flex flex-col">
+                  <p>Refund</p>
+                  <div
+                    id="itemDescDate5"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount5">
+                  <p class="text-green-300">+$32.50</p>
+                </div>
+              </div>
+              <div
+                id="item6"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc6" class="flex flex-col">
+                  <p>Restauran Da Paolo</p>
+                  <div
+                    id="itemDescDate6"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount6">
+                  <p class="text-red-300">-$96.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- CHF History End -->
+
+        <!-- EUR History -->
+        <div
+          class="container mx-auto rounded-3xl shadow-lg hidden"
+          id="eurHistory"
+        >
+          <div
+            class="bg-primary-2 border-4 border-primary-3 rounded-3xl w-[90%] md:w-full md:mx-0 mx-auto h-96"
+          >
+            <div
+              class="h-full rounded-3xl py-10 space-y-2 shadow-lg flex flex-col justify-center overflow-auto"
+            >
+              <div
+                id="item"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc" class="flex flex-col w-[160px]">
+                  <p>Restauran Da Paolo EUR</p>
+                  <div id="itemDescDate" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount" class="flex justify-center items-center">
+                  <p class="text-red-300">-€96.50</p>
+                </div>
+              </div>
+              <div
+                id="item2"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc2" class="flex flex-col w-[160px]">
+                  <p>Cash Inflow</p>
+                  <div id="itemDescDate2" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount2">
+                  <p class="text-green-300">+€22.50</p>
+                </div>
+              </div>
+              <div
+                id="item3"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc3" class="flex flex-col">
+                  <p>Python E-Book</p>
+                  <div
+                    id="itemDescDate3"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount3">
+                  <p class="text-red-300">-€14.90</p>
+                </div>
+              </div>
+              <div
+                id="item4"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc4" class="flex flex-col w-[160px]">
+                  <p>GYM Membership</p>
+                  <div id="itemDescDate4" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount4">
+                  <p class="text-red-300">-€46.40</p>
+                </div>
+              </div>
+              <div
+                id="item5"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc5" class="flex flex-col">
+                  <p>Refund</p>
+                  <div
+                    id="itemDescDate5"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount5">
+                  <p class="text-green-300">+€32.50</p>
+                </div>
+              </div>
+              <div
+                id="item6"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc6" class="flex flex-col">
+                  <p>Restauran Da Paolo</p>
+                  <div
+                    id="itemDescDate6"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount6">
+                  <p class="text-red-300">-€96.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- EUR History End -->
+
+        <!-- TRY History -->
+        <div
+          class="container mx-auto rounded-3xl shadow-lg hidden"
+          id="tryHistory"
+        >
+          <div
+            class="bg-primary-2 border-4 border-primary-3 rounded-3xl w-[90%] md:w-full md:mx-0 mx-auto h-96"
+          >
+            <div
+              class="h-full rounded-3xl py-10 space-y-2 shadow-lg flex flex-col justify-center overflow-auto"
+            >
+              <div
+                id="item"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc" class="flex flex-col w-[160px]">
+                  <p>Restauran Da Paolo TRY</p>
+                  <div id="itemDescDate" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount" class="flex justify-center items-center">
+                  <p class="text-red-300">-₺96.50</p>
+                </div>
+              </div>
+              <div
+                id="item2"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc2" class="flex flex-col w-[160px]">
+                  <p>Cash Inflow</p>
+                  <div id="itemDescDate2" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount2">
+                  <p class="text-green-300">+₺22.50</p>
+                </div>
+              </div>
+              <div
+                id="item3"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc3" class="flex flex-col">
+                  <p>Python E-Book</p>
+                  <div
+                    id="itemDescDate3"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount3">
+                  <p class="text-red-300">-₺14.90</p>
+                </div>
+              </div>
+              <div
+                id="item4"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc4" class="flex flex-col w-[160px]">
+                  <p>GYM Membership</p>
+                  <div id="itemDescDate4" class="flex justify-between">
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount4">
+                  <p class="text-red-300">-₺46.40</p>
+                </div>
+              </div>
+              <div
+                id="item5"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc5" class="flex flex-col">
+                  <p>Refund</p>
+                  <div
+                    id="itemDescDate5"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount5">
+                  <p class="text-green-300">+₺32.50</p>
+                </div>
+              </div>
+              <div
+                id="item6"
+                class="flex justify-between items-center hover:bg-primary-3 px-10"
+              >
+                <div id="itemDesc6" class="flex flex-col">
+                  <p>Restauran Da Paolo</p>
+                  <div
+                    id="itemDescDate6"
+                    class="flex justify-between w-[160px]"
+                  >
+                    <p class="text-primary-5 text-sm">28.01.2024</p>
+                    <p class="text-primary-5 text-sm">02.45PM</p>
+                  </div>
+                </div>
+                <div id="itemAmount6">
+                  <p class="text-red-300">-₺96.50</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-primary-2 text-white">
+      <div
+        class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8"
+      >
+        <nav
+          class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          aria-label="Footer"
+        >
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >About</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >FAQ</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >Fees&Limits</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >Contact</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >Log In</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >Sign Up</a
+            >
+          </div>
+        </nav>
+        <div class="mt-10 flex justify-center space-x-10">
+          <a href="#" class="text-white hover:text-gray-500">
+            <span class="sr-only">Facebook</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="text-white hover:text-gray-500">
+            <span class="sr-only">Instagram</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="text-white hover:text-gray-500">
+            <span class="sr-only">Twitter</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="text-white hover:text-gray-500">
+            <span class="sr-only">YouTube</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="mt-10 text-center text-xs leading-5 text-gray-500">
+          &copy; 2023 walletCo, Inc. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

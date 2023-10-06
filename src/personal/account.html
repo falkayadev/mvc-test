@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>walletCo.</title>
+    <link rel="stylesheet" href="../../dist/output.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body class="text-primary-2 font-poppins">
+    <header class="fixed w-full z-30">
+      <div class="bg-primary-2 p-8">
+        <div class="container mx-auto">
+          <div class="flex justify-between items-center">
+            <!-- Logo Section -->
+            <div>
+              <a
+                href="./dashboard.html"
+                class="text-white text-2xl font-comfortaa"
+                >walletCo</a
+              >
+            </div>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-20">
+              <a href="./transfer.html" class="text-white hover:text-primary-5"
+                >Transfer</a
+              >
+              <a href="./deposit.html" class="text-white hover:text-primary-5"
+                >Deposit</a
+              >
+              <a href="./withdraw.html" class="text-white hover:text-primary-5"
+                >Withdraw</a
+              >
+            </div>
+
+            <!-- User Bar-->
+            <div class="flex items-center gap-3 relative">
+              <!-- Greetings -->
+              <div>
+                <p class="z-30 relative text-white">Hi, John!</p>
+              </div>
+              <!-- Greetings End -->
+
+              <!-- Avatar Menu Button-->
+              <div>
+                <button
+                  class="block w-20 h-20 rounded-full bg-primary-3 duration-300"
+                >
+                  <img
+                    id="avatar"
+                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                    alt="profile foto"
+                    class="rounded-full border hover:border-primary-5 z-30 hover:scale-[102%] relative"
+                    draggable="false"
+                    onclick="document.getElementById('dropBar').classList.toggle('hidden');"
+                  />
+                </button>
+
+                <!-- DropBar Box -->
+
+                <div
+                  class="w-screen md:w-80 absolute -right-8 md:right-0 bg-gray-50 text-primary-2 mt-2 py-6 px-2 rounded-lg shadow-xl hidden border border-primary-2"
+                  id="dropBar"
+                >
+                  <!-- Dropbar Box User Preview -->
+                  <div class="flex justify-center items-center gap-4 p-4">
+                    <div>
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                        alt="avatar"
+                        class="w-14 h-14 rounded-full border hover:border-primary-5 hover:scale-[102%] relative z-30"
+                      />
+                    </div>
+                    <div class="flex flex-col items-center">
+                      <p class="text-lg">
+                        John Doe
+                        <i
+                          class="fa-solid fa-circle-check text-green-300 text-xl"
+                        ></i>
+                        <i
+                          class="fa-solid fa-circle-xmark text-red-300 text-xl hidden"
+                          style="display: none"
+                        ></i>
+                      </p>
+
+                      <p class="text-xs">ID-721328</p>
+                    </div>
+                  </div>
+
+                  <!-- Dropbar Box User Preview End -->
+
+                  <!-- Dropbar Items -->
+                  <div class="flex flex-col px-8 mt-4 gap-2 text-white">
+                    <!-- ITEM 1 -->
+                    <div
+                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-circle-user"></i>
+                      <a href="./account.html">Account Details</a>
+                    </div>
+
+                    <!-- ITEM 2 -->
+                    <div
+                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-clock-rotate-left"></i>
+                      <a href="./transaction.html">Transaction</a>
+                    </div>
+
+                    <!-- ITEM 3 -->
+                    <div
+                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-gear"></i>
+                      <a href="#">Settings</a>
+                    </div>
+
+                    <!-- ITEM 4 -->
+                    <div
+                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-circle-question"></i>
+                      <a href="../index.html#contact">Help</a>
+                    </div>
+
+                    <!-- ITEM 5 -->
+                    <div
+                      class="bg-red-400 rounded-xl px-4 py-1 text-lg space-x-2"
+                    >
+                      <i class="fa-solid fa-door-open"></i>
+                      <a href="../index.html">Log Out</a>
+                    </div>
+                  </div>
+                  <!-- Dropbar Items End -->
+                </div>
+                <!-- DropBar Box End -->
+              </div>
+              <!-- Avatar Menu Button End -->
+            </div>
+            <!-- User Bar End -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="pt-36">
+      <div
+        class="w-full border-b-4 border-primary-2 px-20 py-10 flex justify-center bg-primary-3 text-white"
+      >
+        <div class="mb-4">
+          <div class="flex items-center gap-3 relative group">
+            <img
+              src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+              alt="avatar"
+              class="w-24 h-24 lg:w-40 lg:h-40 rounded-full group-hover:opacity-80 group-hover:border-4 border-white"
+            />
+            <span
+              class="opacity-0 group-hover:opacity-100 absolute text-white text-5xl lg:top-14 lg:left-16 md:top-5 top-6 left-8"
+              >+</span
+            >
+            <div>
+              <p>John Doe</p>
+              <p class="text-xs font-light">email@email.com</p>
+              <p class="text-xs font-light">+90283129432</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Grid Container -->
+      <div
+        class="grid grid-cols-1 xl:grid-cols-2 w-full h-full divide-y-4 lg:divide-x-4 xl:divide-y-0 divide-primary-2 container mx-auto"
+      >
+        <!-- Profile Section -->
+        <div class="py-14 lg:p-20 w-full h-full">
+          <div>
+            <h2 class="text-3xl text-primary-2 text-center mb-20">Profile</h2>
+          </div>
+          <div
+            class="w-[95%] mx-auto rounded-b-2xl rounded-se-2xl shadow-lg bg-primary-3 full relative"
+          >
+            <!-- TABS -->
+            <div class="divide-x">
+              <!-- TAB 1 -->
+              <div
+                class="tab1 absolute left-0 -top-10 w-36 bg-primary-5 text-white rounded-ss-2xl px-6 py-2 hover:bg-primary-4"
+              >
+                <button class="tablink" onclick="openTab('Tab1', this)">
+                  <i class="fa-solid fa-user"></i>
+                  <a class="text-center" id="profile">Profile</a>
+                </button>
+              </div>
+              <!-- TAB 2 -->
+              <div
+                class="tab2 absolute left-[6.7rem] w-40 -top-10 bg-primary-5 px-6 py-2 hover:bg-primary-4 text-white"
+              >
+                <button class="tablink" onclick="openTab('Tab2', this)">
+                  <i class="fa-solid fa-key"></i>
+                  <a class="text-center" id="password">Password</a>
+                </button>
+              </div>
+              <!-- TAB 3 -->
+              <div
+                class="tab3 absolute left-[15.13rem] w-36 -top-10 bg-primary-5 px-6 py-2 rounded-se-2xl hover:bg-primary-4 text-white whitespace-nowrap"
+              >
+                <button class="tablink" onclick="openTab('Tab3', this)">
+                  <i class="fa-solid fa-credit-card"></i>
+                  <a class="text-center" id="payment"> Payment </a>
+                </button>
+              </div>
+            </div>
+
+            <!-- Contents -->
+
+            <div id="Tab1" class="tabcontent py-4 text-white tab-content">
+              <!-- Full Name -->
+              <div class="flex justify-center w-[80%] mx-auto gap-10 mb-4">
+                <div class="flex flex-col w-full">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    id="firstName"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+                <div class="flex flex-col w-full">
+                  <label for="lastName">Last Name</label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+              </div>
+              <!-- Full Name End -->
+              <!-- Email / Phone Number -->
+              <div class="flex justify-center w-[80%] mx-auto gap-10 mb-6">
+                <div class="flex flex-col w-full">
+                  <label for="firstName">E-Mail</label>
+                  <input
+                    type="email"
+                    id="email"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+                <div class="flex flex-col w-full">
+                  <label for="phoneNumber">Phone Number</label>
+                  <input
+                    type="text"
+                    id="phoneNumber"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+              </div>
+              <!-- Email / Phone Number End -->
+              <!-- Address  -->
+              <div class="flex flex-col w-[80%] mx-auto">
+                <label for="address">Address</label>
+                <input
+                  type="text"
+                  id="address"
+                  class="w-full text-primary-2 px-2"
+                />
+              </div>
+              <div class="flex justify-center w-[80%] mx-auto gap-10">
+                <div class="flex flex-col w-full">
+                  <label for="country">Country</label>
+                  <input
+                    type="text"
+                    id="country"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+                <div class="flex flex-col w-full">
+                  <label for="city">City</label>
+                  <input
+                    type="text"
+                    id="city"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+              </div>
+              <div class="flex justify-center w-[80%] mx-auto gap-10">
+                <div class="flex flex-col w-full">
+                  <label for="currency">Currency</label>
+                  <select
+                    name="currency"
+                    id="currency"
+                    class="w-full h-full text-primary-2 px-2"
+                  >
+                    <option value="chf">CHF</option>
+                    <option value="eur">EUR</option>
+                    <option value="try">TRY</option>
+                  </select>
+                </div>
+                <div class="flex flex-col w-full">
+                  <label for="postCode">Post Code</label>
+                  <input
+                    type="text"
+                    id="postCode"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+              </div>
+              <!-- Address End -->
+
+              <!-- Save Button -->
+              <div class="w-[80%] mx-auto mt-6 text-center">
+                <button class="bg-primary-5 rounded-xl p-2">
+                  Save Changes
+                </button>
+              </div>
+            </div>
+            <!-- Tab 1 End -->
+            <div
+              id="Tab2"
+              class="tabcontent py-4 text-white tab-content w-[80%] mx-auto hidden"
+            >
+              <div class="flex flex-col space-y-8 pt-14">
+                <div class="flex flex-col">
+                  <label for="currentPassword">Current Password</label>
+                  <input type="text" id="currentPassword" />
+                </div>
+                <div class="flex flex-col">
+                  <label for="newPassword">New Password</label>
+                  <input type="text" id="newPassword" />
+                </div>
+                <div class="flex flex-col">
+                  <label for="confirmPassword">Confirm New Password</label>
+                  <input type="text" id="confirmPassword" />
+                </div>
+                <div class="w-[80%] mx-auto pt-2 text-center">
+                  <button class="bg-primary-5 rounded-xl p-2">
+                    Save Changes
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- Tab 2 End -->
+            <div
+              id="Tab3"
+              class="tabcontent py-4 text-white hidden tab-content"
+            >
+              <!-- Credit Card Preview -->
+              <div class="pt-6 w-[80%] mx-auto">
+                <div
+                  class="w-full h-52 mx-auto bg-yellow-500 rounded-lg relative"
+                >
+                  <!-- VISA SVG -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="100"
+                    height="100"
+                    viewBox="0 0 50 50"
+                    style="fill: #1a1a1a; display: none"
+                    class="w-14 h-10 absolute top-4 right-4"
+                    id="visa"
+                  >
+                    <path
+                      d="M 5 7 C 2.242188 7 0 9.242188 0 12 L 0 38 C 0 40.757813 2.242188 43 5 43 L 45 43 C 47.757813 43 50 40.757813 50 38 L 50 12 C 50 9.242188 47.757813 7 45 7 Z M 29.6875 19.40625 C 31.050781 19.40625 32.46875 19.96875 32.46875 19.96875 L 31.96875 22.40625 C 31.96875 22.40625 30.890625 21.6875 29.9375 21.6875 C 28.46875 21.6875 27.9375 22.167969 27.9375 22.8125 C 27.9375 24.074219 32.03125 24.296875 32.03125 27.125 C 32.03125 29.476563 29.113281 31.09375 27 31.09375 C 24.886719 31.09375 23.78125 30.46875 23.78125 30.46875 L 24.3125 28.09375 C 24.3125 28.09375 25.417969 28.75 27.125 28.75 C 28.828125 28.75 29.0625 28.023438 29.0625 27.71875 C 29.0625 25.914063 25 26.417969 25 22.90625 C 25 20.964844 26.585938 19.40625 29.6875 19.40625 Z M 16.46875 19.625 L 19.625 19.625 L 15.125 30.75 L 11.875 30.75 L 9.5 21.75 C 9.5 21.75 11.996094 23.023438 13.53125 26.46875 C 13.597656 26.886719 13.78125 27.5625 13.78125 27.5625 Z M 20.78125 19.625 L 23.78125 19.625 L 22 30.75 L 19.03125 30.75 Z M 36.8125 19.625 L 39.90625 19.625 L 42.1875 30.75 L 39.5 30.75 L 39.1875 29.15625 L 35.5 29.15625 L 34.90625 30.75 L 31.96875 30.75 Z M 6.25 19.65625 L 10.8125 19.65625 C 11.976563 19.65625 12.40625 20.75 12.40625 20.75 L 13.40625 25.8125 C 12.054688 21.453125 6.25 19.65625 6.25 19.65625 Z M 37.9375 22.84375 L 36.3125 27.03125 L 38.75 27.03125 Z"
+                    ></path>
+                  </svg>
+                  <!-- VISA SVG END -->
+                  <!-- MC SVG -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="100"
+                    height="100"
+                    viewBox="0 0 64 64"
+                    style="fill: #1a1a1a; display: none"
+                    class="w-14 h-10 absolute top-4 right-4"
+                    id="masterCard"
+                  >
+                    <path
+                      d="M 20 12 C 8.972 12 0 20.972 0 32 C 0 43.028 8.972 52 20 52 C 23.749 52 27.243188 50.938812 30.242188 49.132812 C 27.136187 47.333813 21 42.457 21 32 C 21 22.165 27.292422 16.912547 30.357422 14.935547 C 27.333422 13.086547 23.797 12 20 12 z M 44 12 C 39.495 12 35.347 13.514109 32 16.037109 C 30.537 17.140109 29.233094 18.435625 28.121094 19.890625 C 28.034094 20.003625 27.948281 20.117422 27.863281 20.232422 C 27.574281 20.627422 27.301016 21.033219 27.041016 21.449219 C 26.908016 21.662219 26.775391 21.87575 26.650391 22.09375 C 26.515391 22.32875 26.383812 22.565641 26.257812 22.806641 C 26.049813 23.205641 25.851922 23.609438 25.669922 24.023438 C 25.588922 24.208437 25.516406 24.396984 25.441406 24.583984 C 25.283406 24.975984 25.138859 25.373344 25.005859 25.777344 C 24.963859 25.904344 24.915953 26.026297 24.876953 26.154297 C 24.717953 26.671297 24.587703 27.200375 24.470703 27.734375 C 24.440703 27.871375 24.409812 28.009438 24.382812 28.148438 C 24.273812 28.700437 24.187 29.258219 24.125 29.824219 C 24.113 29.936219 24.10475 30.049109 24.09375 30.162109 C 24.03675 30.768109 24 31.38 24 32 C 24 32.62 24.03775 33.230937 24.09375 33.835938 C 24.10375 33.948937 24.110047 34.061828 24.123047 34.173828 C 24.185047 34.740828 24.271859 35.300562 24.380859 35.851562 C 24.407859 35.990563 24.43875 36.125672 24.46875 36.263672 C 24.58575 36.797672 24.717953 37.32675 24.876953 37.84375 C 24.915953 37.97175 24.963859 38.095656 25.005859 38.222656 C 25.138859 38.625656 25.283406 39.022063 25.441406 39.414062 C 25.516406 39.602063 25.590875 39.791563 25.671875 39.976562 C 25.853875 40.390563 26.049812 40.795359 26.257812 41.193359 C 26.383813 41.435359 26.514391 41.67025 26.650391 41.90625 C 26.775391 42.12325 26.908016 42.336828 27.041016 42.548828 C 27.301016 42.965828 27.575234 43.371578 27.865234 43.767578 C 27.949234 43.882578 28.035094 43.995375 28.121094 44.109375 C 29.233094 45.564375 30.538953 46.859891 32.001953 47.962891 C 35.346953 50.485891 39.495 52 44 52 C 55.028 52 64 43.028 64 32 C 64 20.972 55.028 12 44 12 z M 44 16 C 52.822 16 60 23.178 60 32 C 60 40.822 52.822 48 44 48 C 40.654 48 37.547562 46.964172 34.976562 45.201172 C 38.094563 41.678172 40 37.064 40 32 C 40 26.936 38.094563 22.321828 34.976562 18.798828 C 37.547562 17.035828 40.654 16 44 16 z"
+                    ></path>
+                  </svg>
+                  <!-- MC SVG END -->
+                  <img
+                    src="/dist/assets/noun-chip-card-3986338.png"
+                    class="absolute bottom-28 left-10 w-14 h-10 rounded-lg"
+                  />
+
+                  <p
+                    id="outputCard"
+                    class="text-black font-inconsolata absolute left-10 bottom-14 text-2xl"
+                  ></p>
+                  <p
+                    id="outputExpDate"
+                    class="text-black font-inconsolata absolute left-32 bottom-8 text-base"
+                  ></p>
+                  <div class="flex absolute left-10 bottom-4 gap-2">
+                    <p
+                      id="outputFirstName"
+                      class="text-xl font-inconsolata text-black"
+                    ></p>
+                    <p
+                      id="outputLastName"
+                      class="text-xl font-inconsolata text-black"
+                    ></p>
+                  </div>
+                </div>
+              </div>
+              <!-- Credit Card Preview End -->
+              <!-- Owner Input -->
+              <div class="flex justify-center w-[80%] mx-auto gap-10">
+                <div class="flex flex-col w-full">
+                  <label for="firstName">First Name</label>
+                  <input
+                    type="text"
+                    id="inputFirstName"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+                <div class="flex flex-col w-full">
+                  <label for="inputLastName">Last Name</label>
+                  <input
+                    type="text"
+                    id="inputLastName"
+                    class="w-full text-primary-2 px-2"
+                  />
+                </div>
+              </div>
+              <!-- Owner Input End -->
+              <!-- Credit Card Input -->
+              <div class="flex flex-col w-[80%] mx-auto">
+                <label for="inputCard" class="text-white">Card Number:</label>
+                <input
+                  type="text"
+                  id="inputCard"
+                  oninput="insertSpaces()"
+                  class="text-black px-2"
+                  maxlength="19"
+                />
+              </div>
+              <!-- Credit Card Input End -->
+              <!-- Expiration Date Input -->
+              <div class="flex w-[80%] mx-auto justify-center gap-10">
+                <div class="flex flex-col w-full">
+                  <label for="inputCVC">CVC:</label>
+                  <input
+                    type="password"
+                    name="inputCVC"
+                    id="inputCVC"
+                    oninput="updateStars()"
+                    class="w-full px-2 text-black"
+                    maxlength="3"
+                  />
+                </div>
+                <div class="flex flex-col w-full">
+                  <label for="inputExpDate">Expiration Date:</label>
+                  <input
+                    type="text"
+                    id="inputExpDate"
+                    placeholder="MM/YY"
+                    maxlength="5"
+                    oninput="insertSlash()"
+                    class="w-full px-2 text-black"
+                  />
+                  <span id="error-message" style="color: red"></span>
+                </div>
+              </div>
+            </div>
+            <!-- Tab 3 -->
+          </div>
+        </div>
+
+        <!-- Account Section -->
+        <div class="p-4 py-14 lg:p-20">
+          <h2 class="text-3xl text-center mb-10">Account</h2>
+
+          <div class="text-primary-2 mb-4">
+            <select
+              name="walletSelector"
+              id="currencySelector"
+              class="w-60 bg-primary-5 text-white text-center rounded-lg py-2"
+            >
+              <option value="chf" selected="selected">CHF - Swiss Franc</option>
+              <option value="eur">EUR - Euro</option>
+              <option value="try">TRY - Turkish New Lira</option>
+            </select>
+          </div>
+
+          <!-- CHF -->
+          <div class="space-y-4 px-2" id="chfDetails">
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Account Type</p>
+                <p class="text-xs opacity-60">Unverified or Verified</p>
+              </div>
+              <div>
+                <p>Verified Account</p>
+                <p class="hidden">Unverified Account</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Wallet ID</p>
+                <p class="text-xs opacity-60">
+                  You can money transfer by sharing.
+                </p>
+              </div>
+              <div>
+                <p>ID-721328</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Total Balance</p>
+                <p class="text-xs opacity-60">
+                  The total sum of all balances in your account.
+                </p>
+              </div>
+              <div>
+                <p>₣1.349,10</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Incoming Amount Limit</p>
+                <p class="text-xs opacity-60">
+                  Total amount limit that can be received per month.
+                </p>
+              </div>
+              <div>
+                <p>₣250.000,00</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Deposit Cash Limit</p>
+                <p class="text-xs opacity-60">
+                  Total cash limit that can be deposited monthly.
+                </p>
+              </div>
+              <div>
+                <p>₣100.000,00</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Available Incoming Amount Limit</p>
+                <p class="text-xs opacity-60">
+                  Remaining amount that can be credited in this month.
+                </p>
+              </div>
+              <div>
+                <p>₣232.000,00</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Available Cash Deposit Limit</p>
+                <p class="text-xs opacity-60">
+                  Available cash deposit limit in this month.
+                </p>
+              </div>
+              <div>
+                <p>₣75.000,00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- EUR -->
+          <div class="space-y-4 hidden px-2" id="eurDetails">
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Account Type</p>
+                <p class="text-xs opacity-60">Unverified or Verified</p>
+              </div>
+              <div>
+                <p>Verified Account</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Wallet ID</p>
+                <p class="text-xs opacity-60">
+                  You can money transfer by sharing.
+                </p>
+              </div>
+              <div>
+                <p>ID-721328</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Total Balance</p>
+                <p class="text-xs opacity-60">
+                  The total sum of all balances in your account.
+                </p>
+              </div>
+              <div>
+                <p>€1.349,10</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Incoming Amount Limit</p>
+                <p class="text-xs opacity-60">
+                  Total amount limit that can be received per month.
+                </p>
+              </div>
+              <div>
+                <p>€250.000,00</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Deposit Cash Limit</p>
+                <p class="text-xs opacity-60">
+                  Total cash limit that can be deposited monthly.
+                </p>
+              </div>
+              <div>
+                <p>€100.000,00</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Available Incoming Amount Limit</p>
+                <p class="text-xs opacity-60">
+                  Remaining amount that can be credited in this month.
+                </p>
+              </div>
+              <div>
+                <p>€232.000,00</p>
+              </div>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Available Cash Deposit Limit</p>
+                <p class="text-xs opacity-60">
+                  Available cash deposit limit in this month.
+                </p>
+              </div>
+              <div>
+                <p>€75.000,00</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRY -->
+          <div class="space-y-4 hidden px-2" id="tryDetails">
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Account Type</p>
+                <p class="text-xs opacity-60">Unverified or Verified</p>
+              </div>
+              <div>
+                <p>Verified Account</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Wallet ID</p>
+                <p class="text-xs opacity-60">
+                  You can money transfer by sharing.
+                </p>
+              </div>
+              <div>
+                <p>ID-721328</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Total Balance</p>
+                <p class="text-xs opacity-60">
+                  The total sum of all balances in your account.
+                </p>
+              </div>
+              <div>
+                <p>₺1.349,10</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Incoming Amount Limit</p>
+                <p class="text-xs opacity-60">
+                  Total amount limit that can be received per month.
+                </p>
+              </div>
+              <div>
+                <p>₺250.000,00</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Deposit Cash Limit</p>
+                <p class="text-xs opacity-60">
+                  Total cash limit that can be deposited monthly.
+                </p>
+              </div>
+              <div>
+                <p>₺100.000,00</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Available Incoming Amount Limit</p>
+                <p class="text-xs opacity-60">
+                  Remaining amount that can be credited in this month.
+                </p>
+              </div>
+              <div>
+                <p>₺232.000,00</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <div class="flex flex-col justify-center">
+                <p>Available Cash Deposit Limit</p>
+                <p class="text-xs opacity-60">
+                  Available cash deposit limit in this month.
+                </p>
+              </div>
+              <div>
+                <p>₺75.000,00</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-primary-2">
+      <div
+        class="mx-auto max-w-7xl overflow-hidden py-20 px-6 sm:py-24 lg:px-8"
+      >
+        <nav
+          class="-mb-6 columns-2 sm:flex sm:justify-center sm:space-x-12"
+          aria-label="Footer"
+        >
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >About</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >FAQ</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >Fees&Limits</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >Contact</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >Log In</a
+            >
+          </div>
+
+          <div class="pb-6">
+            <a href="#" class="text-sm leading-6 text-white hover:text-gray-400"
+              >Sign Up</a
+            >
+          </div>
+        </nav>
+        <div class="mt-10 flex justify-center space-x-10">
+          <a href="#" class="text-white hover:text-gray-500">
+            <span class="sr-only">Facebook</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="text-white hover:text-gray-500">
+            <span class="sr-only">Instagram</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.772 1.153 4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.772-1.153 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63zm-.081 1.802h-.468c-2.456 0-2.784.011-3.807.058-.975.045-1.504.207-1.857.344-.467.182-.8.398-1.15.748-.35.35-.566.683-.748 1.15-.137.353-.3.882-.344 1.857-.047 1.023-.058 1.351-.058 3.807v.468c0 2.456.011 2.784.058 3.807.045.975.207 1.504.344 1.857.182.466.399.8.748 1.15.35.35.683.566 1.15.748.353.137.882.3 1.857.344 1.054.048 1.37.058 4.041.058h.08c2.597 0 2.917-.01 3.96-.058.976-.045 1.505-.207 1.858-.344.466-.182.8-.398 1.15-.748.35-.35.566-.683.748-1.15.137-.353.3-.882.344-1.857.048-1.055.058-1.37.058-4.041v-.08c0-2.597-.01-2.917-.058-3.96-.045-.976-.207-1.505-.344-1.858a3.097 3.097 0 00-.748-1.15 3.098 3.098 0 00-1.15-.748c-.353-.137-.882-.3-1.857-.344-1.023-.047-1.351-.058-3.807-.058zM12 6.865a5.135 5.135 0 110 10.27 5.135 5.135 0 010-10.27zm0 1.802a3.333 3.333 0 100 6.666 3.333 3.333 0 000-6.666zm5.338-3.205a1.2 1.2 0 110 2.4 1.2 1.2 0 010-2.4z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="text-white hover:text-gray-500">
+            <span class="sr-only">Twitter</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"
+              />
+            </svg>
+          </a>
+
+          <a href="#" class="text-white hover:text-gray-500">
+            <span class="sr-only">YouTube</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="mt-10 text-center text-xs leading-5 text-gray-500">
+          &copy; 2023 walletCo, Inc. All rights reserved.
+        </p>
+      </div>
+    </footer>
+    <script src="account.js"></script>
+  </body>
+</html>
