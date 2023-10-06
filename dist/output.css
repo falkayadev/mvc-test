@@ -672,28 +672,8 @@ video {
   top: 26rem;
 }
 
-.top-\[2rem\] {
-  top: 2rem;
-}
-
-.top-\[30rem\] {
-  top: 30rem;
-}
-
-.top-\[32rem\] {
-  top: 32rem;
-}
-
-.top-\[3rem\] {
-  top: 3rem;
-}
-
 .top-\[28rem\] {
   top: 28rem;
-}
-
-.top-\[27rem\] {
-  top: 27rem;
 }
 
 .z-30 {
@@ -725,11 +705,6 @@ video {
 .my-14 {
   margin-top: 3.5rem;
   margin-bottom: 3.5rem;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .my-auto {
@@ -1035,10 +1010,6 @@ video {
   cursor: pointer;
 }
 
-.cursor-all-scroll {
-  cursor: all-scroll;
-}
-
 .resize {
   resize: both;
 }
@@ -1175,12 +1146,6 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-y-10 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
 .divide-x > :not([hidden]) ~ :not([hidden]) {
@@ -1412,6 +1377,11 @@ video {
   background-color: rgb(254 202 202 / var(--tw-bg-opacity));
 }
 
+.bg-red-300 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
+}
+
 .bg-red-300\/90 {
   background-color: rgb(252 165 165 / 0.9);
 }
@@ -1434,11 +1404,6 @@ video {
 .bg-yellow-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
-}
-
-.bg-red-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(252 165 165 / var(--tw-bg-opacity));
 }
 
 .object-cover {
@@ -1475,6 +1440,11 @@ video {
   padding-right: 2.5rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .px-2 {
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -1483,11 +1453,6 @@ video {
 .px-20 {
   padding-left: 5rem;
   padding-right: 5rem;
-}
-
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
 }
 
 .px-3 {
@@ -2004,6 +1969,10 @@ input[type="number"]::-ms-clear {
   display: none;
 }
 
+.fa-spin-hover:hover {
+  animation: spin 2s infinite linear;
+}
+
 .hover\:scale-\[102\%\]:hover {
   --tw-scale-x: 102%;
   --tw-scale-y: 102%;
@@ -2056,11 +2025,6 @@ input[type="number"]::-ms-clear {
 
 .hover\:bg-white\/20:hover {
   background-color: rgb(255 255 255 / 0.2);
-}
-
-.hover\:bg-primary-5:hover {
-  --tw-bg-opacity: 1;
-  background-color: rgb(75 159 225 / var(--tw-bg-opacity));
 }
 
 .hover\:text-black:hover {
@@ -2261,14 +2225,6 @@ input[type="number"]::-ms-clear {
     top: 1.25rem;
   }
 
-  .md\:top-\[\] {
-    top: ;
-  }
-
-  .md\:top-\[26re\] {
-    top: 26re;
-  }
-
   .md\:top-\[26rem\] {
     top: 26rem;
   }
@@ -2322,12 +2278,12 @@ input[type="number"]::-ms-clear {
     width: 20rem;
   }
 
-  .md\:w-full {
-    width: 100%;
-  }
-
   .md\:w-\[80\%\] {
     width: 80%;
+  }
+
+  .md\:w-full {
+    width: 100%;
   }
 
   .md\:grid-cols-2 {
@@ -2504,6 +2460,11 @@ input[type="number"]::-ms-clear {
     padding: 5rem;
   }
 
+  .lg\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
   .lg\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
@@ -2528,14 +2489,14 @@ input[type="number"]::-ms-clear {
     line-height: 2rem;
   }
 
-  .lg\:text-base {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
-
   .lg\:text-3xl {
     font-size: 1.875rem;
     line-height: 2.25rem;
+  }
+
+  .lg\:text-base {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 
   .lg\:text-lg {
