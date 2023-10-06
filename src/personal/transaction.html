@@ -10,9 +10,12 @@
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
+
       html {
-        --s: 100px; /* control the size */
-        --c: #0f2557; /* first color */
+        --s: 100px;
+        /* control the size */
+        --c: #0f2557;
+        /* first color */
 
         --_g1: var(--c) calc(25% / 3), #0000 0 calc(50% / 3), var(--c) 0 25%,
           #0000 0 75%, var(--c) 0 calc(250% / 3), #0000 0 calc(275% / 3),
@@ -22,7 +25,8 @@
         background: linear-gradient(45deg, var(--_g2)),
           linear-gradient(45deg, var(--_g1)),
           linear-gradient(-45deg, var(--_g2)),
-          linear-gradient(-45deg, var(--_g1)) #4b9fe1; /* second color */
+          linear-gradient(-45deg, var(--_g1)) #4b9fe1;
+        /* second color */
         background-position: 0 0, var(--s) var(--s);
         background-size: calc(2 * var(--s)) calc(2 * var(--s));
       }
@@ -35,6 +39,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
+
   <body class="font-poppins text-white">
     <header class="fixed w-full z-30">
       <div class="bg-primary-2 p-8">
@@ -170,76 +175,107 @@
         </div>
       </div>
     </header>
-      <div
-        class="bg-white text-primary-2 rounded-lg shadow-md h-full w-[95%] mx-auto relative top-32 p-8"
-      > 
-      <div class="max-w-4xl mx-auto">
-        <h1 class="text-2xl font-semibold mb-6 text-center">Transaction History</h1>
-        <div class="mb-4 flex items-center space-x-4 h-full w-full">
-          <div>
-              <label for="startDate" class="block text-sm font-medium text-gray-700">Start Date:</label>
-              <input type="date" id="startDate" class="mt-1 p-2 border rounded-md">
+
+    <div class="bg-white text-primary-2 h-full w-full pt-48 pb-16">
+      <div class="flex flex-col justify-center items-center">
+        <h1 class="text-2xl font-semibold mb-6 text-center">
+          Transaction History
+        </h1>
+        <div
+          class="mb-4 flex items-center justify-center gap-1 md:gap-10 h-full w-full]"
+        >
+          <div class="flex flex-col items-center justify-center basis-1/3">
+            <label for="startDate" class="text-sm font-medium text-gray-700"
+              >Start Date</label
+            >
+            <input
+              type="date"
+              id="startDate"
+              class="mt-1 p-2 border rounded-md"
+            />
           </div>
-          <div>
-              <label for="endDate" class="block text-sm font-medium text-gray-700">End Date:</label>
-              <input type="date" id="endDate" class="mt-1 p-2 border rounded-md">
+          <div class="flex flex-col items-center justify-center">
+            <label for="endDate" class="text-sm font-medium text-gray-700"
+              >End Date</label
+            >
+            <input
+              type="date"
+              id="endDate"
+              class="mt-1 p-2 border rounded-md"
+            />
           </div>
-          <button onclick="filterTransactionsByDateRange()" class="mt-5 p-2 bg-primary-3 text-white rounded-md">Filter</button>
-      </div>
-        <table class="min-w-full divide-y divide-gray-200">
-            <thead>
-                <tr>
-                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Date</th>
-                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Explanation</th>
-                    <th class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Amount</th>
-                </tr>
-            </thead>
-            <tbody class="bg-white divide-y divide-gray-200">
-                <!-- Örnek bir satır -->
-                <tr>
-                    <td class="px-4 py-2">01/01/2023</td>
-                    <td class="px-4 py-2">Payment to X</td>
-                    <td class="px-4 py-2 text-green-500">+ $100</td>
-                </tr>
-                <tr>
-                  <td class="px-4 py-2">01/01/1999</td>
-                  <td class="px-4 py-2">Payment to X</td>
-                  <td class="px-4 py-2 text-green-500">+ $100</td>
-              </tr>
-              <tr>
-                <td class="px-4 py-2">01/01/2005</td>
-                <td class="px-4 py-2">Payment to X</td>
-                <td class="px-4 py-2 text-green-500">+ $100</td>
+          <button
+            onclick="filterTransactionsByDateRange()"
+            class="py-[10px] px-4 bg-primary-3 text-white rounded-md self-end"
+          >
+            Filter
+          </button>
+        </div>
+        <table class="divide-y divide-gray-200 w-[80%] border">
+          <thead>
+            <tr>
+              <th
+                class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+              >
+                Date
+              </th>
+              <th
+                class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+              >
+                Explanation
+              </th>
+              <th
+                class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
+              >
+                Amount
+              </th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y divide-gray-200">
+            <!-- Örnek bir satır -->
+            <tr>
+              <td class="px-4 py-2">01/01/2023</td>
+              <td class="px-4 py-2">Payment to X</td>
+              <td class="px-4 py-2 text-green-500">+ $100</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">01/01/1999</td>
+              <td class="px-4 py-2">Payment to X</td>
+              <td class="px-4 py-2 text-green-500">+ $100</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">01/01/2005</td>
+              <td class="px-4 py-2">Payment to X</td>
+              <td class="px-4 py-2 text-green-500">+ $100</td>
             </tr>
             <tr>
               <td class="px-4 py-2">01/01/2007</td>
               <td class="px-4 py-2">Payment to X</td>
               <td class="px-4 py-2 text-green-500">+ $100</td>
-          </tr>
-          <tr>
-            <td class="px-4 py-2">01/01/1982</td>
-            <td class="px-4 py-2">Payment to X</td>
-            <td class="px-4 py-2 text-green-500">+ $100</td>
-        </tr>
-        <tr>
-          <td class="px-4 py-2">01/01/1994</td>
-          <td class="px-4 py-2">Payment to X</td>
-          <td class="px-4 py-2 text-green-500">+ $100</td>
-      </tr>
-      <tr>
-        <td class="px-4 py-2">01/01/2002</td>
-        <td class="px-4 py-2">Payment to X</td>
-        <td class="px-4 py-2 text-green-500">+ $100</td>
-    </tr>
-    <tr>
-      <td class="px-4 py-2">01/01/2020</td>
-      <td class="px-4 py-2">Payment to X</td>
-      <td class="px-4 py-2 text-green-500">+ $100</td>
-  </tr>
-                <!-- Diğer satırlar aynı şekilde eklenebilir -->
-            </tbody>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">01/01/1982</td>
+              <td class="px-4 py-2">Payment to X</td>
+              <td class="px-4 py-2 text-green-500">+ $100</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">01/01/1994</td>
+              <td class="px-4 py-2">Payment to X</td>
+              <td class="px-4 py-2 text-green-500">+ $100</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">01/01/2002</td>
+              <td class="px-4 py-2">Payment to X</td>
+              <td class="px-4 py-2 text-green-500">+ $100</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2">01/01/2020</td>
+              <td class="px-4 py-2">Payment to X</td>
+              <td class="px-4 py-2 text-green-500">+ $100</td>
+            </tr>
+            <!-- Diğer satırlar aynı şekilde eklenebilir -->
+          </tbody>
         </table>
-    </div>
       </div>
     </div>
     <script src="transaction.js"></script>
