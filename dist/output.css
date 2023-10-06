@@ -678,8 +678,24 @@ video {
   top: 26rem;
 }
 
-.top-\[28rem\] {
-  top: 28rem;
+.top-32 {
+  top: 8rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.top-36 {
+  top: 9rem;
+}
+
+.top-40 {
+  top: 10rem;
+}
+
+.top-28 {
+  top: 7rem;
 }
 
 .z-30 {
@@ -875,6 +891,14 @@ video {
 
 .h-full {
   height: 100%;
+}
+
+.h-screen {
+  height: 100vh;
+}
+
+.h-\[90\%\] {
+  height: 90%;
 }
 
 .min-h-\[20px\] {
@@ -1408,6 +1432,35 @@ video {
   background-color: rgb(234 179 8 / var(--tw-bg-opacity));
 }
 
+.bg-white\/30 {
+  background-color: rgb(255 255 255 / 0.3);
+}
+
+.bg-white\/80 {
+  background-color: rgb(255 255 255 / 0.8);
+}
+
+.bg-white\/90 {
+  background-color: rgb(255 255 255 / 0.9);
+}
+
+.bg-white\/95 {
+  background-color: rgb(255 255 255 / 0.95);
+}
+
+.bg-\[\] {
+  background-color: ;
+}
+
+.bg-\[\#\] {
+  background-color: #;
+}
+
+.bg-\[\#eaeaea\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(234 234 234 / var(--tw-bg-opacity));
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -1435,6 +1488,18 @@ video {
 
 .p-8 {
   padding: 2rem;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-1 {
+  padding: 0.25rem;
+}
+
+.p-12 {
+  padding: 3rem;
 }
 
 .px-10 {
@@ -1589,6 +1654,10 @@ video {
   padding-top: 1rem;
 }
 
+.pt-56 {
+  padding-top: 14rem;
+}
+
 .pt-6 {
   padding-top: 1.5rem;
 }
@@ -1599,6 +1668,46 @@ video {
 
 .pt-\[4\.5rem\] {
   padding-top: 4.5rem;
+}
+
+.pt-\[4rem\] {
+  padding-top: 4rem;
+}
+
+.pt-\[10rem\] {
+  padding-top: 10rem;
+}
+
+.pt-\[11rem\] {
+  padding-top: 11rem;
+}
+
+.pt-\[12rem\] {
+  padding-top: 12rem;
+}
+
+.pt-\[13rem\] {
+  padding-top: 13rem;
+}
+
+.pt-\[14rem\] {
+  padding-top: 14rem;
+}
+
+.pt-\[14re\] {
+  padding-top: 14re;
+}
+
+.pt-\[40rem\] {
+  padding-top: 40rem;
+}
+
+.pt-\[38rem\] {
+  padding-top: 38rem;
+}
+
+.pt-\[3rem\] {
+  padding-top: 3rem;
 }
 
 .text-left {
@@ -2228,10 +2337,6 @@ input[type="number"]::-ms-clear {
     top: 1.25rem;
   }
 
-  .md\:top-\[26rem\] {
-    top: 26rem;
-  }
-
   .md\:mx-0 {
     margin-left: 0px;
     margin-right: 0px;
@@ -2287,10 +2392,6 @@ input[type="number"]::-ms-clear {
 
   .md\:w-80 {
     width: 20rem;
-  }
-
-  .md\:w-\[80\%\] {
-    width: 80%;
   }
 
   .md\:w-full {
