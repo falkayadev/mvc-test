@@ -184,36 +184,43 @@
         <!-- Profile Section -->
         <div class="py-14 lg:p-20 w-full h-full">
           <div>
-            <h2 class="text-3xl text-primary-2 text-center mb-20">Profile</h2>
+            <h2 class="text-3xl text-primary-2 text-center mb-10">Profile</h2>
           </div>
-          <div
-            class="w-[95%] mx-auto rounded-b-2xl rounded-se-2xl shadow-lg bg-primary-3 full relative"
-          >
+          <div class="bg-primary-3 rounded-xl">
             <!-- TABS -->
-            <div class="divide-x">
+            <div class="flex justify-center w-full divide-x divide-primary-7">
               <!-- TAB 1 -->
               <div
-                class="tab1 absolute left-0 -top-10 w-36 bg-primary-5 text-white rounded-ss-2xl px-6 py-2 hover:bg-primary-4"
+                class="tab1 bg-primary-5 text-white py-2 hover:bg-primary-4 w-full flex justify-center rounded-ss-xl"
               >
-                <button class="tablink" onclick="openTab('Tab1', this)">
+                <button
+                  class="tablink flex items-center justify-center gap-1"
+                  onclick="openTab('Tab1', this)"
+                >
                   <i class="fa-solid fa-user"></i>
                   <a class="text-center" id="profile">Profile</a>
                 </button>
               </div>
               <!-- TAB 2 -->
               <div
-                class="tab2 absolute left-[6.7rem] w-40 -top-10 bg-primary-5 px-6 py-2 hover:bg-primary-4 text-white"
+                class="tab2 bg-primary-5 py-2 hover:bg-primary-4 text-white w-full flex justify-center"
               >
-                <button class="tablink" onclick="openTab('Tab2', this)">
+                <button
+                  class="tablink flex items-center justify-center gap-1"
+                  onclick="openTab('Tab2', this)"
+                >
                   <i class="fa-solid fa-key"></i>
                   <a class="text-center" id="password">Password</a>
                 </button>
               </div>
               <!-- TAB 3 -->
               <div
-                class="tab3 absolute left-[15.13rem] w-36 -top-10 bg-primary-5 px-6 py-2 rounded-se-2xl hover:bg-primary-4 text-white whitespace-nowrap"
+                class="tab3 bg-primary-5 py-2 hover:bg-primary-4 text-white w-full flex justify-center rounded-se-xl"
               >
-                <button class="tablink" onclick="openTab('Tab3', this)">
+                <button
+                  class="tablink flex items-center justify-center gap-1"
+                  onclick="openTab('Tab3', this)"
+                >
                   <i class="fa-solid fa-credit-card"></i>
                   <a class="text-center" id="payment"> Payment </a>
                 </button>
@@ -222,15 +229,15 @@
 
             <!-- Contents -->
 
-            <div id="Tab1" class="tabcontent py-4 text-white tab-content">
+            <div id="Tab1" class="tabcontent py-8 px-8 text-white tab-content">
               <!-- Full Name -->
-              <div class="flex justify-center w-[80%] mx-auto gap-10 mb-4">
+              <div class="flex justify-center gap-10 mb-2">
                 <div class="flex flex-col w-full">
                   <label for="firstName">First Name</label>
                   <input
                     type="text"
                     id="firstName"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
                 <div class="flex flex-col w-full">
@@ -238,19 +245,19 @@
                   <input
                     type="text"
                     id="lastName"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
               </div>
               <!-- Full Name End -->
               <!-- Email / Phone Number -->
-              <div class="flex justify-center w-[80%] mx-auto gap-10 mb-6">
+              <div class="flex justify-center gap-10 mb-6">
                 <div class="flex flex-col w-full">
                   <label for="firstName">E-Mail</label>
                   <input
                     type="email"
                     id="email"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
                 <div class="flex flex-col w-full">
@@ -258,27 +265,27 @@
                   <input
                     type="text"
                     id="phoneNumber"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
               </div>
               <!-- Email / Phone Number End -->
               <!-- Address  -->
-              <div class="flex flex-col w-[80%] mx-auto">
+              <div class="flex flex-col">
                 <label for="address">Address</label>
                 <input
                   type="text"
                   id="address"
-                  class="w-full text-primary-2 px-2"
+                  class="w-full text-primary-2 px-2 rounded"
                 />
               </div>
-              <div class="flex justify-center w-[80%] mx-auto gap-10">
+              <div class="flex justify-center gap-10">
                 <div class="flex flex-col w-full">
                   <label for="country">Country</label>
                   <input
                     type="text"
                     id="country"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
                 <div class="flex flex-col w-full">
@@ -286,17 +293,17 @@
                   <input
                     type="text"
                     id="city"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
               </div>
-              <div class="flex justify-center w-[80%] mx-auto gap-10">
+              <div class="flex justify-center gap-10">
                 <div class="flex flex-col w-full">
                   <label for="currency">Currency</label>
                   <select
                     name="currency"
                     id="currency"
-                    class="w-full h-full text-primary-2 px-2"
+                    class="w-full h-full text-primary-2 px-2 rounded"
                   >
                     <option value="chf">CHF</option>
                     <option value="eur">EUR</option>
@@ -308,7 +315,7 @@
                   <input
                     type="text"
                     id="postCode"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
               </div>
@@ -324,22 +331,22 @@
             <!-- Tab 1 End -->
             <div
               id="Tab2"
-              class="tabcontent py-4 text-white tab-content w-[80%] mx-auto hidden"
+              class="tabcontent py-8 px-8 text-white tab-content hidden"
             >
-              <div class="flex flex-col space-y-8 pt-14">
+              <div class="flex flex-col gap-4">
                 <div class="flex flex-col">
                   <label for="currentPassword">Current Password</label>
-                  <input type="text" id="currentPassword" />
+                  <input type="text" id="currentPassword" class="rounded" />
                 </div>
                 <div class="flex flex-col">
                   <label for="newPassword">New Password</label>
-                  <input type="text" id="newPassword" />
+                  <input type="text" id="newPassword" class="rounded" />
                 </div>
                 <div class="flex flex-col">
                   <label for="confirmPassword">Confirm New Password</label>
-                  <input type="text" id="confirmPassword" />
+                  <input type="text" id="confirmPassword" class="rounded" />
                 </div>
-                <div class="w-[80%] mx-auto pt-2 text-center">
+                <div class="text-center">
                   <button class="bg-primary-5 rounded-xl p-2">
                     Save Changes
                   </button>
@@ -349,12 +356,12 @@
             <!-- Tab 2 End -->
             <div
               id="Tab3"
-              class="tabcontent py-4 text-white hidden tab-content"
+              class="tabcontent py-8 px-8 text-white hidden tab-content"
             >
               <!-- Credit Card Preview -->
-              <div class="pt-6 w-[80%] mx-auto">
+              <div class="mb-4">
                 <div
-                  class="w-full h-52 mx-auto bg-yellow-500 rounded-lg relative"
+                  class="max-w-[24rem] h-52 mx-auto bg-yellow-500 rounded-lg relative border-2 border-primary-2"
                 >
                   <!-- VISA SVG -->
                   <svg
@@ -417,13 +424,13 @@
               </div>
               <!-- Credit Card Preview End -->
               <!-- Owner Input -->
-              <div class="flex justify-center w-[80%] mx-auto gap-10">
+              <div class="flex justify-center gap-6 mb-2">
                 <div class="flex flex-col w-full">
                   <label for="firstName">First Name</label>
                   <input
                     type="text"
                     id="inputFirstName"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
                 <div class="flex flex-col w-full">
@@ -431,25 +438,25 @@
                   <input
                     type="text"
                     id="inputLastName"
-                    class="w-full text-primary-2 px-2"
+                    class="w-full text-primary-2 px-2 rounded"
                   />
                 </div>
               </div>
               <!-- Owner Input End -->
               <!-- Credit Card Input -->
-              <div class="flex flex-col w-[80%] mx-auto">
+              <div class="flex flex-col mb-2">
                 <label for="inputCard" class="text-white">Card Number:</label>
                 <input
                   type="text"
                   id="inputCard"
                   oninput="insertSpaces()"
-                  class="text-black px-2"
+                  class="text-black px-2 rounded"
                   maxlength="19"
                 />
               </div>
               <!-- Credit Card Input End -->
               <!-- Expiration Date Input -->
-              <div class="flex w-[80%] mx-auto justify-center gap-10">
+              <div class="flex justify-center gap-4">
                 <div class="flex flex-col w-full">
                   <label for="inputCVC">CVC:</label>
                   <input
@@ -457,7 +464,7 @@
                     name="inputCVC"
                     id="inputCVC"
                     oninput="updateStars()"
-                    class="w-full px-2 text-black"
+                    class="w-full px-2 text-black rounded"
                     maxlength="3"
                   />
                 </div>
@@ -469,7 +476,7 @@
                     placeholder="MM/YY"
                     maxlength="5"
                     oninput="insertSlash()"
-                    class="w-full px-2 text-black"
+                    class="w-full px-2 text-black rounded"
                   />
                   <span id="error-message" style="color: red"></span>
                 </div>
