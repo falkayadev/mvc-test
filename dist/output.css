@@ -2153,6 +2153,10 @@ input[type="number"]::-ms-clear {
     margin-top: 5rem;
   }
 
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
   .sm\:flex {
     display: flex;
   }
