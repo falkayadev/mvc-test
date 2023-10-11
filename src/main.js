@@ -86,10 +86,15 @@ document.addEventListener("DOMContentLoaded", function () {
 //Modal Login Error
 
 function checkCredentials() {
+  var errMsg = document.getElementById("error-message1");
+  var errMsg2 = document.getElementById("error-message2");
   var email = document.getElementById("email").value;
   var password = document.getElementById("password").value;
 
-  if (email === "banned@email.com") {
+  errMsg.style.display = "none";
+  errMsg2.style.display = "none";
+
+  if (email === "banned@email.com" && password === "1234") {
     document.getElementById("error-message2").style.display = "block";
   } else if (email === "email@email.com" && password === "1234") {
     window.location.href = "./personal/dashboard.html";

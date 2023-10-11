@@ -16,3 +16,8 @@ function showHistory(id) {
   // Seçilen içeriği göster
   document.getElementById(id).style.display = "block";
 }
+
+function changeDiv() {
+  document.getElementById("deactiveEur").style.display = "none";
+  document.getElementById("activeEur").style.display = "block";
+}
