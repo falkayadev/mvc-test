@@ -98,6 +98,8 @@ function checkCredentials() {
     document.getElementById("error-message2").style.display = "block";
   } else if (email === "email@email.com" && password === "1234") {
     window.location.href = "./personal/dashboard.html";
+  } else if (email === "admin@email.com" && password === "1234") {
+    window.location.href = "./admin/admin.html";
   } else {
     document.getElementById("error-message1").style.display = "block";
     document.getElementById("error-message2").style.display = "none";
