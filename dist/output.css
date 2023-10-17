@@ -2064,6 +2064,18 @@ video {
   fill: #fff;
 }
 
+.fill-primary-2 {
+  fill: #0f2557;
+}
+
+.fill-primary-3 {
+  fill: #28559a;
+}
+
+.fill-primary-4 {
+  fill: #3778c2;
+}
+
 .stroke-0 {
   stroke-width: 0;
 }
