@@ -2060,6 +2060,10 @@ video {
   fill: #1e293b;
 }
 
+.fill-white {
+  fill: #fff;
+}
+
 .stroke-0 {
   stroke-width: 0;
 }
