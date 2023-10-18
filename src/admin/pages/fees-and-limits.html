@@ -54,7 +54,7 @@
           sidenav-close
         ></i>
         <a
-          class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-slate-700"
+          class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-gray-50"
           href="../admin.html"
         >
           <span
@@ -126,7 +126,7 @@
 
           <li class="mt-0.5 w-full">
             <a
-              class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-slate-700 transition-colors"
+              class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-gray-50 transition-colors"
               href="../pages/fees-and-limits.html"
             >
               <div
@@ -169,7 +169,7 @@
                 </svg>
               </div>
               <span
-                class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft"
+                class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft text-slate-700"
                 >Fees & Limits</span
               >
             </a>
@@ -286,7 +286,7 @@
                   <!-- add show class on dropdown open js -->
                   <li class="relative mb-2">
                     <a
-                      class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg bg-transparent px-4 duration-300 hover:bg-gray-200 hover:text-slate-700 lg:transition-colors"
+                      class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg bg-transparent px-4 duration-300 hover:bg-gray-200 hover:text-gray-50 lg:transition-colors"
                       href="javascript:;"
                     >
                       <div class="flex py-1">
@@ -315,7 +315,7 @@
 
                   <li class="relative">
                     <a
-                      class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg px-4 duration-300 hover:bg-gray-200 hover:text-slate-700 lg:transition-colors"
+                      class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg px-4 duration-300 hover:bg-gray-200 hover:text-gray-50 lg:transition-colors"
                       href="javascript:;"
                     >
                       <div class="flex py-1">
@@ -383,62 +383,90 @@
       </nav>
       <article class="w-[99%] mx-auto h-screen bg-primary-3">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full mb-4"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 h-full mb-4 gap-4"
         >
-          <div class="bg-red-300 w-full h-full">
-            <div class="flex flex-col items-center justify-center h-full gap-4 ">
-              <div class="text-slate-900 text-3xl">Balance Limit</div>
+          <div class="bg-primary-5 w-full h-full">
+            <div class="flex flex-col items-center justify-center h-full gap-4">
+              <div class="text-gray-50 text-3xl">Balance Limit</div>
               <div>
-                <input type="text" value="$2000" class="text-black rounded-lg px-2 py-3" />
+                <input
+                  type="text"
+                  value="$2000"
+                  class="text-black rounded-lg px-2 py-3"
+                />
               </div>
             </div>
           </div>
-          <div class="bg-blue-300 w-full h-full">
-            <div class="flex flex-col items-center justify-center h-full gap-4 ">
-              <div class="text-slate-900 text-3xl">Incoming Amount</div>
+          <div class="bg-primary-5 w-full h-full">
+            <div class="flex flex-col items-center justify-center h-full gap-4">
+              <div class="text-gray-50 text-3xl">Incoming Amount</div>
               <div>
-                <input type="text" value="$2000" class="text-black rounded-lg px-2 py-3" />
+                <input
+                  type="text"
+                  value="$2000"
+                  class="text-black rounded-lg px-2 py-3"
+                />
               </div>
             </div>
           </div>
-          <div class="bg-green-300 w-full h-full">
-            <div class="flex flex-col items-center justify-center h-full gap-4 ">
-              <div class="text-slate-900 text-3xl">Cash Deposit Limit</div>
+          <div class="bg-primary-5 w-full h-full">
+            <div class="flex flex-col items-center justify-center h-full gap-4">
+              <div class="text-gray-50 text-3xl">Cash Deposit Limit</div>
               <div>
-                <input type="text" value="$2000" class="text-black rounded-lg px-2 py-3" />
+                <input
+                  type="text"
+                  value="$2000"
+                  class="text-black rounded-lg px-2 py-3"
+                />
               </div>
             </div>
           </div>
-          <div class="bg-gray-300 w-full h-full">
-            <div class="flex flex-col items-center justify-center h-full gap-4 ">
-              <div class="text-slate-900 text-3xl">Send Money</div>
+          <div class="bg-primary-5 w-full h-full">
+            <div class="flex flex-col items-center justify-center h-full gap-4">
+              <div class="text-gray-50 text-3xl">Send Money</div>
               <div>
-                <input type="text" value="$2000" class="text-black rounded-lg px-2 py-3" />
+                <input
+                  type="text"
+                  value="$2000"
+                  class="text-black rounded-lg px-2 py-3"
+                />
               </div>
             </div>
           </div>
-          <div class="bg-lime-300 w-full h-full">
-            <div class="flex flex-col items-center justify-center h-full gap-4 ">
-              <div class="text-slate-900 text-3xl">Sending Money to IBAN</div>
+          <div class="bg-primary-5 w-full h-full">
+            <div class="flex flex-col items-center justify-center h-full gap-4">
+              <div class="text-gray-50 text-3xl">Sending Money to IBAN</div>
               <div>
-                <input type="text" value="$2000" class="text-black rounded-lg px-2 py-3" />
+                <input
+                  type="text"
+                  value="$2000"
+                  class="text-black rounded-lg px-2 py-3"
+                />
               </div>
             </div>
           </div>
-          <div class="bg-fuchsia-300 w-full h-full">
-            <div class="flex flex-col items-center justify-center h-full gap-4 ">
-              <div class="text-slate-900 text-3xl">International Money Transfer </div>
+          <div class="bg-primary-5 w-full h-full">
+            <div class="flex flex-col items-center justify-center h-full gap-4">
+              <div class="text-gray-50 text-3xl">
+                International Money Transfer
+              </div>
               <div>
-                <input type="text" value="$2000" class="text-black rounded-lg px-2 py-3" />
+                <input
+                  type="text"
+                  value="$2000"
+                  class="text-black rounded-lg px-2 py-3"
+                />
               </div>
             </div>
-            
           </div>
           <div
-            class="bg-gray-100 col-span-3 -order-1 flex place-content-center items-center"
+            class="bg-primary-5 md:col-span-2 lg:col-span-3 -order-1 flex place-content-center items-center"
           >
-            <h2>Limit Regulations</h2>
+            <h2 class="text-gray-50">Limit Regulations</h2>
           </div>
+          <button class="p-3 rounded text-2xl col-start-2 max-h-10">
+            Save Changes
+          </button>
         </div>
       </article>
     </main>
