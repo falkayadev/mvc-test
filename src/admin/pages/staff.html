@@ -4,24 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../../../dist/output.css" />
     <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="../assets/img/apple-icon.png"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
-    <title>walletCo. - Fees & Limits</title>
+    <link rel="stylesheet" href="../../../dist/output.css" />
+    <title>walletCo. - Staff</title>
     <!--     Fonts and icons     -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
     </style>
-    <!-- Font Awesome Icons -->
-    <script
-      src="https://kit.fontawesome.com/42d5adcbca.js"
-      crossorigin="anonymous"
-    ></script>
+
     <!-- Nucleo Icons -->
     <link href="../assets/css/nucleo-icons.css" rel="stylesheet" />
     <link href="../assets/css/nucleo-svg.css" rel="stylesheet" />
@@ -43,22 +41,23 @@
   </head>
 
   <body
-    class="m-0 font-poppins antialiased font-normal text-base leading-default bg-primary-3 text-white"
+    class="font-poppins text-base antialiased font-normal leading-default bg-primary-3 text-white"
   >
+    <!-- sidenav  -->
     <aside
       class="max-w-62.5 ease-nav-brand z-990 fixed inset-y-0 my-4 ml-4 block w-full -translate-x-full flex-wrap items-center justify-between overflow-y-auto rounded-2xl border-0 bg-primary-5 p-0 antialiased shadow-none transition-transform duration-200 xl:left-0 xl:translate-x-0 xl:bg-transparent"
     >
       <div class="h-19.5">
         <i
-          class="absolute top-0 right-0 hidden p-4 opacity-50 cursor-pointer fas fa-times text-slate-400 xl:hidden"
+          class="absolute top-0 right-0 hidden p-4 opacity-50 cursor-pointer fas fa-times text-white xl:hidden"
           sidenav-close
         ></i>
         <a
-          class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-gray-50"
+          class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-white"
           href="../admin.html"
         >
           <span
-            class="ml-1 font-comfortaa font-semibold transition-all duration-200 ease-nav-brand text-white"
+            class="ml-1 font-semibold transition-all duration-200 ease-nav-brand font-comfortaa"
             >walletCo. Dashboard</span
           >
         </a>
@@ -68,14 +67,13 @@
         class="h-px mt-0 bg-transparent bg-gradient-to-r from-transparent via-black/40 to-transparent"
       />
 
-      <!-- h-sidenav -->
       <div
         class="items-center block w-auto max-h-screen overflow-auto h-sidenav grow basis-full"
       >
         <ul class="flex flex-col pl-0 mb-0">
           <li class="mt-0.5 w-full">
             <a
-              class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
+              class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg px-4 transition-colors"
               href="../admin.html"
             >
               <div
@@ -104,7 +102,7 @@
                       <g transform="translate(1716.000000, 291.000000)">
                         <g transform="translate(0.000000, 148.000000)">
                           <path
-                            class="fill-slate-800 opacity-60"
+                            class="opacity-60 fill-slate-800"
                             d="M46.7199583,10.7414583 L40.8449583,0.949791667 C40.4909749,0.360605034 39.8540131,0 39.1666667,0 L7.83333333,0 C7.1459869,0 6.50902508,0.360605034 6.15504167,0.949791667 L0.280041667,10.7414583 C0.0969176761,11.0460037 -1.23209662e-05,11.3946378 -1.23209662e-05,11.75 C-0.00758042603,16.0663731 3.48367543,19.5725301 7.80004167,19.5833333 L7.81570833,19.5833333 C9.75003686,19.5882688 11.6168794,18.8726691 13.0522917,17.5760417 C16.0171492,20.2556967 20.5292675,20.2556967 23.494125,17.5760417 C26.4604562,20.2616016 30.9794188,20.2616016 33.94575,17.5760417 C36.2421905,19.6477597 39.5441143,20.1708521 42.3684437,18.9103691 C45.1927731,17.649886 47.0084685,14.8428276 47.0000295,11.75 C47.0000295,11.3946378 46.9030823,11.0460037 46.7199583,10.7414583 Z"
                           ></path>
                           <path
@@ -126,11 +124,11 @@
 
           <li class="mt-0.5 w-full">
             <a
-              class="py-2.7 shadow-soft-xl text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap rounded-lg bg-white px-4 font-semibold text-gray-50 transition-colors"
-              href="../pages/fees-and-limits.html"
+              class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
+              href="./fees-and-limits.html"
             >
               <div
-                class="bg-gradient-to-tl from-primary-3 to-primary-6 shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5"
+                class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5"
               >
                 <svg
                   width="12px"
@@ -155,11 +153,11 @@
                       <g transform="translate(1716.000000, 291.000000)">
                         <g transform="translate(453.000000, 454.000000)">
                           <path
-                            class="opacity-60"
+                            class="fill-slate-800 opacity-60"
                             d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
                           ></path>
                           <path
-                            class=""
+                            class="fill-slate-800"
                             d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"
                           ></path>
                         </g>
@@ -169,7 +167,7 @@
                 </svg>
               </div>
               <span
-                class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft text-slate-700"
+                class="ml-1 duration-300 opacity-100 pointer-events-none ease-soft"
                 >Fees & Limits</span
               >
             </a>
@@ -177,11 +175,11 @@
 
           <li class="mt-0.5 w-full">
             <a
-              class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
-              href="./staff.html"
+              class="bg-white rounded-lg text-slate-700 py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors font-semibold"
+              href="#"
             >
               <div
-                class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center fill-current stroke-0 text-center xl:p-2.5"
+                class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-tl from-primary-3 to-primary-6 bg-center fill-current stroke-0 text-center xl:p-2.5"
               >
                 <svg
                   height="12px"
@@ -195,26 +193,26 @@
                 >
                   <g>
                     <path
-                      style="fill: #030104"
+                      style="fill: white"
                       d="M10.898,10.787c0.314,2.613,2.564,5.318,4.604,5.318c2.341,0,4.571-2.845,4.919-5.319
-      c0.129-0.095,0.348-0.322,0.428-0.838c0,0,0.502-1.792-0.164-1.6c0.232-0.69,1-3.379-0.485-5.052c0,0-0.697-0.947-2.386-1.452
-      c-0.059-0.051-0.12-0.1-0.189-0.148c0,0,0.037,0.043,0.094,0.12c-0.098-0.027-0.195-0.052-0.301-0.077
-      c-0.092-0.096-0.193-0.194-0.311-0.301c0,0,0.104,0.106,0.225,0.282c-0.044-0.01-0.086-0.02-0.134-0.03
-      c-0.076-0.118-0.17-0.237-0.288-0.358c0,0,0.049,0.091,0.117,0.24c-0.312-0.228-0.938-0.758-0.938-1.349
-      c0,0-0.394,0.184-0.623,0.517c0.092-0.276,0.242-0.531,0.488-0.74c0,0-0.26,0.133-0.496,0.419
-      c-0.184,0.102-0.604,0.391-0.747,0.903l-0.133-0.066c0.065-0.148,0.158-0.299,0.282-0.455c0,0-0.182,0.164-0.342,0.425
-      l-0.271-0.138c0.08-0.151,0.188-0.304,0.331-0.459c0,0-0.144,0.113-0.302,0.303c0.045-0.176,0.036-0.377-0.511,0.222
-      c0,0-2.466,1.071-3.183,3.288c0,0-0.422,1,0.137,3.944c-0.792-0.374-0.251,1.562-0.251,1.562
-      C10.55,10.466,10.767,10.691,10.898,10.787z M10.851,9.738c0,0.002,0,0.002,0,0.003C10.851,9.74,10.851,9.74,10.851,9.738z
-       M15.384,0.517c-0.118,0.167-0.224,0.376-0.273,0.631l-0.088-0.035C15.091,0.898,15.204,0.694,15.384,0.517z"
+    c0.129-0.095,0.348-0.322,0.428-0.838c0,0,0.502-1.792-0.164-1.6c0.232-0.69,1-3.379-0.485-5.052c0,0-0.697-0.947-2.386-1.452
+    c-0.059-0.051-0.12-0.1-0.189-0.148c0,0,0.037,0.043,0.094,0.12c-0.098-0.027-0.195-0.052-0.301-0.077
+    c-0.092-0.096-0.193-0.194-0.311-0.301c0,0,0.104,0.106,0.225,0.282c-0.044-0.01-0.086-0.02-0.134-0.03
+    c-0.076-0.118-0.17-0.237-0.288-0.358c0,0,0.049,0.091,0.117,0.24c-0.312-0.228-0.938-0.758-0.938-1.349
+    c0,0-0.394,0.184-0.623,0.517c0.092-0.276,0.242-0.531,0.488-0.74c0,0-0.26,0.133-0.496,0.419
+    c-0.184,0.102-0.604,0.391-0.747,0.903l-0.133-0.066c0.065-0.148,0.158-0.299,0.282-0.455c0,0-0.182,0.164-0.342,0.425
+    l-0.271-0.138c0.08-0.151,0.188-0.304,0.331-0.459c0,0-0.144,0.113-0.302,0.303c0.045-0.176,0.036-0.377-0.511,0.222
+    c0,0-2.466,1.071-3.183,3.288c0,0-0.422,1,0.137,3.944c-0.792-0.374-0.251,1.562-0.251,1.562
+    C10.55,10.466,10.767,10.691,10.898,10.787z M10.851,9.738c0,0.002,0,0.002,0,0.003C10.851,9.74,10.851,9.74,10.851,9.738z
+     M15.384,0.517c-0.118,0.167-0.224,0.376-0.273,0.631l-0.088-0.035C15.091,0.898,15.204,0.694,15.384,0.517z"
                     />
                     <path
-                      style="fill: #030104"
+                      style="fill: white"
                       d="M25.876,19.226c-0.645-1.43-4.577-2.669-4.577-2.669c-2.095-0.738-2.109-1.476-2.109-1.476
-      c-4.121,8.125-7.253,0.022-7.253,0.022c-0.286,1.097-4.525,2.381-4.525,2.381c-1.24,0.478-1.765,1.192-1.765,1.192
-      c-1.834,2.719-2.049,8.769-2.049,8.769c0.024,1.383,0.618,1.525,0.618,1.525c4.218,1.882,10.831,2.215,10.831,2.215
-      c6.792,0.144,11.733-1.929,11.733-1.929c0.718-0.454,0.738-0.812,0.738-0.812C28.019,24.108,25.876,19.226,25.876,19.226z
-       M17.976,26.946h-4.759V25.14h4.759V26.946z"
+    c-4.121,8.125-7.253,0.022-7.253,0.022c-0.286,1.097-4.525,2.381-4.525,2.381c-1.24,0.478-1.765,1.192-1.765,1.192
+    c-1.834,2.719-2.049,8.769-2.049,8.769c0.024,1.383,0.618,1.525,0.618,1.525c4.218,1.882,10.831,2.215,10.831,2.215
+    c6.792,0.144,11.733-1.929,11.733-1.929c0.718-0.454,0.738-0.812,0.738-0.812C28.019,24.108,25.876,19.226,25.876,19.226z
+     M17.976,26.946h-4.759V25.14h4.759V26.946z"
                     />
                   </g>
                 </svg>
@@ -228,9 +226,13 @@
         </ul>
       </div>
     </aside>
+
+    <!-- end sidenav -->
+
     <main
       class="ease-soft-in-out xl:ml-68.5 relative h-full max-h-screen rounded-xl transition-all duration-200"
     >
+      <!-- Navbar -->
       <nav
         class="relative flex flex-wrap items-center justify-between px-0 py-2 mx-6 transition-all shadow-none duration-250 ease-soft-in rounded-2xl lg:flex-nowrap lg:justify-start"
       >
@@ -249,10 +251,10 @@
                 class="text-sm pl-2 capitalize leading-normal text-white before:float-left before:pr-2 before:text-gray-600 before:content-['/']"
                 aria-current="page"
               >
-                Fees & Limits
+                Staff
               </li>
             </ol>
-            <h6 class="mb-0 font-bold capitalize text-white">Fees & Limits</h6>
+            <h6 class="mb-0 font-bold capitalize text-white">Staff</h6>
           </nav>
 
           <div
@@ -453,106 +455,175 @@
           </div>
         </div>
       </nav>
-      <article class="w-[99%] mx-auto h-screen bg-primary-3">
-        <div
-          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 h-full mb-4 gap-4 mx-6"
-        >
-          <div class="bg-primary-5 w-full h-full rounded-lg py-10">
-            <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Balance Limit</div>
-              <div class="flex justify-center">
-                <input
-                  type="text"
-                  value="$2000"
-                  class="text-black rounded-lg px-2 py-3 w-2/3"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="bg-primary-5 w-full h-full rounded-lg py-10">
-            <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Incoming Amount</div>
-              <div class="flex justify-center">
-                <input
-                  type="text"
-                  value="$2000"
-                  class="text-black rounded-lg px-2 py-3 w-2/3"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="bg-primary-5 w-full h-full rounded-lg py-10">
-            <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Cash Deposit Limit</div>
-              <div class="flex justify-center">
-                <input
-                  type="text"
-                  value="$2000"
-                  class="text-black rounded-lg px-2 py-3 w-2/3"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="bg-primary-5 w-full h-full rounded-lg py-10">
-            <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Send Money</div>
-              <div class="flex justify-center">
-                <input
-                  type="text"
-                  value="$2000"
-                  class="text-black rounded-lg px-2 py-3 w-2/3"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="bg-primary-5 w-full h-full rounded-lg py-10">
-            <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Sending Money to IBAN</div>
-              <div class="flex justify-center">
-                <input
-                  type="text"
-                  value="$2000"
-                  class="text-black rounded-lg px-2 py-3 w-2/3"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="bg-primary-5 w-full h-full rounded-lg py-10">
-            <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">
-                International Money Transfer
-              </div>
-              <div class="flex justify-center">
-                <input
-                  type="text"
-                  value="$2000"
-                  class="text-black rounded-lg px-2 py-3 w-2/3"
-                />
-              </div>
-            </div>
-          </div>
+      <!-- end Navbar -->
+
+      <!-- Staff Content Section -->
+      <div class="space-y-10">
+        <div>
+          <h2 class="text-center text-yellow-400">Staff Info</h2>
           <div
-            class="bg-yellow-400 md:col-span-2 xl:col-span-3 -order-1 flex place-content-center items-center rounded-lg py-4"
+            class="bg-primary-3 w-full grid grid-cols-3 auto-rows-[10rem] auto-cols-min gap-6 px-4 text-slate-700"
           >
-            <h2 class="text-slate-700">Limit Regulations</h2>
+            <div
+              class="w-full h-full bg-yellow-400 flex items-center px-8 rounded-xl gap-4"
+            >
+              <img
+                src="../assets/img/bruce-mars.jpg"
+                alt="admin photo"
+                class="w-16 h-16 rounded-full border-2 border-primary-3"
+              />
+              <div class="flex flex-col justify-center">
+                <span class="text-2xl">Johnson Smith</span>
+                <span class="text-sm">johnson.smith@email.com</span>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 flex items-center px-8 rounded-xl gap-4"
+            >
+              <img
+                src="../assets/img/bruce-mars.jpg"
+                alt="admin photo"
+                class="w-16 h-16 rounded-full border-2 border-primary-3"
+              />
+              <div class="flex flex-col justify-center">
+                <span class="text-2xl">Johnson Smith</span>
+                <span class="text-sm">johnson.smith@email.com</span>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 flex items-center px-8 rounded-xl gap-4"
+            >
+              <img
+                src="../assets/img/bruce-mars.jpg"
+                alt="admin photo"
+                class="w-16 h-16 rounded-full border-2 border-primary-3"
+              />
+              <div class="flex flex-col justify-center">
+                <span class="text-2xl">Johnson Smith</span>
+                <span class="text-sm">johnson.smith@email.com</span>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 flex items-center px-8 rounded-xl gap-4"
+            >
+              <img
+                src="../assets/img/bruce-mars.jpg"
+                alt="admin photo"
+                class="w-16 h-16 rounded-full border-2 border-primary-3"
+              />
+              <div class="flex flex-col justify-center">
+                <span class="text-2xl">Johnson Smith</span>
+                <span class="text-sm">johnson.smith@email.com</span>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 flex items-center px-8 rounded-xl gap-4"
+            >
+              <img
+                src="../assets/img/bruce-mars.jpg"
+                alt="admin photo"
+                class="w-16 h-16 rounded-full border-2 border-primary-3"
+              />
+              <div class="flex flex-col justify-center">
+                <span class="text-2xl">Johnson Smith</span>
+                <span class="text-sm">johnson.smith@email.com</span>
+              </div>
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 flex items-center px-8 rounded-xl gap-4"
+            >
+              <img
+                src="../assets/img/bruce-mars.jpg"
+                alt="admin photo"
+                class="w-16 h-16 rounded-full border-2 border-primary-3"
+              />
+              <div class="flex flex-col justify-center">
+                <span class="text-2xl">Johnson Smith</span>
+                <span class="text-sm">johnson.smith@email.com</span>
+              </div>
+            </div>
           </div>
-          <button
-            class="bg-yellow-400 text-slate-700 p-3 rounded text-2xl lg:col-span-2 xl:col-span-1 xl:col-start-2 max-h-16"
-          >
-            Save Changes
-          </button>
         </div>
-      </article>
+        <!-- new staff -->
+        <div class="text-slate-700">
+          <h2 class="text-center text-yellow-400">New Staff</h2>
+          <div
+            class="w-full grid grid-cols-3 auto-rows-min auto-cols-min px-4 gap-6"
+          >
+            <div
+              class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center"
+            >
+              <label for="firstName" class="text-2xl">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                class="rounded-lg text-slate-700 px-2 text-center"
+              />
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center"
+            >
+              <label for="lastName" class="text-2xl">Last Name</label>
+              <input
+                type="text"
+                id="lastName"
+                class="rounded-lg text-slate-700 px-2 text-center"
+              />
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center"
+            >
+              <label for="birthdate" class="text-2xl">Birthdate</label>
+              <input
+                type="date"
+                id="birthdate"
+                class="rounded-lg text-slate-700 px-2 text-center"
+              />
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center"
+            >
+              <label for="email" class="text-2xl">Email</label>
+              <input
+                type="email"
+                id="email"
+                class="rounded-lg text-slate-700 px-2 text-center"
+              />
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center"
+            >
+              <label for="password" class="text-2xl">Password</label>
+              <input
+                type="password"
+                id="password"
+                class="rounded-lg text-slate-700 px-2 text-center"
+              />
+            </div>
+            <div
+              class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center"
+            >
+              <label for="confirmPassword" class="text-2xl">Password</label>
+              <input
+                type="text"
+                id="confirmPassword"
+                class="rounded-lg text-slate-700 px-2 text-center"
+              />
+            </div>
+          </div>
+          <div class="grid place-content-center mt-6 pb-10">
+            <button
+              class="px-10 py-4 bg-primary-3 border-4 border-yellow-400 text-yellow-400 rounded-lg font-semibold"
+            >
+              Add Staff
+            </button>
+          </div>
+        </div>
+
+        <!-- new staff end -->
+      </div>
+
+      <!-- Staff Content Section End -->
     </main>
   </body>
-  <!-- plugin for scrollbar  -->
-  <script src="../assets/js/plugins/perfect-scrollbar.min.js" async></script>
-  <!-- github button -->
-  <script async defer src="https://buttons.github.io/buttons.js"></script>
-  <!-- main script file  -->
-  <script
-    src="../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5"
-    async
-  ></script>
-  <script src="../assets/js/sidenav-burger.js"></script>
 </html>
