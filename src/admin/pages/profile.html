@@ -124,7 +124,7 @@
           <li class="mt-0.5 w-full">
             <a
               class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
-              href="../pages/fess-and-limits.html"
+              href="../pages/fees-and-limits.html"
             >
               <div
                 class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5"
@@ -303,32 +303,6 @@
                     </a>
                   </li>
 
-                  <li class="relative mb-2">
-                    <a
-                      class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg px-4 duration-300 lg:transition-colors"
-                      href="javascript:;"
-                    >
-                      <div class="flex py-1">
-                        <div class="my-auto">
-                          <img
-                            src="../assets/img/small-logos/logo-spotify.svg"
-                            class="inline-flex items-center justify-center mr-4 text-white text-sm bg-gradient-to-tl from-gray-900 to-slate-800 h-9 w-9 max-w-none rounded-xl"
-                          />
-                        </div>
-                        <div class="flex flex-col justify-center">
-                          <h6 class="mb-1 font-normal leading-normal text-sm">
-                            <span class="font-semibold">New album</span> by
-                            Travis Scott
-                          </h6>
-                          <p class="mb-0 leading-tight text-xs text-slate-400">
-                            <i class="mr-1 fa fa-clock" aria-hidden="true"></i>
-                            1 day
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-
                   <li class="relative">
                     <a
                       class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg px-4 duration-300 lg:transition-colors"
@@ -401,10 +375,6 @@
       <div class="w-full px-6 mx-auto">
         <div
           class="relative flex items-center p-0 mt-6 overflow-hidden bg-center bg-cover min-h-75 rounded-2xl"
-          style="
-            background-image: url('../assets/img/curved-images/curved0.jpg');
-            background-position-y: 50%;
-          "
         >
           <span
             class="absolute inset-y-0 w-full h-full bg-center bg-cover bg-gradient-to-tl from-primary-3 to-primary-6 opacity-60"
@@ -443,9 +413,10 @@
                 >
                   <li class="z-30 flex-auto text-center">
                     <a
-                      class="z-30 block w-full px-0 py-1 mb-0 transition-all border-0 rounded-lg ease-soft-in-out bg-inherit text-primary-2"
+                      class="z-30 block w-full px-0 py-1 mb-0 border-0 rounded-lg ease-soft-in-out bg-inherit text-primary-2"
                       nav-link
                       href="javascript:;"
+                      onclick="chatOpenBtn()"
                       role="tab"
                       aria-selected="false"
                     >
@@ -489,59 +460,6 @@
                       <span class="ml-1 text-white">Messages</span>
                     </a>
                   </li>
-                  <li class="z-30 flex-auto text-center">
-                    <a
-                      class="z-30 block w-full px-0 py-1 mb-0 transition-colors border-0 rounded-lg ease-soft-in-out bg-inherit text-slate-700"
-                      nav-link
-                      href="javascript:;"
-                      role="tab"
-                      aria-selected="false"
-                    >
-                      <svg
-                        class="text-slate-700"
-                        width="16px"
-                        height="16px"
-                        viewBox="0 0 40 40"
-                        version="1.1"
-                        xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                      >
-                        <title>settings</title>
-                        <g
-                          stroke="none"
-                          stroke-width="1"
-                          fill="none"
-                          fill-rule="evenodd"
-                        >
-                          <g
-                            transform="translate(-2020.000000, -442.000000)"
-                            fill="#FFFFFF"
-                            fill-rule="nonzero"
-                          >
-                            <g transform="translate(1716.000000, 291.000000)">
-                              <g transform="translate(304.000000, 151.000000)">
-                                <polygon
-                                  class="fill-white"
-                                  opacity="0.596981957"
-                                  points="18.0883333 15.7316667 11.1783333 8.82166667 13.3333333 6.66666667 6.66666667 0 0 6.66666667 6.66666667 13.3333333 8.82166667 11.1783333 15.315 17.6716667"
-                                ></polygon>
-                                <path
-                                  class="fill-white"
-                                  d="M31.5666667,23.2333333 C31.0516667,23.2933333 30.53,23.3333333 30,23.3333333 C29.4916667,23.3333333 28.9866667,23.3033333 28.48,23.245 L22.4116667,30.7433333 L29.9416667,38.2733333 C32.2433333,40.575 35.9733333,40.575 38.275,38.2733333 L38.275,38.2733333 C40.5766667,35.9716667 40.5766667,32.2416667 38.275,29.94 L31.5666667,23.2333333 Z"
-                                  opacity="0.596981957"
-                                ></path>
-                                <path
-                                  class="fill-white"
-                                  d="M33.785,11.285 L28.715,6.215 L34.0616667,0.868333333 C32.82,0.315 31.4483333,0 30,0 C24.4766667,0 20,4.47666667 20,10 C20,10.99 20.1483333,11.9433333 20.4166667,12.8466667 L2.435,27.3966667 C0.95,28.7083333 0.0633333333,30.595 0.00333333333,32.5733333 C-0.0583333333,34.5533333 0.71,36.4916667 2.11,37.89 C3.47,39.2516667 5.27833333,40 7.20166667,40 C9.26666667,40 11.2366667,39.1133333 12.6033333,37.565 L27.1533333,19.5833333 C28.0566667,19.8516667 29.01,20 30,20 C35.5233333,20 40,15.5233333 40,10 C40,8.55166667 39.685,7.18 39.1316667,5.93666667 L33.785,11.285 Z"
-                                ></path>
-                              </g>
-                            </g>
-                          </g>
-                        </g>
-                      </svg>
-                      <span class="ml-1 text-white">Settings</span>
-                    </a>
-                  </li>
                 </ul>
               </div>
             </div>
@@ -549,7 +467,7 @@
         </div>
       </div>
       <div class="w-full p-6 mx-auto">
-        <div class="flex flex-wrap -mx-3">
+        <div class="flex flex-wrap -mx-3 gap-8 xl:gap-0">
           <div class="w-full max-w-full px-3 xl:w-4/12">
             <div
               class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
@@ -559,20 +477,20 @@
                   class="bg-yellow-400 text-primary-2 w-full h-[27rem] overflow-y-scroll rounded-xl border-4 border-primary-5"
                 >
                   <div
-                    class="rounded-3xl py-10 space-y-0 shadow-lg flex flex-col justify-center"
+                    class="rounded-3xl py-6 space-y-0 shadow-lg flex flex-col justify-center"
                   >
                     <h4 class="text-center text-primary-2 font-light">
-                      Last Transactions
+                      Transaction Tracker
                     </h4>
                     <div
                       id="item"
-                      class="flex justify-between items-center px-10"
+                      class="flex justify-between items-center px-10 py-2 hover:bg-primary-3"
                     >
                       <div id="itemDesc" class="flex flex-col w-[160px]">
                         <p>Restauran Da Paolo CHF</p>
                         <div id="itemDescDate" class="flex justify-between">
-                          <p class="text-sm text-primary-5">28.01.2024</p>
-                          <p class="text-sm text-primary-5">02.45PM</p>
+                          <p class="text-sm text-white">28.01.2024</p>
+                          <p class="text-sm text-white">02.45PM</p>
                         </div>
                       </div>
                       <div
@@ -586,13 +504,13 @@
                     </div>
                     <div
                       id="item2"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
                     >
                       <div id="itemDesc2" class="flex flex-col w-[160px]">
                         <p>Cash Inflow</p>
                         <div id="itemDescDate2" class="flex justify-between">
-                          <p class="text-primary-5 text-sm">28.01.2024</p>
-                          <p class="text-primary-5 text-sm">02.45PM</p>
+                          <p class="text-white text-sm">28.01.2024</p>
+                          <p class="text-white text-sm">02.45PM</p>
                         </div>
                       </div>
                       <div id="itemAmount2">
@@ -603,7 +521,7 @@
                     </div>
                     <div
                       id="item3"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
                     >
                       <div id="itemDesc3" class="flex flex-col">
                         <p>Python E-Book</p>
@@ -611,8 +529,8 @@
                           id="itemDescDate3"
                           class="flex justify-between w-[160px]"
                         >
-                          <p class="text-primary-5 text-sm">28.01.2024</p>
-                          <p class="text-primary-5 text-sm">02.45PM</p>
+                          <p class="text-white text-sm">28.01.2024</p>
+                          <p class="text-white text-sm">02.45PM</p>
                         </div>
                       </div>
                       <div id="itemAmount3">
@@ -623,13 +541,13 @@
                     </div>
                     <div
                       id="item4"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
                     >
                       <div id="itemDesc4" class="flex flex-col w-[160px]">
                         <p>GYM Membership</p>
                         <div id="itemDescDate4" class="flex justify-between">
-                          <p class="text-primary-5 text-sm">28.01.2024</p>
-                          <p class="text-primary-5 text-sm">02.45PM</p>
+                          <p class="text-white text-sm">28.01.2024</p>
+                          <p class="text-white text-sm">02.45PM</p>
                         </div>
                       </div>
                       <div id="itemAmount4">
@@ -640,7 +558,7 @@
                     </div>
                     <div
                       id="item5"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
                     >
                       <div id="itemDesc5" class="flex flex-col">
                         <p>Refund</p>
@@ -648,8 +566,8 @@
                           id="itemDescDate5"
                           class="flex justify-between w-[160px]"
                         >
-                          <p class="text-primary-5 text-sm">28.01.2024</p>
-                          <p class="text-primary-5 text-sm">02.45PM</p>
+                          <p class="text-white text-sm">28.01.2024</p>
+                          <p class="text-white text-sm">02.45PM</p>
                         </div>
                       </div>
                       <div id="itemAmount5">
@@ -660,7 +578,7 @@
                     </div>
                     <div
                       id="item6"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
                     >
                       <div id="itemDesc6" class="flex flex-col">
                         <p>Restauran Da Paolo</p>
@@ -668,8 +586,8 @@
                           id="itemDescDate6"
                           class="flex justify-between w-[160px]"
                         >
-                          <p class="text-primary-5 text-sm">28.01.2024</p>
-                          <p class="text-primary-5 text-sm">02.45PM</p>
+                          <p class="text-white text-sm">28.01.2024</p>
+                          <p class="text-white text-sm">02.45PM</p>
                         </div>
                       </div>
                       <div id="itemAmount6">
@@ -683,7 +601,7 @@
               </div>
             </div>
           </div>
-          <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12 -order-1">
+          <div class="w-full max-w-full px-3 xl:w-4/12 -order-1">
             <div
               class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
             >
@@ -771,136 +689,91 @@
               </div>
             </div>
           </div>
-          <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12">
+          <div class="w-full max-w-full px-3 xl:w-4/12">
             <div
-              class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
+              class="py-6 px-4 overflow-y-scroll h-[27rem] relative grid min-w-0 break-words bg-yellow-400 border-4 border-primary-5 shadow-soft-xl rounded-2xl bg-clip-border"
             >
-              <div class="p-4 pb-0 mb-0 bg-white border-b-0 rounded-t-2xl">
-                <h6 class="mb-0">Conversations</h6>
+              <h4 class="text-primary-2 font-light text-center">
+                Session Tracker
+              </h4>
+              <div
+                class="grid w-full grid-cols-4 grid-rows-2 text-white text-center"
+              >
+                <div class="col-span-4 row-span-1 bg-blue-500 rounded-t-xl">
+                  Session 1
+                </div>
+                <div class="col-span-2 bg-green-500 text-white">
+                  28-01-2024 02:44:22
+                </div>
+                <div class="col-span-2 bg-red-500 text-white">
+                  28-01-2024 3:01:22
+                </div>
               </div>
-              <div class="flex-auto p-4">
-                <ul class="flex flex-col pl-0 mb-0 rounded-lg">
-                  <li
-                    class="relative flex items-center px-0 py-2 mb-2 bg-white border-0 rounded-t-lg text-inherit"
-                  >
-                    <div
-                      class="inline-flex items-center justify-center w-12 h-12 mr-4 text-white transition-all duration-200 text-base ease-soft-in-out rounded-xl"
-                    >
-                      <img
-                        src="../assets/img/kal-visuals-square.jpg"
-                        alt="kal"
-                        class="w-full shadow-soft-2xl rounded-xl"
-                      />
-                    </div>
-                    <div class="flex flex-col items-start justify-center">
-                      <h6 class="mb-0 leading-normal text-sm">Sophie B.</h6>
-                      <p class="mb-0 leading-tight text-xs">
-                        Hi! I need more information..
-                      </p>
-                    </div>
-                    <a
-                      class="inline-block py-3 pl-0 pr-4 mb-0 ml-auto font-bold text-center uppercase align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer leading-pro text-xs ease-soft-in hover:scale-102 hover:active:scale-102 active:opacity-85 text-primary-3 hover:text-primary-6 hover:shadow-none active:scale-100"
-                      href="javascript:;"
-                      >Reply</a
-                    >
-                  </li>
-                  <li
-                    class="relative flex items-center px-0 py-2 mb-2 bg-white border-0 border-t-0 text-inherit"
-                  >
-                    <div
-                      class="inline-flex items-center justify-center w-12 h-12 mr-4 text-white transition-all duration-200 text-base ease-soft-in-out rounded-xl"
-                    >
-                      <img
-                        src="../assets/img/marie.jpg"
-                        alt="kal"
-                        class="w-full shadow-soft-2xl rounded-xl"
-                      />
-                    </div>
-                    <div class="flex flex-col items-start justify-center">
-                      <h6 class="mb-0 leading-normal text-sm">Anne Marie</h6>
-                      <p class="mb-0 leading-tight text-xs">
-                        Awesome work, can you..
-                      </p>
-                    </div>
-                    <a
-                      class="inline-block py-3 pl-0 pr-4 mb-0 ml-auto font-bold text-center uppercase align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer leading-pro text-xs ease-soft-in hover:scale-102 hover:active:scale-102 active:opacity-85 text-primary-3 hover:text-primary-6 hover:shadow-none active:scale-100"
-                      href="javascript:;"
-                      >Reply</a
-                    >
-                  </li>
-                  <li
-                    class="relative flex items-center px-0 py-2 mb-2 bg-white border-0 border-t-0 text-inherit"
-                  >
-                    <div
-                      class="inline-flex items-center justify-center w-12 h-12 mr-4 text-white transition-all duration-200 text-base ease-soft-in-out rounded-xl"
-                    >
-                      <img
-                        src="../assets/img/ivana-square.jpg"
-                        alt="kal"
-                        class="w-full shadow-soft-2xl rounded-xl"
-                      />
-                    </div>
-                    <div class="flex flex-col items-start justify-center">
-                      <h6 class="mb-0 leading-normal text-sm">Ivanna</h6>
-                      <p class="mb-0 leading-tight text-xs">
-                        About files I can..
-                      </p>
-                    </div>
-                    <a
-                      class="inline-block py-3 pl-0 pr-4 mb-0 ml-auto font-bold text-center uppercase align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer leading-pro text-xs ease-soft-in hover:scale-102 hover:active:scale-102 active:opacity-85 text-primary-3 hover:text-primary-6 hover:shadow-none active:scale-100"
-                      href="javascript:;"
-                      >Reply</a
-                    >
-                  </li>
-                  <li
-                    class="relative flex items-center px-0 py-2 mb-2 bg-white border-0 border-t-0 text-inherit"
-                  >
-                    <div
-                      class="inline-flex items-center justify-center w-12 h-12 mr-4 text-white transition-all duration-200 text-base ease-soft-in-out rounded-xl"
-                    >
-                      <img
-                        src="../assets/img/team-4.jpg"
-                        alt="kal"
-                        class="w-full shadow-soft-2xl rounded-xl"
-                      />
-                    </div>
-                    <div class="flex flex-col items-start justify-center">
-                      <h6 class="mb-0 leading-normal text-sm">Peterson</h6>
-                      <p class="mb-0 leading-tight text-xs">
-                        Have a great afternoon..
-                      </p>
-                    </div>
-                    <a
-                      class="inline-block py-3 pl-0 pr-4 mb-0 ml-auto font-bold text-center uppercase align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer leading-pro text-xs ease-soft-in hover:scale-102 hover:active:scale-102 active:opacity-85 text-primary-3 hover:text-primary-6 hover:shadow-none active:scale-100"
-                      href="javascript:;"
-                      >Reply</a
-                    >
-                  </li>
-                  <li
-                    class="relative flex items-center px-0 py-2 bg-white border-0 border-t-0 rounded-b-lg text-inherit"
-                  >
-                    <div
-                      class="inline-flex items-center justify-center w-12 h-12 mr-4 text-white transition-all duration-200 text-base ease-soft-in-out rounded-xl"
-                    >
-                      <img
-                        src="../assets/img/team-3.jpg"
-                        alt="kal"
-                        class="w-full shadow-soft-2xl rounded-xl"
-                      />
-                    </div>
-                    <div class="flex flex-col items-start justify-center">
-                      <h6 class="mb-0 leading-normal text-sm">Nick Daniel</h6>
-                      <p class="mb-0 leading-tight text-xs">
-                        Hi! I need more information..
-                      </p>
-                    </div>
-                    <a
-                      class="inline-block py-3 pl-0 pr-4 mb-0 ml-auto font-bold text-center uppercase align-middle transition-all bg-transparent border-0 rounded-lg shadow-none cursor-pointer leading-pro text-xs ease-soft-in hover:scale-102 hover:active:scale-102 active:opacity-85 text-primary-3 hover:text-primary-6 hover:shadow-none active:scale-100"
-                      href="javascript:;"
-                      >Reply</a
-                    >
-                  </li>
-                </ul>
+              <div
+                class="grid w-full grid-cols-4 grid-rows-2 text-white text-center"
+              >
+                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
+                <div class="col-span-2 bg-green-500 text-white">
+                  28-01-2024 02:44:22
+                </div>
+                <div class="col-span-2 bg-red-500 text-white">
+                  28-01-2024 3:01:22
+                </div>
+              </div>
+              <div
+                class="grid w-full grid-cols-4 grid-rows-2 text-white text-center"
+              >
+                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
+                <div class="col-span-2 bg-green-500 text-white">
+                  28-01-2024 02:44:22
+                </div>
+                <div class="col-span-2 bg-red-500 text-white">
+                  28-01-2024 3:01:22
+                </div>
+              </div>
+              <div
+                class="grid w-full grid-cols-4 grid-rows-2 text-white text-center"
+              >
+                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
+                <div class="col-span-2 bg-green-500 text-white">
+                  28-01-2024 02:44:22
+                </div>
+                <div class="col-span-2 bg-red-500 text-white">
+                  28-01-2024 3:01:22
+                </div>
+              </div>
+              <div
+                class="grid w-full grid-cols-4 grid-rows-2 text-white text-center"
+              >
+                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
+                <div class="col-span-2 bg-green-500 text-white">
+                  28-01-2024 02:44:22
+                </div>
+                <div class="col-span-2 bg-red-500 text-white">
+                  28-01-2024 3:01:22
+                </div>
+              </div>
+              <div
+                class="grid w-full grid-cols-4 grid-rows-2 text-white text-center"
+              >
+                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
+                <div class="col-span-2 bg-green-500 text-white">
+                  28-01-2024 02:44:22
+                </div>
+                <div class="col-span-2 bg-red-500 text-white">
+                  28-01-2024 3:01:22
+                </div>
+              </div>
+              <div
+                class="grid w-full grid-cols-4 grid-rows-2 text-white text-center"
+              >
+                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
+                <div class="col-span-2 bg-green-500 text-white rounded-es-xl">
+                  28-01-2024 02:44:22
+                </div>
+                <div class="col-span-2 bg-red-500 text-white rounded-ee-xl">
+                  28-01-2024 3:01:22
+                </div>
               </div>
             </div>
           </div>
