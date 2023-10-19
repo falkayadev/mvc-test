@@ -5,11 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      rel="apple-touch-icon"
-      sizes="76x76"
-      href="../assets/img/apple-icon.png"
-    />
-    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
       integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
@@ -57,11 +52,10 @@
         ></i>
         <a
           class="block px-8 py-6 m-0 text-sm whitespace-nowrap text-white"
-          href="../pages/dashboard.html"
-          target="_blank"
+          href="../admin.html"
         >
           <span
-            class="ml-1 font-semibold transition-all duration-200 ease-nav-brand"
+            class="ml-1 font-semibold transition-all duration-200 ease-nav-brand font-comfo"
             >walletCo. Dashboard</span
           >
         </a>
@@ -79,7 +73,7 @@
           <li class="mt-0.5 w-full">
             <a
               class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
-              href="../pages/dashboard.html"
+              href="../admin.html"
             >
               <div
                 class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5"
@@ -130,7 +124,7 @@
           <li class="mt-0.5 w-full">
             <a
               class="py-2.7 text-sm ease-nav-brand my-0 mx-4 flex items-center whitespace-nowrap px-4 transition-colors"
-              href="../pages/tables.html"
+              href="../pages/fess-and-limits.html"
             >
               <div
                 class="shadow-soft-2xl mr-2 flex h-8 w-8 items-center justify-center rounded-lg bg-white bg-center stroke-0 text-center xl:p-2.5"
@@ -560,80 +554,136 @@
             <div
               class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
             >
-              <div class="p-4 pb-0 mb-0 bg-white border-b-0 rounded-t-2xl">
-                <h6 class="mb-0">Platform Settings</h6>
-              </div>
-              <div class="flex-auto p-4">
-                <h6
-                  class="font-bold leading-tight uppercase text-xs text-slate-500"
+              <div class="shadow-lg" id="chfHistory">
+                <div
+                  class="bg-yellow-400 text-primary-2 w-full h-[27rem] overflow-y-scroll rounded-xl border-4 border-primary-5"
                 >
-                  Account
-                </h6>
-                <ul class="flex flex-col pl-0 mb-0 rounded-lg">
-                  <li
-                    class="relative block px-0 py-2 bg-white border-0 rounded-t-lg text-inherit"
+                  <div
+                    class="rounded-3xl py-10 space-y-0 shadow-lg flex flex-col justify-center"
                   >
-                    <div class="min-h-6 mb-0.5 block pl-0">
-                      <input id="follow" class="mt-0.54 rounded-10 duration-250
-                      ease-soft-in-out after:rounded-circle
-                      after:shadow-soft-2xl after:duration-250
-                      checked:after:translate-x-5.25 h-5 relative float-left
-                      ml-auto w-10 cursor-pointer appearance-none border
-                      border-solid border-gray-200 bg-slate-800/10 bg-none
-                      bg-contain bg-left bg-no-repeat align-top transition-all
-                      after:absolute after:top-px after:h-4 after:w-4
-                      after:translate-x-px after:bg-white after:content-['']
-                      checked:border-slate-800/95 checked:bg-slate-800/95
-                      checked:bg-none checked:bg-right" type="checkbox" "
-                      checked />
-                      <label
-                        for="follow"
-                        class="w-4/5 mb-0 ml-4 overflow-hidden font-normal cursor-pointer select-none text-sm text-ellipsis whitespace-nowrap text-slate-500"
-                        for="flexSwitchCheckDefault"
-                        >Email me when someone follows me</label
+                    <h4 class="text-center text-primary-2 font-light">
+                      Last Transactions
+                    </h4>
+                    <div
+                      id="item"
+                      class="flex justify-between items-center px-10"
+                    >
+                      <div id="itemDesc" class="flex flex-col w-[160px]">
+                        <p>Restauran Da Paolo CHF</p>
+                        <div id="itemDescDate" class="flex justify-between">
+                          <p class="text-sm text-primary-5">28.01.2024</p>
+                          <p class="text-sm text-primary-5">02.45PM</p>
+                        </div>
+                      </div>
+                      <div
+                        id="itemAmount"
+                        class="flex justify-center items-center"
                       >
+                        <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
+                          -$96.50
+                        </p>
+                      </div>
                     </div>
-                  </li>
-                  <li
-                    class="relative block px-0 py-2 bg-white border-0 text-inherit"
-                  >
-                    <div class="min-h-6 mb-0.5 block pl-0">
-                      <input
-                        id="answer"
-                        class="mt-0.54 rounded-10 duration-250 ease-soft-in-out after:rounded-circle after:shadow-soft-2xl after:duration-250 checked:after:translate-x-5.25 h-5 relative float-left ml-auto w-10 cursor-pointer appearance-none border border-solid border-gray-200 bg-slate-800/10 bg-none bg-contain bg-left bg-no-repeat align-top transition-all after:absolute after:top-px after:h-4 after:w-4 after:translate-x-px after:bg-white after:content-[''] checked:border-slate-800/95 checked:bg-slate-800/95 checked:bg-none checked:bg-right"
-                        type="checkbox"
-                      />
-                      <label
-                        for="answer"
-                        class="w-4/5 mb-0 ml-4 overflow-hidden font-normal cursor-pointer select-none text-sm text-ellipsis whitespace-nowrap text-slate-500"
-                        for="flexSwitchCheckDefault1"
-                        >Email me when someone answers on my post</label
-                      >
+                    <div
+                      id="item2"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                    >
+                      <div id="itemDesc2" class="flex flex-col w-[160px]">
+                        <p>Cash Inflow</p>
+                        <div id="itemDescDate2" class="flex justify-between">
+                          <p class="text-primary-5 text-sm">28.01.2024</p>
+                          <p class="text-primary-5 text-sm">02.45PM</p>
+                        </div>
+                      </div>
+                      <div id="itemAmount2">
+                        <p class="text-green-300 bg-primary-2 p-2 rounded-lg">
+                          +$22.50
+                        </p>
+                      </div>
                     </div>
-                  </li>
-                  <li
-                    class="relative block px-0 py-2 bg-white border-0 rounded-b-lg text-inherit"
-                  >
-                    <div class="min-h-6 mb-0.5 block pl-0">
-                      <input
-                        id="mention"
-                        class="mt-0.54 rounded-10 duration-250 ease-soft-in-out after:rounded-circle after:shadow-soft-2xl after:duration-250 checked:after:translate-x-5.25 h-5 relative float-left ml-auto w-10 cursor-pointer appearance-none border border-solid border-gray-200 bg-slate-800/10 bg-none bg-contain bg-left bg-no-repeat align-top transition-all after:absolute after:top-px after:h-4 after:w-4 after:translate-x-px after:bg-white after:content-[''] checked:border-slate-800/95 checked:bg-slate-800/95 checked:bg-none checked:bg-right"
-                        type="checkbox"
-                        checked
-                      />
-                      <label
-                        for="mention"
-                        class="w-4/5 mb-0 ml-4 overflow-hidden font-normal cursor-pointer select-none text-sm text-ellipsis whitespace-nowrap text-slate-500"
-                        for="flexSwitchCheckDefault2"
-                        >Email me when someone mentions me</label
-                      >
+                    <div
+                      id="item3"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                    >
+                      <div id="itemDesc3" class="flex flex-col">
+                        <p>Python E-Book</p>
+                        <div
+                          id="itemDescDate3"
+                          class="flex justify-between w-[160px]"
+                        >
+                          <p class="text-primary-5 text-sm">28.01.2024</p>
+                          <p class="text-primary-5 text-sm">02.45PM</p>
+                        </div>
+                      </div>
+                      <div id="itemAmount3">
+                        <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
+                          -$14.90
+                        </p>
+                      </div>
                     </div>
-                  </li>
-                </ul>
+                    <div
+                      id="item4"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                    >
+                      <div id="itemDesc4" class="flex flex-col w-[160px]">
+                        <p>GYM Membership</p>
+                        <div id="itemDescDate4" class="flex justify-between">
+                          <p class="text-primary-5 text-sm">28.01.2024</p>
+                          <p class="text-primary-5 text-sm">02.45PM</p>
+                        </div>
+                      </div>
+                      <div id="itemAmount4">
+                        <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
+                          -$46.40
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      id="item5"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                    >
+                      <div id="itemDesc5" class="flex flex-col">
+                        <p>Refund</p>
+                        <div
+                          id="itemDescDate5"
+                          class="flex justify-between w-[160px]"
+                        >
+                          <p class="text-primary-5 text-sm">28.01.2024</p>
+                          <p class="text-primary-5 text-sm">02.45PM</p>
+                        </div>
+                      </div>
+                      <div id="itemAmount5">
+                        <p class="text-green-300 bg-primary-2 p-2 rounded-lg">
+                          +$32.50
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      id="item6"
+                      class="flex justify-between items-center hover:bg-primary-3 px-10"
+                    >
+                      <div id="itemDesc6" class="flex flex-col">
+                        <p>Restauran Da Paolo</p>
+                        <div
+                          id="itemDescDate6"
+                          class="flex justify-between w-[160px]"
+                        >
+                          <p class="text-primary-5 text-sm">28.01.2024</p>
+                          <p class="text-primary-5 text-sm">02.45PM</p>
+                        </div>
+                      </div>
+                      <div id="itemAmount6">
+                        <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
+                          -$96.50
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12">
+          <div class="w-full max-w-full px-3 lg-max:mt-6 xl:w-4/12 -order-1">
             <div
               class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
             >

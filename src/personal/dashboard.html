@@ -24,18 +24,26 @@
         <div class="container mx-auto">
           <div class="flex justify-between items-center">
             <!-- Logo Section -->
-            <div>
-              <a href="../index.html" class="text-white text-2xl font-comfortaa"
+            <div class="flex items-center">
+              <a
+                href="../index.html"
+                class="text-white text-2xl font-comfortaa mr-2"
                 >walletCo</a
               >
+              <div class="bg-gray-400 h-4 w-[1px]"></div>
+              <a href="./dashboard.html" class="fa-solid fa-home ml-2"></a>
             </div>
             <!-- Desktop Menu -->
             <div class="hidden lg:flex space-x-20">
               <a href="./transfer.html" class="text-white hover:text-primary-5"
                 >Transfer</a
               >
-              <a href="#" class="text-white hover:text-primary-5">Deposit</a>
-              <a href="#" class="text-white hover:text-primary-5">Withdraw</a>
+              <a href="./deposit.html" class="text-white hover:text-primary-5"
+                >Deposit</a
+              >
+              <a href="./withdraw.html" class="text-white hover:text-primary-5"
+                >Withdraw</a
+              >
             </div>
 
             <!-- User Bar-->
@@ -318,47 +326,7 @@ c897 -138 1632 -798 1854 -1666 55 -216 70 -336 70 -569 0 -302 -47 -559 -150
           <!-- EUR Account Card -->
           <!-- Deactive -->
           <div
-            class="w-[90%] group mx-auto md:w-full md:mx-0 h-96 relative cursor-pointer shadow-lg hover:shadow-xl transition-all rounded-3xl"
-            id="deactiveEur"
-            onclick="changeDiv()"
-          >
-            <div
-              class="w-full h-full card-transform transition-transform duration-700"
-            >
-              <div
-                class="w-full h-full card-face front bg-primary-2 rounded-2xl flex items-center justify-center"
-              >
-                <div
-                  class="w-full h-full flex flex-col justify-center items-center mb-40"
-                >
-                  <h2 class="text-4xl text-center w-full bg-primary-3 py-3">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="w-24 h-24 mx-auto"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M14.25 7.756a4.5 4.5 0 100 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                      />
-                    </svg>
-                  </h2>
-                </div>
-              </div>
-            </div>
-            <div
-              class="text-white text-7xl absolute top-52 left-[calc(50%-7px)] -translate-x-1/2 -translate-y-1/2 rotate-45 group-hover:rotate-90 transition-all"
-            >
-              +
-            </div>
-          </div>
-          <!-- Deactive End -->
-          <div
-            class="hidden w-[90%] mx-auto md:w-full md:mx-0 h-96 relative cursor-pointer shadow-lg hover:shadow-xl transition-all rounded-3xl"
+            class="w-[90%] mx-auto md:w-full md:mx-0 h-96 relative cursor-pointer shadow-lg hover:shadow-xl transition-all rounded-3xl"
             onclick="toggleCard(this)"
             id="activeEur"
           >

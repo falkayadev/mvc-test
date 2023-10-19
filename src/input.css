@@ -32,3 +32,15 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="number"]::-ms-clear {
   display: none;
 }
+
+::-webkit-scrollbar {
+  @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply hidden;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-primary-2 rounded-xl;
+}
