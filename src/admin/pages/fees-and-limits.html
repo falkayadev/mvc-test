@@ -455,11 +455,11 @@
       </nav>
       <article class="w-[99%] mx-auto h-screen bg-primary-3">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 h-full mb-4 gap-4 mx-6"
+          class="grid grid-cols-1 md:grid-cols-2 h-full mb-4 gap-4 mx-6"
         >
           <div class="bg-primary-5 w-full h-full rounded-lg py-10">
             <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Balance Limit</div>
+              <div class="text-gray-50 text-2xl text-center">Maximum Deposit</div>
               <div class="flex justify-center">
                 <input
                   type="text"
@@ -471,7 +471,7 @@
           </div>
           <div class="bg-primary-5 w-full h-full rounded-lg py-10">
             <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Incoming Amount</div>
+              <div class="text-gray-50 text-2xl text-center">Minimum Deposit</div>
               <div class="flex justify-center">
                 <input
                   type="text"
@@ -483,7 +483,7 @@
           </div>
           <div class="bg-primary-5 w-full h-full rounded-lg py-10">
             <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Cash Deposit Limit</div>
+              <div class="text-gray-50 text-2xl text-center">Daily Maximum Deposit</div>
               <div class="flex justify-center">
                 <input
                   type="text"
@@ -495,7 +495,7 @@
           </div>
           <div class="bg-primary-5 w-full h-full rounded-lg py-10">
             <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Send Money</div>
+              <div class="text-gray-50 text-2xl text-center">Monthly Maximum Deposit</div>
               <div class="flex justify-center">
                 <input
                   type="text"
@@ -505,39 +505,14 @@
               </div>
             </div>
           </div>
-          <div class="bg-primary-5 w-full h-full rounded-lg py-10">
-            <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">Sending Money to IBAN</div>
-              <div class="flex justify-center">
-                <input
-                  type="text"
-                  value="$2000"
-                  class="text-black rounded-lg px-2 py-3 w-2/3"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="bg-primary-5 w-full h-full rounded-lg py-10">
-            <div class="flex flex-col items-center justify-center h-full gap-4">
-              <div class="text-gray-50 text-3xl">
-                International Money Transfer
-              </div>
-              <div class="flex justify-center">
-                <input
-                  type="text"
-                  value="$2000"
-                  class="text-black rounded-lg px-2 py-3 w-2/3"
-                />
-              </div>
-            </div>
-          </div>
+         
           <div
-            class="bg-yellow-400 md:col-span-2 xl:col-span-3 -order-1 flex place-content-center items-center rounded-lg py-4"
+            class="bg-yellow-400 md:col-span-2  -order-1 flex place-content-center items-center rounded-lg py-4"
           >
             <h2 class="text-slate-700">Limit Regulations</h2>
           </div>
           <button
-            class="bg-yellow-400 text-slate-700 p-3 rounded text-2xl lg:col-span-2 xl:col-span-1 xl:col-start-2 max-h-16"
+            class="bg-yellow-400 text-slate-700 p-3 rounded text-2xl md:col-span-2 max-h-16"
           >
             Save Changes
           </button>
