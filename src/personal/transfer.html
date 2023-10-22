@@ -1,242 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>walletCo.</title>
-    <link rel="stylesheet" href="../../dist/output.css" />
-    <style>
-      @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
-      html {
-        --s: 100px; /* control the size */
-        --c: #0f2557; /* first color */
 
-        --_g1: var(--c) calc(25% / 3), #0000 0 calc(50% / 3), var(--c) 0 25%,
-          #0000 0 75%, var(--c) 0 calc(250% / 3), #0000 0 calc(275% / 3),
-          var(--c) 0;
-        --_g2: #0000 calc(25% / 3), var(--c) 0 calc(50% / 3),
-          #0000 0 calc(250% / 3), var(--c) 0 calc(275% / 3), #0000 0;
-        background: linear-gradient(45deg, var(--_g2)),
-          linear-gradient(45deg, var(--_g1)),
-          linear-gradient(-45deg, var(--_g2)),
-          linear-gradient(-45deg, var(--_g1)) #4b9fe1; /* second color */
-        background-position: 0 0, var(--s) var(--s);
-        background-size: calc(2 * var(--s)) calc(2 * var(--s));
-      }
-    </style>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body class="font-poppins text-white">
-    <header class="fixed w-full z-30">
-      <div class="bg-primary-2 p-8">
-        <div class="container mx-auto">
-          <div class="flex justify-between items-center">
-            <!-- Logo Section -->
-            <div class="flex items-center">
-              <a
-                href="../index.html"
-                class="text-white text-2xl font-comfortaa mr-2"
-                >walletCo</a
-              >
-              <div class="bg-gray-400 h-4 w-[1px]"></div>
-              <a href="./dashboard.html" class="fa-solid fa-home ml-2"></a>
-            </div>
-            <!-- Desktop Menu -->
-            <div class="hidden lg:flex space-x-20">
-              <a href="./transfer.html" class="text-white hover:text-primary-5"
-                >Transfer</a
-              >
-              <a href="./deposit.html" class="text-white hover:text-primary-5"
-                >Deposit</a
-              >
-              <a href="./withdraw.html" class="text-white hover:text-primary-5"
-                >Withdraw</a
-              >
-            </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>walletCo.</title>
+  <link rel="stylesheet" href="../../dist/output.css" />
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
 
-            <!-- User Bar-->
-            <div class="flex items-center gap-3 relative">
-              <!-- Greetings -->
-              <div>
-                <p class="z-30 relative">Hi, John!</p>
-              </div>
-              <!-- Greetings End -->
+    html {
+      --s: 100px;
+      /* control the size */
+      --c: #0f2557;
+      /* first color */
 
-              <!-- Avatar Menu Button-->
-              <div>
-                <button
-                  class="block w-20 h-20 rounded-full bg-primary-3 duration-300"
-                >
-                  <img
-                    id="avatar"
-                    src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                    alt="profile foto"
-                    class="rounded-full border hover:border-primary-5 z-30 hover:scale-[102%] relative"
-                    draggable="false"
-                    onclick="document.getElementById('dropBar').classList.toggle('hidden');"
-                  />
-                </button>
+      --_g1: var(--c) calc(25% / 3), #0000 0 calc(50% / 3), var(--c) 0 25%,
+        #0000 0 75%, var(--c) 0 calc(250% / 3), #0000 0 calc(275% / 3),
+        var(--c) 0;
+      --_g2: #0000 calc(25% / 3), var(--c) 0 calc(50% / 3),
+        #0000 0 calc(250% / 3), var(--c) 0 calc(275% / 3), #0000 0;
+      background: linear-gradient(45deg, var(--_g2)),
+        linear-gradient(45deg, var(--_g1)),
+        linear-gradient(-45deg, var(--_g2)),
+        linear-gradient(-45deg, var(--_g1)) #4b9fe1;
+      /* second color */
+      background-position: 0 0, var(--s) var(--s);
+      background-size: calc(2 * var(--s)) calc(2 * var(--s));
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
 
-                <!-- DropBar Box -->
-
-                <div
-                  class="w-screen md:w-80 absolute -right-8 md:right-0 bg-gray-50 text-primary-2 mt-2 py-6 px-2 rounded-lg shadow-xl hidden border border-primary-2"
-                  id="dropBar"
-                >
-                  <!-- Dropbar Box User Preview -->
-                  <div class="flex justify-center items-center gap-4 p-4">
-                    <div>
-                      <img
-                        src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                        alt="avatar"
-                        class="w-14 h-14 rounded-full border hover:border-primary-5 hover:scale-[102%] relative z-30"
-                      />
-                    </div>
-                    <div class="flex flex-col items-center">
-                      <p class="text-lg">
-                        John Doe
-                        <i
-                          class="fa-solid fa-circle-check text-green-300 text-xl"
-                        ></i>
-                        <i
-                          class="fa-solid fa-circle-xmark text-red-300 text-xl hidden"
-                          style="display: none"
-                        ></i>
-                      </p>
-
-                      <p class="text-xs">ID-721328</p>
-                    </div>
-                  </div>
-
-                  <!-- Dropbar Box User Preview End -->
-
-                  <!-- Dropbar Items -->
-                  <div class="flex flex-col px-8 mt-4 gap-2 text-white">
-                    <!-- ITEM 1 -->
-                    <div
-                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
-                    >
-                      <i class="fa-solid fa-circle-user"></i>
-                      <a href="./account.html">Account Details</a>
-                    </div>
-
-                    <!-- ITEM 2 -->
-                    <div
-                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
-                    >
-                      <i class="fa-solid fa-clock-rotate-left"></i>
-                      <a href="#">Transaction</a>
-                    </div>
-
-                    <!-- ITEM 3 -->
-                    <div
-                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
-                    >
-                      <i class="fa-solid fa-gear"></i>
-                      <a href="#">Settings</a>
-                    </div>
-
-                    <!-- ITEM 4 -->
-                    <div
-                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
-                    >
-                      <i class="fa-solid fa-circle-question"></i>
-                      <a href="#">Help</a>
-                    </div>
-
-                    <!-- ITEM 5 -->
-                    <div
-                      class="bg-red-400 rounded-xl px-4 py-1 text-lg space-x-2"
-                    >
-                      <i class="fa-solid fa-door-open"></i>
-                      <a href="#">Log Out</a>
-                    </div>
-                  </div>
-                  <!-- Dropbar Items End -->
-                </div>
-                <!-- DropBar Box End -->
-              </div>
-              <!-- Avatar Menu Button End -->
-            </div>
-            <!-- User Bar End -->
+<body class="font-poppins text-white">
+  <header class="fixed w-full z-30">
+    <div class="bg-primary-2 p-8">
+      <div class="container mx-auto">
+        <div class="flex justify-between items-center">
+          <!-- Logo Section -->
+          <div class="flex items-center">
+            <a href="../index.html" class="text-white text-2xl font-comfortaa mr-2">walletCo</a>
+            <div class="bg-gray-400 h-4 w-[1px]"></div>
+            <a href="./dashboard.html" class="fa-solid fa-home ml-2"></a>
           </div>
+          <!-- Desktop Menu -->
+          <div class="hidden lg:flex space-x-20">
+            <a href="./transfer.html" class="text-white hover:text-primary-5">Transfer</a>
+            <a href="./deposit.html" class="text-white hover:text-primary-5">Deposit</a>
+            <a href="./withdraw.html" class="text-white hover:text-primary-5">Withdraw</a>
+          </div>
+
+          <!-- User Bar-->
+          <div class="flex items-center gap-3 relative">
+            <!-- Greetings -->
+            <div>
+              <p class="z-30 relative">Hi, John!</p>
+            </div>
+            <!-- Greetings End -->
+
+            <!-- Avatar Menu Button-->
+            <div>
+              <button class="block w-20 h-20 rounded-full bg-primary-3 duration-300">
+                <img id="avatar" src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" alt="profile foto"
+                  class="rounded-full border hover:border-primary-5 z-30 hover:scale-[102%] relative" draggable="false"
+                  onclick="document.getElementById('dropBar').classList.toggle('hidden');" />
+              </button>
+
+              <!-- DropBar Box -->
+
+              <div
+                class="w-screen md:w-80 absolute -right-8 md:right-0 bg-gray-50 text-primary-2 mt-2 py-6 px-2 rounded-lg shadow-xl hidden border border-primary-2"
+                id="dropBar">
+                <!-- Dropbar Box User Preview -->
+                <div class="flex justify-center items-center gap-4 p-4">
+                  <div>
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" alt="avatar"
+                      class="w-14 h-14 rounded-full border hover:border-primary-5 hover:scale-[102%] relative z-30" />
+                  </div>
+                  <div class="flex flex-col items-center">
+                    <p class="text-lg">
+                      John Doe
+                      <i class="fa-solid fa-circle-check text-green-300 text-xl"></i>
+                      <i class="fa-solid fa-circle-xmark text-red-300 text-xl hidden" style="display: none"></i>
+                    </p>
+
+                    <p class="text-xs">ID-721328</p>
+                  </div>
+                </div>
+
+                <!-- Dropbar Box User Preview End -->
+
+                <!-- Dropbar Items -->
+                <div class="flex flex-col px-8 mt-4 gap-2 text-white">
+                  <!-- ITEM 1 -->
+                  <div class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <a href="./account.html">Account Details</a>
+                  </div>
+
+                  <!-- ITEM 2 -->
+                  <div class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    <a href="./transaction.html">Transaction</a>
+                  </div>
+
+                  <!-- ITEM 3 -->
+                  <div class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2">
+                    <i class="fa-solid fa-gear"></i>
+                    <a href="#">Settings</a>
+                  </div>
+
+                  <!-- ITEM 4 -->
+                  <div class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2">
+                    <i class="fa-solid fa-circle-question"></i>
+                    <a href="./support.html">Help</a>
+                  </div>
+
+                  <!-- ITEM 5 -->
+                  <div class="bg-red-400 rounded-xl px-4 py-1 text-lg space-x-2">
+                    <i class="fa-solid fa-door-open"></i>
+                    <a href="#">Log Out</a>
+                  </div>
+                </div>
+                <!-- Dropbar Items End -->
+              </div>
+              <!-- DropBar Box End -->
+            </div>
+            <!-- Avatar Menu Button End -->
+          </div>
+          <!-- User Bar End -->
         </div>
       </div>
-    </header>
-    <div
-      class="bg-white text-primary-2 p-8 rounded-lg shadow-md w-96 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-36"
-    >
-      <h2 class="text-center text-2xl mb-6">Transfer</h2>
-      <!-- Account  -->
-      <div class="mb-4">
-        <label class="block mb-2">Account</label>
-        <div class="flex space-x-2">
-          <button
-            id="chfButton"
-            class="account-btn w-1/3 flex items-center justify-center p-2 rounded border bg-gray-50 hover:bg-gray-200 focus:outline-none focus:ring"
-          >
-            <img
-              src="/dist/assets/icons8-switzerland-48.png"
-              alt="CHF Flag"
-              class="w-6 h-6 mr-2"
-            />
-            CHF
-          </button>
-          <button
-            id="eurButton"
-            class="account-btn w-1/3 flex items-center justify-center p-2 rounded border bg-gray-50 hover:bg-gray-200 focus:outline-none focus:ring"
-          >
-            <img
-              src="/dist/assets/icons8-flag-of-europe-48.png"
-              alt="EUR Flag"
-              class="w-6 h-6 mr-2"
-            />
-            EUR
-          </button>
-          <button
-            id="tryButton"
-            class="account-btn w-1/3 flex items-center justify-center p-2 rounded border bg-gray-50 hover:bg-gray-200 focus:outline-none focus:ring"
-          >
-            <img
-              src="/dist/assets/turkey.png"
-              alt="TRY Flag"
-              class="w-6 h-6 mr-2"
-            />
-            TRY
-          </button>
-        </div>
-      </div>
-
-      <!-- Kime Gönderileceği Input -->
-      <div class="mb-4">
-        <label class="block mb-2">Wallet ID</label>
-        <input type="number" class="p-2 w-full border rounded" />
-      </div>
-
-      <!-- Ne Kadar Para Gönderileceği Input -->
-      <div class="mb-4">
-        <div class="flex justify-between">
-          <label class="block mb-2" for="amount">Amount</label>
-          <p>Balance: <a href="#" id="balanceTag" class="ml-2">₣1.349,10</a></p>
-        </div>
-        <input type="text" id="amount" class="p-2 w-full border rounded" />
-      </div>
-
-      <button
-        class="w-full bg-primary-3 text-white p-2 rounded hover:bg-primary-2"
-      >
-        Confirm
-      </button>
     </div>
-    <script src="transfer.js"></script>
-  </body>
+  </header>
+  <div
+    class="bg-white text-primary-2 p-8 rounded-lg shadow-md w-96 fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-36">
+    <h2 class="text-center text-2xl mb-6">Transfer</h2>
+    <!-- Account  -->
+    <div class="mb-4">
+      <label class="block mb-2">Account</label>
+      <div class="flex space-x-2">
+        <button id="chfButton"
+          class="account-btn w-1/3 flex items-center justify-center p-2 rounded border bg-gray-50 hover:bg-gray-200 focus:outline-none focus:ring">
+          <img src="/dist/assets/icons8-switzerland-48.png" alt="CHF Flag" class="w-6 h-6 mr-2" />
+          CHF
+        </button>
+        <button id="eurButton"
+          class="account-btn w-1/3 flex items-center justify-center p-2 rounded border bg-gray-50 hover:bg-gray-200 focus:outline-none focus:ring">
+          <img src="/dist/assets/icons8-flag-of-europe-48.png" alt="EUR Flag" class="w-6 h-6 mr-2" />
+          EUR
+        </button>
+        <button id="tryButton"
+          class="account-btn w-1/3 flex items-center justify-center p-2 rounded border bg-gray-50 hover:bg-gray-200 focus:outline-none focus:ring">
+          <img src="/dist/assets/turkey.png" alt="TRY Flag" class="w-6 h-6 mr-2" />
+          TRY
+        </button>
+      </div>
+    </div>
+
+    <!-- Kime Gönderileceği Input -->
+    <div class="mb-4">
+      <label class="block mb-2">Wallet ID</label>
+      <input type="number" class="p-2 w-full border rounded" />
+    </div>
+
+    <!-- Ne Kadar Para Gönderileceği Input -->
+    <div class="mb-4">
+      <div class="flex justify-between">
+        <label class="block mb-2" for="amount">Amount</label>
+        <p>Balance: <a href="#" id="balanceTag" class="ml-2">₣1.349,10</a></p>
+      </div>
+      <input type="text" id="amount" class="p-2 w-full border rounded" />
+    </div>
+
+    <button class="w-full bg-primary-3 text-white p-2 rounded hover:bg-primary-2">
+      Confirm
+    </button>
+  </div>
+  <script src="transfer.js"></script>
+</body>
+
 </html>
