@@ -8,5 +8,19 @@
   "dependencies": {
     "country-list-js": "^3.1.7",
     "sweetalert2": "^11.7.32"
-  }
+  },
+  "name": "ewallet",
+  "version": "1.0.0",
+  "description": "ewallet system",
+  "main": "tailwind.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/falkayadev/eWallet.git"
+  },
+  "author": "kharon-dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/falkayadev/eWallet/issues"
+  },
+  "homepage": "https://github.com/falkayadev/eWallet#readme"
 }
