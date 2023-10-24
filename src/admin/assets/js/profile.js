@@ -22,9 +22,9 @@ function profileFunc() {
   }
 }
 
-function banFunc() {
+function authFunc() {
   profileStatus.classList.remove("bg-green-400", "bg-gray-400")
   profileStatus.classList.add("bg-red-400")
-  profileStatus.innerHTML = "Banned"
-  profileStatus.setAttribute("data-status", "banned")
+  profileStatus.innerHTML = "Unauthorized"
+  profileStatus.setAttribute("data-status", "unauth")
 }
