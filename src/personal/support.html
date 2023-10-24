@@ -122,16 +122,15 @@
     </header>
     <main class="pt-36 text-slate-700 text-xl bg-primary-2">
         <!-- TABS -->
-        <div class="grid grid-cols-3 h-20 border-b-4 border-primary-2 divide-x-4 divide-primary-2 text-center"
-            id="tabs">
-            <div class="bg-yellow-400 h-full flex items-center justify-center cursor-pointer" id="new-request"
-                onclick="newSection()">New
+        <div class="grid grid-cols-3 h-20 border-b-4 border-primary-2 gap-1 divide-primary-2 text-center" id="tabs">
+            <div class="bg-yellow-400 h-full flex items-center justify-center rounded-md cursor-pointer"
+                id="new-request" onclick="newSection()">New
                 Request</div>
-            <div class="bg-gray-400  h-full flex items-center justify-center cursor-pointer" id="solved-request"
-                onclick="solvedSection()">Solved
+            <div class="bg-gray-400  h-full flex items-center justify-center rounded-md cursor-pointer"
+                id="solved-request" onclick="solvedSection()">Solved
                 Requests</div>
-            <div class="bg-gray-400 h-full flex items-center justify-center cursor-pointer" id="current-request"
-                onclick="currentSection()">Current
+            <div class="bg-gray-400 h-full flex items-center justify-center rounded-md cursor-pointer"
+                id="current-request" onclick="currentSection()">Current
                 Requests</div>
         </div>
         <!-- TABS END -->
