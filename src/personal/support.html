@@ -224,8 +224,8 @@
                     greatly appreciated. <br><br>Thank you.
                 </p>
 
-                <button onclick="document.getElementById('chatContainer').classList.toggle('hidden')"
-                    class="self-end inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-primary-2 hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
+                <button
+                    class="trigger self-end inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-primary-2 hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
                     type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed">
                     <svg xmlns=" http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -257,8 +257,8 @@
                     is
                     greatly appreciated. <br><br>Thank you.
                 </p>
-                <button onclick="document.getElementById('chatContainer').classList.toggle('hidden')"
-                    class="self-end inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-primary-2 hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
+                <button
+                    class="trigger self-end inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-primary-2 hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
                     type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed">
                     <svg xmlns=" http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -289,8 +289,8 @@
                     is
                     greatly appreciated. <br><br>Thank you.
                 </p>
-                <button onclick="document.getElementById('chatContainer').classList.toggle('hidden')"
-                    class="self-end inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-primary-2 hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
+                <button
+                    class="trigger self-end inline-flex items-center justify-center text-sm font-medium disabled:pointer-events-none disabled:opacity-50 border rounded-full w-16 h-16 bg-primary-2 hover:bg-gray-700 m-0 cursor-pointer border-gray-200 bg-none p-0 normal-case leading-5 hover:text-gray-900"
                     type="button" aria-haspopup="dialog" aria-expanded="false" data-state="closed">
                     <svg xmlns=" http://www.w3.org/2000/svg" width="30" height="40" viewBox="0 0 24 24" fill="none"
                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
@@ -371,7 +371,8 @@
         </div>
 
         <div id="chatContainer"
-            class="hidden z-30 fixed bottom-24 right-0 mr-4 bg-white text-slate-700 p-6 rounded-lg border border-primary-2 w-96">
+            class="hidden z-30 fixed bottom-4 right-0 mr-4 bg-white text-slate-700 p-6 rounded-lg border border-primary-2 w-96">
+            <i class="fa-solid fa-close absolute right-8 cursor-pointer" onclick="chatBoxClose()"></i>
             <!-- Chat Container -->
             <div>
                 <!-- Chat Message AI -->

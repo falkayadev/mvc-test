@@ -75,3 +75,39 @@ function currentSection() {
     newContainer.classList.add("hidden");
     solvedContainer.classList.add("hidden");
 };
+
+// CHATBOX TRIGGER
+
+function chatBoxOpen() {
+    const chatContainer = document.getElementById('chatContainer');
+    chatContainer.classList.remove('hidden');
+}
+
+function chatBoxClose() {
+    const chatContainer = document.getElementById('chatContainer');
+    chatContainer.classList.add('hidden');
+}
+const triggers = document.querySelectorAll('.trigger');
+triggers.forEach((trigger) => {
+    trigger.addEventListener('click', function (event) {
+        event.stopPropagation();
+        chatBoxOpen();
+    });
+});
+
+document.addEventListener('click', function (event) {
+    const chatContainer = document.getElementById('chatContainer');
+    
+    if (event.target !== chatContainer) {
+        // Tıklanan öğe chatContainer veya trigger değilse, chatBox'ı kapat
+        chatBoxClose();
+    }
+});
+
+chatContainer.addEventListener('click', function (event) {
+    event.stopPropagation();
+});
+
+
+
+

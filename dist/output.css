@@ -635,10 +635,6 @@ video {
   bottom: 3.5rem;
 }
 
-.bottom-2 {
-  bottom: 0.5rem;
-}
-
 .bottom-28 {
   bottom: 7rem;
 }
@@ -673,6 +669,10 @@ video {
 
 .right-0 {
   right: 0px;
+}
+
+.right-2 {
+  right: 0.5rem;
 }
 
 .right-4 {
@@ -711,24 +711,16 @@ video {
   top: 1%;
 }
 
-.bottom-\[calc\(4rem\+1\.5rem\)\] {
-  bottom: calc(4rem + 1.5rem);
+.right-6 {
+  right: 1.5rem;
 }
 
-.bottom-10 {
-  bottom: 2.5rem;
+.right-10 {
+  right: 2.5rem;
 }
 
-.bottom-20 {
-  bottom: 5rem;
-}
-
-.bottom-32 {
-  bottom: 8rem;
-}
-
-.bottom-24 {
-  bottom: 6rem;
+.right-8 {
+  right: 2rem;
 }
 
 .z-10 {
@@ -1149,14 +1141,6 @@ video {
   height: 30rem;
 }
 
-.h-\[474px\] {
-  height: 474px;
-}
-
-.h-\[634px\] {
-  height: 634px;
-}
-
 .h-full {
   height: 100%;
 }
@@ -1167,50 +1151,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-\[100px\] {
-  height: 100px;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[400px\] {
-  height: 400px;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[700px\] {
-  height: 700px;
-}
-
-.h-\[600px\] {
-  height: 600px;
-}
-
-.h-\[500px\] {
-  height: 500px;
-}
-
-.h-\[px\] {
-  height: px;
-}
-
-.h-\[1000px\] {
-  height: 1000px;
-}
-
-.h-\[800px\] {
-  height: 800px;
-}
-
-.h-\[1200px\] {
-  height: 1200px;
 }
 
 .max-h-16 {
@@ -1327,10 +1267,6 @@ video {
 
 .w-\[24rem\] {
   width: 24rem;
-}
-
-.w-\[440px\] {
-  width: 440px;
 }
 
 .w-\[80\%\] {
@@ -1716,12 +1652,6 @@ video {
   margin-bottom: calc(0.25rem * var(--tw-space-y-reverse));
 }
 
-.space-y-1\.5 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.375rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.375rem * var(--tw-space-y-reverse));
-}
-
 .space-y-10 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 0;
   margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -2047,10 +1977,6 @@ video {
 .border-yellow-400 {
   --tw-border-opacity: 1;
   border-color: rgb(250 204 21 / var(--tw-border-opacity));
-}
-
-.border-\[\#e5e7\] {
-  border-color: #e5e7;
 }
 
 .border-b-transparent {
@@ -2759,10 +2685,6 @@ video {
   line-height: 2.5rem;
 }
 
-.leading-3 {
-  line-height: .75rem;
-}
-
 .leading-5 {
   line-height: 1.25rem;
 }
@@ -2810,11 +2732,6 @@ video {
 .text-\[\#030712\] {
   --tw-text-opacity: 1;
   color: rgb(3 7 18 / var(--tw-text-opacity));
-}
-
-.text-\[\#6b7280\] {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .text-\[\#aaa\] {
