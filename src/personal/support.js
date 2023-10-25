@@ -87,6 +87,8 @@ function chatBoxClose() {
     const chatContainer = document.getElementById('chatContainer');
     chatContainer.classList.add('hidden');
 }
+
+
 const triggers = document.querySelectorAll('.trigger');
 triggers.forEach((trigger) => {
     trigger.addEventListener('click', function (event) {
@@ -94,6 +96,9 @@ triggers.forEach((trigger) => {
         chatBoxOpen();
     });
 });
+
+
+
 
 document.addEventListener('click', function (event) {
     const chatContainer = document.getElementById('chatContainer');
