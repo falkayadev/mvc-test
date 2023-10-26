@@ -1,35 +1,68 @@
-const employeeForm = document.getElementById("employee-form");
-console.log(employeeForm);
-const staffList = document.getElementById("staff-list");
-console.log(staffList);
-const createBtn = document.getElementById("create-btn");
+document.querySelectorAll(".toggleStatus").forEach(function (button) {
+    button.addEventListener("click", function () {
+      const status = button.getAttribute("data-status");
+      const confirmationBox = document.getElementById("customConfirm");
+      const confirmYesButton = document.getElementById("confirmYes");
+      const confirmNoButton = document.getElementById("confirmNo");
+      confirmationBox.classList.remove("hidden");
+      confirmYesButton.addEventListener("click", function () {
+        if (status === "active") {
+          button.setAttribute("data-status", "passive");
+          button.textContent = "Passive";
+          button.classList.remove(
+            "bg-gradient-to-tl",
+            "from-green-600",
+            "to-lime-400"
+          );
+          button.classList.add(
+            "bg-gradient-to-tl",
+            "from-slate-600",
+            "to-slate-300"
+          );
+        } else {
+          button.setAttribute("data-status", "active");
+          button.textContent = "Active";
+          if (!button.classList.contains("from-green-600")) {
+            button.classList.add(
+              "bg-gradient-to-tl",
+              "from-green-600",
+              "to-lime-400"
+            );
+          }
+        }
+        confirmationBox.classList.add("hidden");
+      });
+      confirmNoButton.addEventListener("click", function () {
+        confirmationBox.classList.add("hidden");
+      });
+    });
+  });
+  
+  function banUser(userId) {
+    const statusElement = document.getElementById(`status${userId}`);
+    const confirmationBox = document.getElementById('customConfirm');
+    const confirmYesButton = document.getElementById("confirmYes");
+    const confirmNoButton = document.getElementById("confirmNo");
 
-// createBtn.addEventListener("click", function () {
-//   const firstName = document.getElementById("firstName").value;
-//   const lastName = document.getElementById("lastName").value;
-//   const email = document.getElementById("email").value;
-//   const password = document.getElementById("password").value;
-//   const today = new Date();
-//   const day = today.getDate();
-//   const month = today.getMonth() + 1;
-//   const year = today.getFullYear();
-//   const dateFormat = year + "-" + month + "-" + day;
 
-//   // Create a new employee card
-//   const row = staffList.insertRow(staffList.rows.length);
-//   const cell1 = row.insertCell(0);
-//   const cell2 = row.insertCell(1);
-//   const cell3 = row.insertCell(2);
-//   const cell4 = row.insertCell(3);
-//   cell1.innerHTML = `${firstName} ${lastName}`;
-//   cell1.classList.add("text-center", "border-b", "text-sm");
-//   cell2.innerHTML = `${email}`;
-//   cell2.classList.add("text-center", "border-b", "text-sm");
-//   cell3.innerHTML = `${password}`;
-//   cell3.classList.add("text-center", "border-b", "text-sm");
-//   cell4.innerHTML = ` ${dateFormat}`;
-//   cell4.classList.add("text-center", "border-b", "text-sm");
-//   // Clear form inputs
-//   document.getElementById("name").value = "";
-//   document.getElementById("email").value = "";
-// });
+    confirmationBox.classList.remove('hidden');  
+    confirmYesButton.addEventListener('click', function(){
+
+        if (statusElement.classList.contains("from-slate-600")) {
+            statusElement.classList.remove("from-slate-600", "to-slate-300");
+          } else if (statusElement.classList.contains("from-green-600")) {
+            statusElement.classList.remove("from-green-600", "to-lime-400");
+          }
+          statusElement.classList.add("bg-red-400", "to-gray-400");
+          statusElement.textContent = "Unauthorized";
+          statusElement.setAttribute("data-status", "unauthorized");
+          confirmationBox.classList.add('hidden');
+    });
+
+    confirmNoButton.addEventListener('click', function(){
+        confirmationBox.classList.add('hidden');
+    })
+
+    
+  }
+  
