@@ -1285,8 +1285,20 @@ video {
   width: 100vw;
 }
 
+.w-32 {
+  width: 8rem;
+}
+
+.w-28 {
+  width: 7rem;
+}
+
 .min-w-0 {
   min-width: 0px;
+}
+
+.min-w-\[13rem\] {
+  min-width: 13rem;
 }
 
 .min-w-\[90\%\] {
@@ -1967,6 +1979,11 @@ video {
   border-color: rgb(250 204 21 / var(--tw-border-opacity));
 }
 
+.border-yellow-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(254 240 138 / var(--tw-border-opacity));
+}
+
 .border-b-transparent {
   border-bottom-color: transparent;
 }
@@ -2555,6 +2572,10 @@ video {
   text-align: right;
 }
 
+.text-start {
+  text-align: start;
+}
+
 .align-baseline {
   vertical-align: baseline;
 }
@@ -3107,6 +3128,10 @@ input[type="number"]::-ms-clear {
   background-color: rgb(15 37 87 / var(--tw-bg-opacity));
 }
 
+select {
+  font-family: 'FontAwesome', 'Second Font name'
+}
+
 .placeholder\:text-gray-500::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -3319,6 +3344,11 @@ input[type="number"]::-ms-clear {
 
 .hover\:bg-white\/20:hover {
   background-color: rgb(255 255 255 / 0.2);
+}
+
+.hover\:bg-yellow-400:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
 .hover\:text-black:hover {
@@ -3583,6 +3613,10 @@ input[type="number"]::-ms-clear {
     display: flex;
   }
 
+  .sm\:inline-flex {
+    display: inline-flex;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
   }
@@ -3710,6 +3744,10 @@ input[type="number"]::-ms-clear {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:inline-flex {
+    display: inline-flex;
   }
 
   .md\:hidden {
