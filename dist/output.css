@@ -635,6 +635,10 @@ video {
   bottom: 3.5rem;
 }
 
+.bottom-24 {
+  bottom: 6rem;
+}
+
 .bottom-28 {
   bottom: 7rem;
 }
@@ -669,10 +673,6 @@ video {
 
 .right-0 {
   right: 0px;
-}
-
-.right-2 {
-  right: 0.5rem;
 }
 
 .right-4 {
@@ -711,12 +711,32 @@ video {
   top: 1%;
 }
 
-.right-6 {
-  right: 1.5rem;
+.top-\[10remn\] {
+  top: 10remn;
 }
 
-.right-10 {
-  right: 2.5rem;
+.top-\[10rem\] {
+  top: 10rem;
+}
+
+.top-\[1\] {
+  top: 1;
+}
+
+.top-\[15rem\] {
+  top: 15rem;
+}
+
+.top-\[20rem\] {
+  top: 20rem;
+}
+
+.top-\[25rem\] {
+  top: 25rem;
+}
+
+.top-\[28rem\] {
+  top: 28rem;
 }
 
 .right-8 {
@@ -1295,6 +1315,10 @@ video {
 
 .w-screen {
   width: 100vw;
+}
+
+.w-40 {
+  width: 10rem;
 }
 
 .min-w-0 {
@@ -3119,6 +3143,10 @@ input[type="number"]::-ms-clear {
   background-color: rgb(15 37 87 / var(--tw-bg-opacity));
 }
 
+.first-letter\:flex::first-letter {
+  display: flex;
+}
+
 .placeholder\:text-gray-500::-moz-placeholder {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
@@ -3611,6 +3639,10 @@ input[type="number"]::-ms-clear {
     flex: none;
   }
 
+  .sm\:flex-col {
+    flex-direction: column;
+  }
+
   .sm\:justify-center {
     justify-content: center;
   }
@@ -3772,6 +3804,10 @@ input[type="number"]::-ms-clear {
     width: 100%;
   }
 
+  .md\:w-60 {
+    width: 15rem;
+  }
+
   .md\:flex-none {
     flex: none;
   }
@@ -3782,6 +3818,10 @@ input[type="number"]::-ms-clear {
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-col {
+    flex-direction: column;
   }
 
   .md\:items-start {

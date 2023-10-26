@@ -1,9 +1,10 @@
+
+
 const walletContainer = document.getElementById("walletContainer");
 const newDiv = document.createElement("div");
 const newSpan = document.createElement("span");
 const newSpanTwo = document.createElement("span");
 const selectedWallet = document.querySelector('[data-status="passive"]');
-console.log("selectedWallet");
 function createFunc() {
     walletContainer.appendChild(newDiv);
     newDiv.appendChild(newSpan);

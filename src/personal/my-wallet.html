@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>walletCo.</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <link rel="stylesheet" href="../../dist/output.css" />
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
@@ -110,11 +114,7 @@
                     <a href="./transaction.html">Transaction</a>
                   </div>
 
-                  <!-- ITEM 3 -->
-                  <div class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2">
-                    <i class="fa-solid fa-gear"></i>
-                    <a href="#">Settings</a>
-                  </div>
+
 
                   <!-- ITEM 4 -->
                   <div class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2">
@@ -169,10 +169,35 @@
           data-status="passive" onclick="selectedFunc()">
           <span class="text-2xl">TRY</span>
         </button>
-        <button class="bg-primary-2 rounded-lg border-2 border-primary-2 flex justify-center items-center col-span-3"
-          onclick="createFunc()">
+        <button id="createButton"
+          class="bg-primary-2 rounded-lg border-2 border-primary-2 flex justify-center items-center col-span-3">
           <span class="text-xl text-white">Create</span>
         </button>
+        <script>
+          $(document).ready(function () {
+            $("#createButton").click(function () {
+              Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                cancelButtonColor: '#facc15',
+                confirmButtonColor: '#28559a',
+                confirmButtonText: 'Yes, create it!'
+              }).then((result) => {
+                if (result.isConfirmed) {
+                  Swal.fire(
+                    'Created!',
+                    'Your wallet has been created.',
+                    'success'
+                  );
+                  createFunc();
+                };
+
+              })
+            });
+          });
+        </script>
       </div>
     </div>
   </main>
@@ -245,6 +270,7 @@
     </div>
   </footer>
   <script src="./my-wallet.js"></script>
+
 </body>
 
 </html>
