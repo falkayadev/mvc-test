@@ -41,3 +41,30 @@ function cssFuncStatus() {
     admin.classList.add("opacity-30");
   }
 }
+
+const statusContent = document.getElementById(
+  "toggleSwitchStatusContainer",
+).innerHTML;
+const roleContent = document.getElementById("toggleSwitchContainer").innerHTML;
+
+function unauthFunc() {
+  const profileStatus = document.getElementById("toggleSwitchStatusContainer");
+  const profileRole = document.getElementById("toggleSwitchContainer");
+  profileStatus.innerHTML = "UNAUTHORIZED";
+  profileRole.innerHTML = "UNAUTHORIZED";
+  profileStatus.classList.remove("bg-white");
+  profileStatus.classList.add("bg-red-400", "text-white");
+  profileRole.classList.remove("bg-white");
+  profileRole.classList.add("bg-red-400", "text-white");
+}
+
+function permFunc() {
+  const profileStatus = document.getElementById("toggleSwitchStatusContainer");
+  const profileRole = document.getElementById("toggleSwitchContainer");
+  profileStatus.classList.remove("bg-red-400", "text-white");
+  profileStatus.classList.add("bg-white");
+  profileRole.classList.remove("bg-red-400", "text-white");
+  profileRole.classList.add("bg-white");
+  profileStatus.innerHTML = statusContent;
+  profileRole.innerHTML = roleContent;
+}
