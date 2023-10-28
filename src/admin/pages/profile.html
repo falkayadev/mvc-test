@@ -410,143 +410,37 @@
         </div>
       </div>
       <div class="w-full p-6 mx-auto">
-        <div class="grid grid-cols-3 -mx-3 gap-8 xl:gap-0">
-          <div class="w-full max-w-full px-3 col-span-3 lg:col-span-1">
+        <div class="grid grid-cols-3 -mx-3 gap-8">
+          <div class="w-full max-w-full px-3 col-span-3">
             <div
-              class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
+              class="border-4 rounded-lg bg-primary-2 grid grid-cols-3 h-20 divide-x-2"
             >
-              <div class="shadow-lg" id="chfHistory">
-                <div
-                  class="bg-yellow-400 h-full text-primary-2 w-full overflow-y-scroll rounded-xl border-4 border-primary-5"
-                >
-                  <div
-                    class="rounded-3xl py-6 space-y-0 shadow-lg flex flex-col justify-center"
-                  >
-                    <h4 class="text-center text-primary-2 font-light">
-                      Transaction Tracker
-                    </h4>
-                    <div
-                      id="item"
-                      class="flex justify-between items-center px-10 py-2 hover:bg-primary-3"
-                    >
-                      <div id="itemDesc" class="flex flex-col w-[160px]">
-                        <p>Restauran Da Paolo CHF</p>
-                        <div id="itemDescDate" class="flex justify-between">
-                          <p class="text-sm text-white">28.01.2024</p>
-                          <p class="text-sm text-white">02.45PM</p>
-                        </div>
-                      </div>
-                      <div
-                        id="itemAmount"
-                        class="flex justify-center items-center"
-                      >
-                        <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
-                          -$96.50
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      id="item2"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
-                    >
-                      <div id="itemDesc2" class="flex flex-col w-[160px]">
-                        <p>Cash Inflow</p>
-                        <div id="itemDescDate2" class="flex justify-between">
-                          <p class="text-white text-sm">28.01.2024</p>
-                          <p class="text-white text-sm">02.45PM</p>
-                        </div>
-                      </div>
-                      <div id="itemAmount2">
-                        <p class="text-green-300 bg-primary-2 p-2 rounded-lg">
-                          +$22.50
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      id="item3"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
-                    >
-                      <div id="itemDesc3" class="flex flex-col">
-                        <p>Python E-Book</p>
-                        <div
-                          id="itemDescDate3"
-                          class="flex justify-between w-[160px]"
-                        >
-                          <p class="text-white text-sm">28.01.2024</p>
-                          <p class="text-white text-sm">02.45PM</p>
-                        </div>
-                      </div>
-                      <div id="itemAmount3">
-                        <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
-                          -$14.90
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      id="item4"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
-                    >
-                      <div id="itemDesc4" class="flex flex-col w-[160px]">
-                        <p>GYM Membership</p>
-                        <div id="itemDescDate4" class="flex justify-between">
-                          <p class="text-white text-sm">28.01.2024</p>
-                          <p class="text-white text-sm">02.45PM</p>
-                        </div>
-                      </div>
-                      <div id="itemAmount4">
-                        <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
-                          -$46.40
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      id="item5"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
-                    >
-                      <div id="itemDesc5" class="flex flex-col">
-                        <p>Refund</p>
-                        <div
-                          id="itemDescDate5"
-                          class="flex justify-between w-[160px]"
-                        >
-                          <p class="text-white text-sm">28.01.2024</p>
-                          <p class="text-white text-sm">02.45PM</p>
-                        </div>
-                      </div>
-                      <div id="itemAmount5">
-                        <p class="text-green-300 bg-primary-2 p-2 rounded-lg">
-                          +$32.50
-                        </p>
-                      </div>
-                    </div>
-                    <div
-                      id="item6"
-                      class="flex justify-between items-center hover:bg-primary-3 px-10 py-2"
-                    >
-                      <div id="itemDesc6" class="flex flex-col">
-                        <p>Restauran Da Paolo</p>
-                        <div
-                          id="itemDescDate6"
-                          class="flex justify-between w-[160px]"
-                        >
-                          <p class="text-white text-sm">28.01.2024</p>
-                          <p class="text-white text-sm">02.45PM</p>
-                        </div>
-                      </div>
-                      <div id="itemAmount6">
-                        <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
-                          -$96.50
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="flex justify-around items-center hover:bg-primary-3">
+                <span>EUR</span>
+                <i
+                  class="fa-solid fa-trash p-2 hover:text-yellow-400 hover:rounded-full hover:bg-primary-2"
+                  onclick="this.parentElement.remove()"
+                ></i>
+              </div>
+              <div class="flex justify-around items-center hover:bg-primary-3">
+                <span>CHF</span>
+                <i
+                  class="fa-solid fa-trash p-2 hover:text-yellow-400 hover:rounded-full hover:bg-primary-2"
+                  onclick="this.parentElement.remove()"
+                ></i>
+              </div>
+              <div class="flex justify-around items-center hover:bg-primary-3">
+                <span>TRY</span>
+                <i
+                  class="fa-solid fa-trash p-2 hover:text-yellow-400 hover:rounded-full hover:bg-primary-2"
+                  onclick="this.parentElement.remove()"
+                ></i>
               </div>
             </div>
           </div>
-          <div class="w-full max-w-full px-3 col-span-3 lg:col-span-1 -order-1">
+          <div class="w-full max-w-full px-3 col-span-3 lg:col-span-1">
             <div
-              class="relative flex flex-col h-full min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
+              class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
             >
               <div class="p-4 pb-0 mb-0 bg-white border-b-0 rounded-t-2xl">
                 <div class="flex flex-wrap -mx-3">
@@ -655,11 +549,153 @@
           </div>
           <div class="w-full max-w-full px-3 col-span-3 lg:col-span-1">
             <div
-              class="py-6 px-4 overflow-y-scroll h-full relative grid min-w-0 break-words bg-yellow-400 border-4 border-primary-5 shadow-soft-xl rounded-md bg-clip-border"
+              class="relative flex flex-col min-w-0 break-words bg-white border-0 shadow-soft-xl rounded-2xl bg-clip-border"
             >
-              <h4 class="text-primary-2 font-light text-center">
+              <div class="shadow-lg" id="chfHistory">
+                <div
+                  class="bg-white text-slate-700 w-full overflow-y-scroll rounded-xl border-4 border-primary-2"
+                >
+                  <div
+                    class="rounded-3xl py-6 space-y-0 shadow-lg flex flex-col justify-center"
+                  >
+                    <p
+                      class="text-center text-2xl font-semibold text-slate-700 bg-primary-5"
+                    >
+                      Transaction Tracker
+                    </p>
+                    <div class="flex flex-col divide-y-2 divide-primary-2">
+                      <div
+                        id="item"
+                        class="flex justify-between items-center px-10 py-2 hover:bg-yellow-400"
+                      >
+                        <div id="itemDesc" class="flex flex-col w-[160px]">
+                          <p>Restaurant Da Paolo CHF</p>
+                          <div
+                            id="itemDescDate"
+                            class="flex justify-between items-center"
+                          >
+                            <p class="text-sm text-slate-700">28.01.2024</p>
+                            <p class="text-sm text-slate-700">02.45PM</p>
+                          </div>
+                        </div>
+                        <div
+                          id="itemAmount"
+                          class="flex justify-center items-center"
+                        >
+                          <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
+                            -$96.50
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        id="item2"
+                        class="flex justify-between items-center hover:bg-yellow-400 px-10 py-2"
+                      >
+                        <div id="itemDesc2" class="flex flex-col w-[160px]">
+                          <p>Cash Inflow</p>
+                          <div id="itemDescDate2" class="flex justify-between">
+                            <p class="text-slate-700 text-sm">28.01.2024</p>
+                            <p class="text-slate-700 text-sm">02.45PM</p>
+                          </div>
+                        </div>
+                        <div id="itemAmount2">
+                          <p class="text-green-300 bg-primary-2 p-2 rounded-lg">
+                            +$22.50
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        id="item3"
+                        class="flex justify-between items-center hover:bg-yellow-400 px-10 py-2"
+                      >
+                        <div id="itemDesc3" class="flex flex-col">
+                          <p>Python E-Book</p>
+                          <div
+                            id="itemDescDate3"
+                            class="flex justify-between w-[160px]"
+                          >
+                            <p class="text-slate-700 text-sm">28.01.2024</p>
+                            <p class="text-slate-700 text-sm">02.45PM</p>
+                          </div>
+                        </div>
+                        <div id="itemAmount3">
+                          <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
+                            -$14.90
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        id="item4"
+                        class="flex justify-between items-center hover:bg-yellow-400 px-10 py-2"
+                      >
+                        <div id="itemDesc4" class="flex flex-col w-[160px]">
+                          <p>GYM Membership</p>
+                          <div id="itemDescDate4" class="flex justify-between">
+                            <p class="text-slate-700 text-sm">28.01.2024</p>
+                            <p class="text-slate-700 text-sm">02.45PM</p>
+                          </div>
+                        </div>
+                        <div id="itemAmount4">
+                          <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
+                            -$46.40
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        id="item5"
+                        class="flex justify-between items-center hover:bg-yellow-400 px-10 py-2"
+                      >
+                        <div id="itemDesc5" class="flex flex-col">
+                          <p>Refund</p>
+                          <div
+                            id="itemDescDate5"
+                            class="flex justify-between w-[160px]"
+                          >
+                            <p class="text-slate-700 text-sm">28.01.2024</p>
+                            <p class="text-slate-700 text-sm">02.45PM</p>
+                          </div>
+                        </div>
+                        <div id="itemAmount5">
+                          <p class="text-green-300 bg-primary-2 p-2 rounded-lg">
+                            +$32.50
+                          </p>
+                        </div>
+                      </div>
+                      <div
+                        id="item6"
+                        class="flex justify-between items-center hover:bg-yellow-400 px-10 py-2"
+                      >
+                        <div id="itemDesc6" class="flex flex-col">
+                          <p>Restauran Da Paolo</p>
+                          <div
+                            id="itemDescDate6"
+                            class="flex justify-between w-[160px]"
+                          >
+                            <p class="text-slate-700 text-sm">28.01.2024</p>
+                            <p class="text-slate-700 text-sm">02.45PM</p>
+                          </div>
+                        </div>
+                        <div id="itemAmount6">
+                          <p class="text-red-300 bg-primary-2 p-2 rounded-lg">
+                            -$96.50
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="w-full max-w-full px-3 col-span-3 lg:col-span-1">
+            <div
+              class="py-6 px-4 overflow-y-scroll relative grid min-w-0 break-words bg-white border-4 border-primary-5 shadow-soft-xl rounded-md bg-clip-border"
+            >
+              <p
+                class="text-center text-2xl font-semibold text-slate-700 bg-primary-5"
+              >
                 Session Tracker
-              </h4>
+              </p>
               <div
                 class="grid w-full grid-cols-4 grid-rows-2 text-white text-center"
               >
@@ -742,26 +778,26 @@
             </div>
           </div>
         </div>
-        <footer class="pt-4">
-          <div class="w-full px-6 mx-auto">
-            <div class="flex flex-wrap items-center -mx-3 lg:justify-between">
+      </div>
+      <footer class="pt-4">
+        <div class="w-full px-6 mx-auto">
+          <div class="flex flex-wrap items-center -mx-3 lg:justify-between">
+            <div
+              class="w-full max-w-full px-3 mt-0 mb-6 shrink-0 lg:mb-0 lg:w-1/2 lg:flex-none"
+            >
               <div
-                class="w-full max-w-full px-3 mt-0 mb-6 shrink-0 lg:mb-0 lg:w-1/2 lg:flex-none"
+                class="leading-normal text-center text-sm text-white lg:text-left"
               >
-                <div
-                  class="leading-normal text-center text-sm text-white lg:text-left"
-                >
-                  ©
-                  <script>
-                    document.write(new Date().getFullYear());
-                  </script>
-                  Copyright - walletCo.
-                </div>
+                ©
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                Copyright - walletCo.
               </div>
             </div>
           </div>
-        </footer>
-      </div>
+        </div>
+      </footer>
     </div>
   </body>
   <!-- plugin for scrollbar  -->

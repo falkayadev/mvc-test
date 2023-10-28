@@ -24,3 +24,20 @@ function cssFunc() {
     admin.classList.add("opacity-30");
   }
 }
+
+function cssFuncStatus() {
+  const thumb = document.querySelector("#switchStatusThumb");
+  const admin = document.querySelector("#passiveSide");
+  const employee = document.querySelector("#activeSide");
+  if (thumb.classList.contains("left-1")) {
+    thumb.classList.remove("left-1");
+    thumb.classList.add("right-1");
+    employee.classList.add("opacity-30");
+    admin.classList.remove("opacity-30");
+  } else {
+    thumb.classList.remove("right-1");
+    thumb.classList.add("left-1");
+    employee.classList.remove("opacity-30");
+    admin.classList.add("opacity-30");
+  }
+}

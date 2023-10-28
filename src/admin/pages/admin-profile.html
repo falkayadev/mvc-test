@@ -403,23 +403,6 @@
                 </div>
               </div>
             </div>
-            <div
-              id="toggleSwitchContainer"
-              class="flex items-center gap-2 group"
-            >
-              <div id="employeeSide">Employee</div>
-              <div
-                id="toggleSwitch"
-                class="w-12 h-6 bg-yellow-400 group-hover:bg-primary-3 rounded-3xl relative flex"
-                onclick="cssFunc()"
-              >
-                <div
-                  class="w-4 h-4 rounded-full bg-primary-2 absolute top-1 left-1 group-hover:bg-yellow-400"
-                  id="switchThumb"
-                ></div>
-              </div>
-              <div id="adminSide" class="opacity-30">Admin</div>
-            </div>
           </div>
         </div>
       </div>
@@ -570,6 +553,50 @@
                     class="rounded-lg px-2"
                   />
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full max-w-full px-3">
+          <div
+            class="relative flex h-full min-w-0 flex-col break-words rounded-2xl border-0 bg-white bg-clip-border shadow-soft-xl p-2"
+          >
+            <div
+              class="w-full h-full bg-primary-2 rounded-lg text-slate-700 text-lg p-8 grid place-content-center gap-20"
+            >
+              <div
+                id="toggleSwitchContainer"
+                class="flex items-center justify-between gap-2 group bg-white rounded-lg p-2"
+              >
+                <div id="employeeSide">Employee</div>
+                <div
+                  id="toggleSwitch"
+                  class="w-12 h-6 bg-yellow-400 border-2 border-primary-2 group-hover:bg-primary-3 rounded-3xl relative flex"
+                  onclick="cssFunc()"
+                >
+                  <div
+                    class="w-4 h-4 rounded-full bg-primary-2 absolute top-0.5 left-1 group-hover:bg-yellow-400"
+                    id="switchThumb"
+                  ></div>
+                </div>
+                <div id="adminSide" class="opacity-30">Admin</div>
+              </div>
+              <div
+                id="toggleSwitchStatusContainer"
+                class="flex items-center justify-between group p-2 bg-white rounded-lg"
+              >
+                <div id="activeSide">Active</div>
+                <div
+                  id="toggleSwitchStatus"
+                  class="w-12 h-6 bg-yellow-400 border-2 border-primary-2 group-hover:bg-primary-3 rounded-3xl relative flex"
+                  onclick="cssFuncStatus()"
+                >
+                  <div
+                    class="w-4 h-4 rounded-full bg-primary-2 absolute top-0.5 left-1 group-hover:bg-yellow-400"
+                    id="switchStatusThumb"
+                  ></div>
+                </div>
+                <div id="passiveSide" class="opacity-30">Passive</div>
               </div>
             </div>
           </div>

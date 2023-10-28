@@ -14,6 +14,17 @@
         referrerpolicy="no-referrer"/>
   <link rel="stylesheet"
         href="../../../dist/output.css"/>
+  <!-- DataTable -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+  <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-1.13.6/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/date-1.5.1/r-2.5.0/datatables.min.js"></script>
+  <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+          crossorigin="anonymous"
+  />
+  <!-- DataTable End -->
   <title>walletCo. - Employees</title>
   <!--     Fonts and icons     -->
   <style>
@@ -411,446 +422,355 @@
         <div class="flex flex-wrap -mx-3">
           <div class="flex-none w-full max-w-full px-3">
             <div
-                    class="relative flex flex-col min-w-0 mb-6 break-words bg-white border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
-              <div class="p-6 pb-0 mb-0 bg-white border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
-                <h6>Employees</h6>
+                    class="relative flex flex-col min-w-0 mb-6 break-words border-0 border-transparent border-solid shadow-soft-xl rounded-2xl bg-clip-border">
+              <div class="p-6 pb-0 mb-0 border-b-0 border-b-solid rounded-t-2xl border-b-transparent">
+                <h6 class="text-white">Employees</h6>
               </div>
-              <div class="flex-auto px-0 pt-0 pb-2">
-                <div class="p-0 overflow-x-auto">
-                  <table class="items-center w-full mb-0 align-top border-gray-200 text-slate-500"
-                         id="myTable">
-                    <colgroup>
-                      <col class="w-1/5">
-                      <col class="w-1/5">
-                      <col class="w-1/5">
-                      <col class="w-1/5">
-                      <col class="w-1/5">
-                    </colgroup>
-                    <thead class="align-bottom">
-                    <tr>
-                      <th
-                              class="px-6 py-3 font-bold text-left uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
-                        Employee
-                      </th>
+              <div>
+                <table id="myEmployeeTable"
+                       class="table compact hover">
+                  <thead class="text-white bg-primary-2">
+                  <tr>
+                    <th>Full Name</th>
+                    <th>E-Mail</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Last Login Date</th>
+                    <th>Remove</th>
+                  </tr>
+                  </thead>
+                  <tbody class="text-white bg-primary-4">
+                  <!-- Example Inputs -->
+                  <tr>
+                    <td>John Doe</td>
+                    <td>john.doe@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-15</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Jane Smith</td>
+                    <td>jane.smith@example.com</td>
+                    <td>Staff</td>
+                    <td>Active</td>
+                    <td>2023-10-25</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Michael Johnson</td>
+                    <td>michael.j@example.com</td>
+                    <td>Admin</td>
+                    <td>Inactive</td>
+                    <td>2023-09-30</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Emily Davis</td>
+                    <td>emily.d@example.com</td>
+                    <td>Staff</td>
+                    <td>Active</td>
+                    <td>2023-10-27</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>David Brown</td>
+                    <td>david.b@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-20</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Sarah Wilson</td>
+                    <td>sarah.w@example.com</td>
+                    <td>Staff</td>
+                    <td>Inactive</td>
+                    <td>2023-10-10</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>James Miller</td>
+                    <td>james.m@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-18</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Lisa Martinez</td>
+                    <td>lisa.m@example.com</td>
+                    <td>Staff</td>
+                    <td>Inactive</td>
+                    <td>2023-10-05</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Robert Lee</td>
+                    <td>robert.l@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-23</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Jessica Harris</td>
+                    <td>jessica.h@example.com</td>
+                    <td>Staff</td>
+                    <td>Active</td>
+                    <td>2023-10-29</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>William Smith</td>
+                    <td>william.s@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-14</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Mary Taylor</td>
+                    <td>mary.t@example.com</td>
+                    <td>Staff</td>
+                    <td>Inactive</td>
+                    <td>2023-10-08</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td class="cursor-pointer"
+                        onclick="window.location.href='./admin-profile.html'">Christopher Clark
+                    </td>
+                    <td>christopher.c@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-17</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Laura White</td>
+                    <td>laura.w@example.com</td>
+                    <td>Staff</td>
+                    <td>Inactive</td>
+                    <td>2023-10-09</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Daniel Walker</td>
+                    <td>daniel.w@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-21</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>John Doe</td>
+                    <td>john.doe@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-15</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Jane Smith</td>
+                    <td>jane.smith@example.com</td>
+                    <td>Staff</td>
+                    <td>Active</td>
+                    <td>2023-10-25</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Michael Johnson</td>
+                    <td>michael.j@example.com</td>
+                    <td>Admin</td>
+                    <td>Inactive</td>
+                    <td>2023-09-30</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Emily Davis</td>
+                    <td>emily.d@example.com</td>
+                    <td>Staff</td>
+                    <td>Active</td>
+                    <td>2023-10-27</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>David Brown</td>
+                    <td>david.b@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-20</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Sarah Wilson</td>
+                    <td>sarah.w@example.com</td>
+                    <td>Staff</td>
+                    <td>Inactive</td>
+                    <td>2023-10-10</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>James Miller</td>
+                    <td>james.m@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-18</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Lisa Martinez</td>
+                    <td>lisa.m@example.com</td>
+                    <td>Staff</td>
+                    <td>Inactive</td>
+                    <td>2023-10-05</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Robert Lee</td>
+                    <td>robert.l@example.com</td>
+                    <td>Admin</td>
+                    <td>Active</td>
+                    <td>2023-10-23</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <tr>
+                    <td>Jessica Harris</td>
+                    <td>jessica.h@example.com</td>
+                    <td>Staff</td>
+                    <td>Active</td>
+                    <td>2023-10-29</td>
+                    <td><i onclick="this.parentElement.parentElement.remove()"
+                           class="fa-solid fa-trash flex justify-center items-center"></i></td>
+                  </tr>
+                  <!-- Example Inputs End -->
+                  </tbody>
+                </table>
+              </div>
 
-                      <th
-                              class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
-                        Role
-                      </th>
 
-                      <th
-                              class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
-                        Status
-                      </th>
-                      <th
-                              class="px-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
-                        Permission
-                      </th>
-                      <th
-                              class="x-6 py-3 font-bold text-center uppercase align-middle bg-transparent border-b border-gray-200 shadow-none text-xxs border-b-solid tracking-none whitespace-nowrap text-slate-400 opacity-70">
-                        Last Login
-                      </th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    <tr>
-                      <td class="cursor-pointer p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <div class="flex px-2 py-1 justify-between">
-                          <div class="">
-                            <img src="../assets/img/team-2.jpg"
-                                 class="inline-flex items-center justify-center mr-4 text-sm text-white transition-all duration-200 ease-soft-in-out h-9 w-9 rounded-xl"
-                                 alt="user1"/>
-                          </div>
-                          <div class="flex flex-col justify-center ">
-                            <h6 class="mb-0 text-sm leading-normal">
-                              John Michael
-                            </h6>
-                            <p class="mb-0 text-xs leading-tight text-slate-400">
-                              john@walletco.com
-                            </p>
-                          </div>
-                          <div class="">
-                            <i class="fa-solid fa-trash ml-14 remove"></i>
-                          </div>
-                        </div>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="bg-gradient-to-tl from-yellow-400 to-yellow-300 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-slate-700">
-                          Admin
-                        </button>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="toggleStatus bg-gradient-to-tl from-green-600 to-lime-400 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white"
-                                data-status="active"
-                                id="status1">
-                          Active
-                        </button>
-                      </td>
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <i class="fa-solid fa-close cursor-pointer bg-red-400 px-3 py-1 text-xs rounded-full text-white"
-                           onclick="banUser(1);"></i>
-                      </td>
-                      <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <span class="text-xs font-semibold leading-tight text-slate-400">23/04/18</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="cursor-pointer p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <div class="flex px-2 py-1 justify-between">
-                          <div>
-                            <img src="../assets/img/team-3.jpg"
-                                 class="inline-flex items-center justify-center mr-4 text-sm text-white transition-all duration-200 ease-soft-in-out h-9 w-9 rounded-xl"
-                                 alt="user2"/>
-                          </div>
-                          <div class="flex flex-col justify-center ">
-                            <h6 class="mb-0 text-sm leading-normal">
-                              Alexa Liras
-                            </h6>
-                            <p class="mb-0 text-xs leading-tight text-slate-400">
-                              alexa@walletco.com
-                            </p>
-                          </div>
-                          <div>
-                            <i class="fa-solid fa-trash ml-14 remove "></i>
-                          </div>
-                        </div>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="bg-primary-3 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white">
-                          Staff
-                        </button>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="toggleStatus bg-gradient-to-tl from-slate-600 to-slate-300 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white"
-                                data-status="passive"
-                                id="status2">
-                          Passive
-                        </button>
-                      </td>
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <i class="fa-solid fa-close cursor-pointer bg-red-400 px-3 py-1 text-xs rounded-full text-white"
-                           onclick="banUser(2);"></i>
-                      </td>
-                      <td
-                              class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <span class="text-xs font-semibold leading-tight text-slate-400">11/01/19</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                              class="cursor-pointer p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent"
-                      >
-                        <div class="flex px-2 py-1 justify-between">
-                          <div>
-                            <img src="../assets/img/team-4.jpg"
-                                 class="inline-flex items-center justify-center mr-4 text-sm text-white transition-all duration-200 ease-soft-in-out h-9 w-9 rounded-xl"
-                                 alt="user3"/>
-                          </div>
-                          <div class="flex flex-col justify-center">
-                            <h6 class="mb-0 text-sm leading-normal">
-                              Laurent Perrier
-                            </h6>
-                            <p class="mb-0 text-xs leading-tight text-slate-400">
-                              laurent@walletco.com
-                            </p>
-                          </div>
-                          <div>
-                            <i class="fa-solid fa-trash ml-14 remove"></i>
-                          </div>
-                        </div>
-
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="bg-primary-3 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white">
-                          Staff
-                        </button>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="toggleStatus bg-gradient-to-tl from-green-600 to-lime-400 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white"
-                                data-status="active"
-                                id="status3">
-                          Active
-                        </button>
-                      </td>
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <i class="fa-solid fa-close cursor-pointer bg-red-400 px-3 py-1 text-xs rounded-full text-white"
-                           onclick="banUser(3)"></i>
-                      </td>
-                      <td
-                              class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <span class="text-xs font-semibold leading-tight text-slate-400">19/09/17</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                              class="cursor-pointer p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent"
-                      >
-                        <div class="flex px-2 py-1 justify-between">
-                          <div>
-                            <img src="../assets/img/team-3.jpg"
-                                 class="inline-flex items-center justify-center mr-4 text-sm text-white transition-all duration-200 ease-soft-in-out h-9 w-9 rounded-xl"
-                                 alt="user4"/>
-                          </div>
-                          <div class="flex flex-col justify-center">
-                            <h6 class="mb-0 text-sm leading-normal">
-                              Michael Levi
-                            </h6>
-                            <p class="mb-0 text-xs leading-tight text-slate-400">
-                              michael@walletco.com
-                            </p>
-                          </div>
-                          <div>
-                            <i class="fa-solid fa-trash ml-14 remove"></i>
-                          </div>
-                        </div>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="bg-gradient-to-tl from-yellow-400 to-yellow-300 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-slate-700">
-                          Admin
-                        </button>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="toggleStatus bg-gradient-to-tl from-green-600 to-lime-400 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white"
-                                data-status="active"
-                                id="status4">
-                          Active
-                        </button>
-                      </td>
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <i class="fa-solid fa-close cursor-pointer bg-red-400 px-3 py-1 text-xs rounded-full text-white"
-                           onclick="banUser(4)"></i>
-                      </td>
-                      <td
-                              class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <span class="text-xs font-semibold leading-tight text-slate-400">24/12/08</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                              class="cursor-pointer p-2 align-middle bg-transparent border-b whitespace-nowrap shadow-transparent"
-                      >
-                        <div class="flex px-2 py-1 justify-between">
-                          <div>
-                            <img src="../assets/img/team-2.jpg"
-                                 class="inline-flex items-center justify-center mr-4 text-sm text-white transition-all duration-200 ease-soft-in-out h-9 w-9 rounded-xl"
-                                 alt="user5"/>
-                          </div>
-                          <div class="flex flex-col justify-center">
-                            <h6 class="mb-0 text-sm leading-normal">
-                              Richard Gran
-                            </h6>
-                            <p class="mb-0 text-xs leading-tight text-slate-400">
-                              richard@walletco.com
-                            </p>
-                          </div>
-                          <div>
-                            <i class="fa-solid fa-trash ml-14 remove"></i>
-                          </div>
-                        </div>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="bg-primary-3 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white">
-                          Admin
-                        </button>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <button
-                                class="toggleStatus bg-gradient-to-tl from-slate-600 to-slate-300 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white"
-                                data-status="passive"
-                                id="status5">
-                          Passive
-                        </button>
-                      </td>
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <i class="fa-solid fa-close cursor-pointer bg-red-400 px-3 py-1 text-xs rounded-full text-white"
-                           onclick="banUser(5)"></i>
-                      </td>
-                      <td class="p-2 text-center align-middle bg-transparent border-b whitespace-nowrap shadow-transparent">
-                        <span class="text-xs font-semibold leading-tight text-slate-400">04/10/21</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td
-                              class="cursor-pointer p-2 align-middle bg-transparent border-b-0 whitespace-nowrap shadow-transparent"
-                      >
-                        <div class="flex px-2 py-1 justify-between">
-                          <div>
-                            <img src="../assets/img/team-4.jpg"
-                                 class="inline-flex items-center justify-center mr-4 text-sm text-white transition-all duration-200 ease-soft-in-out h-9 w-9 rounded-xl"
-                                 alt="user6"/>
-                          </div>
-                          <div class="flex flex-col justify-center">
-                            <h6 class="mb-0 text-sm leading-normal">
-                              Miriam Eric
-                            </h6>
-                            <p class="mb-0 text-xs leading-tight text-slate-400">
-                              miriam@walletco.com
-                            </p>
-                          </div>
-                          <div>
-                            <i class="fa-solid fa-trash ml-14 remove"></i>
-                          </div>
-                        </div>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent whitespace-nowrap shadow-transparent">
-                        <button
-                                class="bg-primary-3 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white">
-                          Admin
-                        </button>
-                      </td>
-
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent border-b-0 whitespace-nowrap shadow-transparent">
-                        <button
-                                class="toggleStatus bg-gradient-to-tl from-slate-600 to-slate-300 px-2.5 text-xs rounded-1.8 py-1.4 inline-block whitespace-nowrap text-center align-baseline font-bold uppercase leading-none text-white"
-                                data-status="passive"
-                                id="status6">
-                          Passive
-                        </button>
-                      </td>
-                      <td
-                              class="p-2 text-sm leading-normal text-center align-middle bg-transparent  whitespace-nowrap shadow-transparent">
-                        <i class="fa-solid fa-close cursor-pointer bg-red-400 px-3 py-1 text-xs rounded-full text-white"
-                           onclick="banUser(6)"></i>
-                      </td>
-                      <td
-                              class="p-2 text-center align-middle bg-transparent border-b-0 whitespace-nowrap shadow-transparent">
-                        <span class="text-xs font-semibold leading-tight text-slate-400">14/09/20</span>
-                      </td>
-                    </tr>
-                    </tbody>
-                    <div id="customConfirm"
-                         class="hidden text-white inset-0 fixed z-10 flex items-center justify-center">
-                      <div
-                              class="bg-primary-4 p-6 lg:p-10 rounded-xl shadow-lg text-center w-[24rem] md:w-[30rem] lg:w-[36rem]">
-                        <p class="text-xl">
-                          Are you sure you want to change this member's
-                          status?
-                        </p>
-                        <div class="flex justify-center items-center">
-                          <button id="confirmYes"
-                                  class="bg-green-500 text-white p-2 m-2 rounded hover:bg-green-700 w-20">
-                            Yes
-                          </button>
-                          <button id="confirmNo"
-                                  class="bg-red-500 text-white p-2 m-2 rounded hover:bg-red-700 w-20">
-                            No
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </table>
+              <div id="customConfirm"
+                   class="hidden text-white inset-0 fixed z-10 flex items-center justify-center">
+                <div
+                        class="bg-primary-4 p-6 lg:p-10 rounded-xl shadow-lg text-center w-[24rem] md:w-[30rem] lg:w-[36rem]">
+                  <p class="text-xl">
+                    Are you sure you want to change this member's
+                    status?
+                  </p>
+                  <div class="flex justify-center items-center">
+                    <button id="confirmYes"
+                            class="bg-green-500 text-white p-2 m-2 rounded hover:bg-green-700 w-20">
+                      Yes
+                    </button>
+                    <button id="confirmNo"
+                            class="bg-red-500 text-white p-2 m-2 rounded hover:bg-red-700 w-20">
+                      No
+                    </button>
+                  </div>
                 </div>
               </div>
+              </table>
             </div>
           </div>
         </div>
       </div>
-      <!-- new staff -->
-      <div class="text-slate-700"
-           id="employee-form">
-        <h2 class="text-center text-yellow-400">New Employee</h2>
-        <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min auto-cols-min px-4 gap-6">
-          <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
-            <label for="firstName"
-                   class="text-2xl">First Name</label>
-            <input type="text"
-                   id="firstName"
-                   class="rounded-lg text-slate-700 px-2 text-center"/>
-          </div>
-          <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
-            <label for="lastName"
-                   class="text-2xl">Last Name</label>
-            <input type="text"
-                   id="lastName"
-                   class="rounded-lg text-slate-700 px-2 text-center"/>
-          </div>
-          <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
-            <label for="staffRole"
-                   class="text-2xl">Role</label>
-            <select name="role"
-                    id="staffRole"
-                    class="min-w-[13rem] rounded-lg py-1 px-2">
-              <option value="staff"> Staff</option>
-              <option value="admin"> Admin</option>
-            </select>
-          </div>
-          <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
-            <label for="email"
-                   class="text-2xl">Email</label>
-            <input type="email"
-                   id="email"
-                   class="rounded-lg text-slate-700 px-2 text-center"/>
-          </div>
-          <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
-            <label for="password"
-                   class="text-2xl">Password</label>
-            <input type="password"
-                   id="password"
-                   class="rounded-lg text-slate-700 px-2 text-center"/>
-          </div>
-          <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
-            <label for="confirmPassword"
-                   class="text-2xl">Password</label>
-            <input type="password"
-                   id="confirmPassword"
-                   class="rounded-lg text-slate-700 px-2 text-center"/>
-          </div>
-        </div>
-        <div class="grid place-content-center mt-6 pb-10">
-          <button
-                  class="px-10 py-4 hover:bg-primary-2 bg-primary-2/60 border-4 border-yellow-400 text-yellow-400 rounded-lg font-semibold"
-                  id="create-btn">
-            Add Employee
-          </button>
-        </div>
-      </div>
-
-      <!-- new staff end -->
     </div>
+  </div>
+  <!-- new staff -->
+  <div class="text-slate-700"
+       id="employee-form">
+    <h2 class="text-center text-yellow-400">New Employee</h2>
+    <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 auto-rows-min auto-cols-min px-4 gap-6">
+      <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
+        <label for="firstName"
+               class="text-2xl">First Name</label>
+        <input type="text"
+               id="firstName"
+               class="rounded-lg text-slate-700 px-2 text-center"/>
+      </div>
+      <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
+        <label for="lastName"
+               class="text-2xl">Last Name</label>
+        <input type="text"
+               id="lastName"
+               class="rounded-lg text-slate-700 px-2 text-center"/>
+      </div>
+      <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
+        <label for="staffRole"
+               class="text-2xl">Role</label>
+        <select name="role"
+                id="staffRole"
+                class="min-w-[13rem] rounded-lg py-1 px-2">
+          <option value="staff"> Staff</option>
+          <option value="admin"> Admin</option>
+        </select>
+      </div>
+      <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
+        <label for="email"
+               class="text-2xl">Email</label>
+        <input type="email"
+               id="email"
+               class="rounded-lg text-slate-700 px-2 text-center"/>
+      </div>
+      <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
+        <label for="password"
+               class="text-2xl">Password</label>
+        <input type="password"
+               id="password"
+               class="rounded-lg text-slate-700 px-2 text-center"/>
+      </div>
+      <div class="w-full h-full bg-yellow-400 rounded-lg p-4 flex flex-col justify-center items-center">
+        <label for="confirmPassword"
+               class="text-2xl">Password</label>
+        <input type="password"
+               id="confirmPassword"
+               class="rounded-lg text-slate-700 px-2 text-center"/>
+      </div>
+    </div>
+    <div class="grid place-content-center mt-6 pb-10">
+      <button
+              class="px-10 py-4 hover:bg-primary-2 bg-primary-2/60 border-4 border-yellow-400 text-yellow-400 rounded-lg font-semibold"
+              id="create-btn">
+        Add Employee
+      </button>
+    </div>
+  </div>
 
-    <!-- Staff Content Section End -->
+  <!-- new staff end -->
+  </div>
+
+  <!-- Staff Content Section End -->
 </main>
 <script src="../assets/js/staff.js"></script>
 <script src="../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5"
         async></script>
 <script src="../assets/js/sidenav-burger.js"></script>
+<script src="../assets/js/staff-table.js"></script>
 </body>
 
 </html>
