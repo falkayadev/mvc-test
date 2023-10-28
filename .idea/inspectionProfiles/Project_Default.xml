@@ -4,11 +4,14 @@
     <inspection_tool class="HtmlUnknownAttribute" enabled="true" level="WARNING" enabled_by_default="true">
       <option name="myValues">
         <value>
-          <list size="4">
+          <list size="7">
             <item index="0" class="java.lang.String" itemvalue="sidenav-close" />
             <item index="1" class="java.lang.String" itemvalue="dropdown-trigger" />
             <item index="2" class="java.lang.String" itemvalue="sidenav-trigger" />
             <item index="3" class="java.lang.String" itemvalue="dropdown-menu" />
+            <item index="4" class="java.lang.String" itemvalue="navbar-profile" />
+            <item index="5" class="java.lang.String" itemvalue="navbar-scroll" />
+            <item index="6" class="java.lang.String" itemvalue="fixed-plugin-button-nav" />
           </list>
         </value>
       </option>

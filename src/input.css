@@ -46,28 +46,5 @@ input[type="number"]::-ms-clear {
 }
 
 select {
-  font-family: 'FontAwesome', 'Second Font name'
+  font-family: "FontAwesome", "Second Font name";
 }
-
-
-/* Ticket table */
-#myTable tbody td:first-child {
-  @apply bg-yellow-400 text-slate-700 font-semibold border-r-4 !border-primary-2;
-}
-
-#myTable tbody td:nth-child(2) {
-  @apply text-center;
-}
-
-#myTable tbody td:nth-child(3) {
-  text-align: right;
-}
-
-#myTable thead td:nth-child(2) {
-    text-align:center !important;
-}
-
-#myTable thead td:nth-child(3) {
-  @apply !text-right;
-}
-

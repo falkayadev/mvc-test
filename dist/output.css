@@ -639,6 +639,10 @@ video {
   bottom: 7rem;
 }
 
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
 .bottom-4 {
   bottom: 1rem;
 }
@@ -649,6 +653,10 @@ video {
 
 .left-0 {
   left: 0px;
+}
+
+.left-1 {
+  left: 0.25rem;
 }
 
 .left-1\/2 {
@@ -671,6 +679,10 @@ video {
   right: 0px;
 }
 
+.right-2 {
+  right: 0.5rem;
+}
+
 .right-4 {
   right: 1rem;
 }
@@ -681,6 +693,10 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.top-1 {
+  top: 0.25rem;
 }
 
 .top-1\/2 {
@@ -709,6 +725,10 @@ video {
 
 .top-\[1\%\] {
   top: 1%;
+}
+
+.right-1 {
+  right: 0.25rem;
 }
 
 .z-10 {
@@ -2941,6 +2961,10 @@ video {
   opacity: 0.7;
 }
 
+.opacity-30 {
+  opacity: 0.3;
+}
+
 .shadow {
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
@@ -3081,6 +3105,10 @@ video {
   transition-duration: 700ms;
 }
 
+.ease-in-out {
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .card-transform {
   transform-style: preserve-3d;
 }
@@ -3130,36 +3158,7 @@ input[type="number"]::-ms-clear {
 }
 
 select {
-  font-family: 'FontAwesome', 'Second Font name'
-}
-
-/* Ticket table */
-
-#myTable tbody td:first-child {
-  border-right-width: 4px;
-  --tw-border-opacity: 1 !important;
-  border-color: rgb(15 37 87 / var(--tw-border-opacity)) !important;
-  --tw-bg-opacity: 1;
-  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
-  font-weight: 600;
-  --tw-text-opacity: 1;
-  color: rgb(51 65 85 / var(--tw-text-opacity));
-}
-
-#myTable tbody td:nth-child(2) {
-  text-align: center;
-}
-
-#myTable tbody td:nth-child(3) {
-  text-align: right;
-}
-
-#myTable thead td:nth-child(2) {
-  text-align:center !important;
-}
-
-#myTable thead td:nth-child(3) {
-  text-align: right !important;
+  font-family: "FontAwesome", "Second Font name";
 }
 
 .placeholder\:text-gray-500::-moz-placeholder {
@@ -3547,6 +3546,16 @@ select {
 
 .group:hover .group-hover\:border-4 {
   border-width: 4px;
+}
+
+.group:hover .group-hover\:bg-primary-3 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(40 85 154 / var(--tw-bg-opacity));
+}
+
+.group:hover .group-hover\:bg-yellow-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(250 204 21 / var(--tw-bg-opacity));
 }
 
 .group\/\31:hover .group-hover\/1\:text-slate-700 {
@@ -4253,4 +4262,3 @@ select {
     padding: 0.625rem;
   }
 }
-

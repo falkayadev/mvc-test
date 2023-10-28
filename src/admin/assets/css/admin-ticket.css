@@ -1,0 +1,24 @@
+/* Ticket table */
+tbody td:first-child {
+  background-color: #facc15;
+  color: #334155;
+  font-weight: 600;
+  border-right: 4px;
+  border-color: #0f2557;
+}
+
+tbody td:nth-child(2) {
+  text-align: center !important;
+}
+
+tbody td:nth-child(3) {
+  text-align: right !important;
+}
+
+thead td:nth-child(2) {
+  text-align: center !important;
+}
+
+thead td:nth-child(3) {
+  text-align: right !important;
+}
