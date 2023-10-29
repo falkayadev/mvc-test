@@ -12,12 +12,12 @@ document.querySelectorAll(".toggleStatus").forEach(function (button) {
         button.classList.remove(
           "bg-gradient-to-tl",
           "from-green-600",
-          "to-lime-400"
+          "to-lime-400",
         );
         button.classList.add(
           "bg-gradient-to-tl",
           "from-slate-600",
-          "to-slate-300"
+          "to-slate-300",
         );
       } else {
         button.setAttribute("data-status", "active");
@@ -26,7 +26,7 @@ document.querySelectorAll(".toggleStatus").forEach(function (button) {
           button.classList.add(
             "bg-gradient-to-tl",
             "from-green-600",
-            "to-lime-400"
+            "to-lime-400",
           );
         }
       }
@@ -50,3 +50,5 @@ function banUser(userId) {
   statusElement.textContent = "Banned";
   statusElement.setAttribute("data-status", "banned");
 }
+
+let table = new DataTable("#clientTable");
