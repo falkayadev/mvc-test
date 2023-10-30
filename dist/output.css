@@ -894,6 +894,11 @@ video {
   margin-bottom: auto;
 }
 
+.mx-3 {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+}
+
 .-mb-5 {
   margin-bottom: -1.25rem;
 }
@@ -978,6 +983,10 @@ video {
   margin-left: 1.5rem;
 }
 
+.ml-auto {
+  margin-left: auto;
+}
+
 .mr-1 {
   margin-right: 0.25rem;
 }
@@ -1000,10 +1009,6 @@ video {
 
 .mr-4 {
   margin-right: 1rem;
-}
-
-.mr-auto {
-  margin-right: auto;
 }
 
 .mt-0 {
@@ -1052,10 +1057,6 @@ video {
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.ml-auto {
-  margin-left: auto;
 }
 
 .block {
@@ -1790,6 +1791,10 @@ video {
 
 .overflow-y-auto {
   overflow-y: auto;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden;
 }
 
 .overflow-y-hidden {
