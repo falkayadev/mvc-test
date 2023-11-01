@@ -12,15 +12,19 @@
     />
     <link rel="stylesheet" href="../../../dist/output.css" />
     <!-- DataTable -->
-    <link
-      href="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.6/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/date-1.5.1/datatables.min.css"
-      rel="stylesheet"
-    />
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/v/dt/jq-3.7.0/jszip-3.10.1/dt-1.13.6/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/date-1.5.1/datatables.min.js"></script>
+    <!-- Table AG-Grid JS -->
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <!-- Table My JS -->
+    <script src="../assets/js/data.js"></script>
+    <!-- Table Core CSS -->
+    <link rel="stylesheet" href="../assets/css/ag-grid.css" />
+    <!-- Table Theme CSS -->
+    <link rel="stylesheet" href="../assets/css/ag-theme-alpine.css" />
+    <!-- Page JS -->
+    <script src="../assets/js/transaction-control.js"></script>
     <!-- DataTable End -->
+
     <!--     Fonts and icons     -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
@@ -47,6 +51,7 @@
     ></script>
     <title>walletCo. - Transaction Control</title>
   </head>
+
   <body
     class="leading-default m-0 bg-primary-3 font-poppins text-base font-normal text-white antialiased"
   >
@@ -593,188 +598,63 @@
       <!-- Wallets End -->
 
       <!-- Transaction Table -->
-      <div class="flex">
-        <div class="mx-10 mt-14 basis-2/3 pb-10">
-          <table id="transactionTable">
-            <thead class="bg-yellow-400 text-slate-700">
-              <th>Sender/Receiver</th>
-              <th>Description</th>
-              <th>Transaction</th>
-              <th>Date</th>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>4Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>3Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>2Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>1Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-              <tr>
-                <td>Alec Thompson</td>
-                <td>Restaurant De Loco</td>
-                <td>+$100</td>
-                <td>2012/10/24</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="mx-10 mt-14 grid grid-cols-1 gap-0 pb-10 text-slate-700">
+      <div class="flex w-full flex-col">
+        <div
+          class="mx-10 mt-14 flex flex-row justify-around gap-8 text-slate-700"
+        >
           <div
-            class="col-span-1 flex h-32 w-96 items-center justify-around rounded-lg bg-white"
+            class="flex w-full items-center justify-center rounded-lg bg-white py-4 sm:py-8"
           >
             <div class="flex flex-col">
-              <span class="text-sm font-semibold leading-normal"
-                >Total Income</span
-              >
-              <span class="font-bold leading-normal"
+              <span class="text-xs font-semibold leading-normal">Income</span>
+              <span class="text-base font-bold leading-normal"
                 ><span class="text-green-600">+</span>$100.000</span
               >
             </div>
-            <div class="flex items-center rounded-lg bg-yellow-400 p-6">
-              <i class="fa-solid fa-money-bill-trend-up fa-lg"></i>
-            </div>
           </div>
           <div
-            class="col-span-1 flex h-32 w-96 items-center justify-around rounded-lg bg-white"
+            class="flex w-full items-center justify-center rounded-lg bg-white"
           >
             <div class="flex flex-col">
-              <span class="text-sm font-semibold leading-normal"
-                >Total Expenses</span
-              >
-              <span class="font-bold leading-normal"
+              <span class="text-xs font-semibold leading-normal">Expenses</span>
+              <span class="text-base font-bold leading-normal"
                 ><span class="text-red-600">-</span>$20.000</span
               >
             </div>
-            <div class="flex items-center rounded-lg bg-yellow-400 p-6">
-              <i class="fa-solid fa-coins fa-lg"></i>
-            </div>
           </div>
           <div
-            class="col-span-1 flex h-32 w-96 items-center justify-around rounded-lg bg-white"
+            class="flex w-full items-center justify-around rounded-lg bg-white"
           >
             <div class="flex flex-col">
-              <span class="text-sm font-semibold leading-normal"
-                >Net Balance</span
-              >
-              <span class="font-bold leading-normal">$80.000</span>
+              <span class="text-xs font-semibold leading-normal">Balance</span>
+              <span class="text-base font-bold leading-normal">$80.000</span>
             </div>
-            <div class="flex items-center rounded-lg bg-yellow-400 p-6">
-              <i class="fa-solid fa-scale-balanced fa-lg"></i>
+          </div>
+        </div>
+        <div id="table-wrapper" class="mx-10 my-14">
+          <div id="myGrid" class="ag-theme-alpine-dark">
+            <div class="mb-4 flex justify-between text-white">
+              <div>
+                <span>Quick Filter:</span>
+                <input
+                  class="rounded-lg bg-yellow-400 p-2 text-slate-700 placeholder:text-slate-700"
+                  type="text"
+                  id="filter-text-box"
+                  placeholder="Filter..."
+                  oninput="onFilterTextBoxChanged()"
+                />
+              </div>
+              <button
+                onclick="onBtnExport()"
+                class="rounded-lg border-2 border-primary-2 bg-yellow-400 p-2 text-slate-700"
+              >
+                EXPORT
+              </button>
             </div>
           </div>
         </div>
       </div>
-      <!-- Transaction Table End -->
     </div>
-
-    <script src="../assets/js/transaction-control.js"></script>
+    <!-- Transaction Table End -->
   </body>
 </html>
