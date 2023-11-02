@@ -9,6 +9,7 @@ deactivators.forEach((deactivator) => {
     if (targetContent.classList.contains("bg-yellow-400")) {
       targetContent.classList.remove("bg-yellow-400");
       targetContent.classList.add("bg-gray-600");
+      targetContent.setAttribute("data-status", "passive");
     } else {
       return false;
     }
@@ -22,6 +23,7 @@ reactivators.forEach((reactivator) => {
     if (targetContent.classList.contains("bg-gray-600")) {
       targetContent.classList.remove("bg-gray-600");
       targetContent.classList.add("bg-yellow-400");
+      targetContent.setAttribute("data-status", "active");
     } else {
       return false;
     }
