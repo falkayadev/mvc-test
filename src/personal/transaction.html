@@ -34,6 +34,10 @@
         background-size: calc(2 * var(--s)) calc(2 * var(--s));
       }
     </style>
+    <link rel="stylesheet" href="../admin/assets/css/ag-grid.css">
+    <link rel="stylesheet" href="../admin/assets/css/ag-theme-alpine.css">
+    <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
+    <script src="../admin/assets/js/trans-control-data.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
@@ -176,13 +180,13 @@
       </div>
     </header>
 
-    <div class="bg-white text-primary-2 h-screen md:w-[92%] mx-auto pt-48">
-      <div class="flex flex-col justify-center items-center">
+    <div class="bg-white text-primary-2 h-full w-full mx-auto pt-48">
+      <div class="flex flex-col justify-center items-center w-[80%] h-full mx-auto">
         <h1 class="text-2xl font-semibold mb-6 text-center">
           Transaction History
         </h1>
         <div
-          class="mb-4 flex items-center justify-center gap-1 md:gap-10 h-full w-full]"
+          class="mb-4 flex items-center justify-start gap-1 md:gap-10 h-full w-full"
         >
           <div class="flex flex-col items-center justify-center">
             <label for="curSelector" class="text-sm font-medium text-gray-700"
@@ -198,97 +202,8 @@
               <option value="TRY">TRY</option>
             </select>
           </div>
-          <div class="flex flex-col items-center justify-center">
-            <label for="startDate" class="text-sm font-medium text-gray-700"
-              >Start Date</label
-            >
-            <input
-              type="date"
-              id="startDate"
-              class="mt-1 p-2 border rounded-md"
-            />
-          </div>
-          <div class="flex flex-col items-center justify-center">
-            <label for="endDate" class="text-sm font-medium text-gray-700"
-              >End Date</label
-            >
-            <input
-              type="date"
-              id="endDate"
-              class="mt-1 p-2 border rounded-md"
-            />
-          </div>
-          <button
-            onclick="filterTransactionsByDateRange()"
-            class="py-[10px] px-4 bg-primary-3 text-white rounded-md self-end"
-          >
-            Filter
-          </button>
         </div>
-        <table class="divide-y divide-gray-200 w-[80%] border">
-          <thead>
-            <tr>
-              <th
-                class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-              >
-                Date
-              </th>
-              <th
-                class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-              >
-                Explanation
-              </th>
-              <th
-                class="px-4 py-2 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-              >
-                Amount
-              </th>
-            </tr>
-          </thead>
-          <tbody class="bg-white divide-y divide-gray-200">
-            <!-- Örnek bir satır -->
-            <tr>
-              <td class="px-4 py-2">01/01/2023</td>
-              <td class="px-4 py-2">Payment to X</td>
-              <td class="px-4 py-2 text-green-500">+ $100</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">01/01/1999</td>
-              <td class="px-4 py-2">Payment to X</td>
-              <td class="px-4 py-2 text-green-500">+ $100</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">01/01/2005</td>
-              <td class="px-4 py-2">Payment to X</td>
-              <td class="px-4 py-2 text-green-500">+ $100</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">01/01/2007</td>
-              <td class="px-4 py-2">Payment to X</td>
-              <td class="px-4 py-2 text-green-500">+ $100</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">01/01/1982</td>
-              <td class="px-4 py-2">Payment to X</td>
-              <td class="px-4 py-2 text-green-500">+ $100</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">01/01/1994</td>
-              <td class="px-4 py-2">Payment to X</td>
-              <td class="px-4 py-2 text-green-500">+ $100</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">01/01/2002</td>
-              <td class="px-4 py-2">Payment to X</td>
-              <td class="px-4 py-2 text-green-500">+ $100</td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2">01/01/2020</td>
-              <td class="px-4 py-2">Payment to X</td>
-              <td class="px-4 py-2 text-green-500">+ $100</td>
-            </tr>
-            <!-- Diğer satırlar aynı şekilde eklenebilir -->
-          </tbody>
+        <table class="ag-theme-alpine w-full h-full" id="myTable">
         </table>
       </div>
     </div>
