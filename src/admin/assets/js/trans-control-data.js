@@ -25,6 +25,12 @@ const columnDefs = [
   
   // specify the data
   const rowData = [];
+
+  function onFilterTextBoxChanged() {
+    gridOptions.api.setQuickFilter(
+      document.getElementById("filter-text-box").value,
+    );
+  }
   
   // let the grid know which columns and what data to use
   const gridOptions = {
