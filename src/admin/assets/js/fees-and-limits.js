@@ -1,6 +1,5 @@
 const triggers = document.querySelectorAll(".section-trigger");
 const sections = document.querySelectorAll('[id^="section"]');
-console.log(triggers);
 
 triggers.forEach(function (trigger) {
   trigger.addEventListener("click", function (e) {
