@@ -12,17 +12,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../../../dist/output.css" />
-    <!-- DataTable -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-    <script src="https://cdn.datatables.net/v/bs5/jq-3.7.0/jszip-3.10.1/dt-1.13.6/b-2.4.2/b-colvis-2.4.2/b-html5-2.4.2/b-print-2.4.2/date-1.5.1/r-2.5.0/datatables.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-      crossorigin="anonymous"
-    />
-    <!-- DataTable End -->
     <title>walletCo. - Employees</title>
     <!--     Fonts and icons     -->
     <style>
@@ -556,25 +545,57 @@
                     <h6 class="text-white">Employees</h6>
                   </div>
                   <div>
-                    <table
-                      id="myEmployeeTable"
-                      class="compact hover mt-4 table"
-                    >
-                      <thead class="bg-primary-2 text-white">
+                    <div>
+                      <input
+                        type="text"
+                        id="filterInput"
+                        placeholder="Quick Filter.."
+                        class="rounded-lg bg-primary-2 p-2"
+                      />
+                    </div>
+                    <table id="myTable" class="mt-4 w-full">
+                      <colgroup>
+                        <col class="w-4/12" />
+                        <col class="w-2/12" />
+                        <col class="w-2/12" />
+                        <col class="w-2/12" />
+                        <col class="w-2/12" />
+                      </colgroup>
+                      <thead class="bg-primary-2 text-center text-white">
                         <tr>
-                          <th>Full Name</th>
-                          <th>E-Mail</th>
-                          <th>Role</th>
-                          <th>Status</th>
-                          <th>Last Login Date</th>
-                          <th>Remove</th>
+                          <th class="rounded-ss-lg p-2">Employee</th>
+                          <th class="p-2">Role</th>
+                          <th class="p-2">Status</th>
+                          <th class="p-2">Last Login Date</th>
+                          <th class="rounded-se-lg p-2">Remove</th>
                         </tr>
                       </thead>
                       <tbody class="bg-primary-4 text-white">
                         <!-- Example Inputs -->
                         <tr>
-                          <td>John Doe</td>
-                          <td>john.doe@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-3.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  John Michael
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  john@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Admin</td>
                           <td>Active</td>
                           <td>2023-10-15</td>
@@ -586,8 +607,29 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Jane Smith</td>
-                          <td>jane.smith@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-2.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  Alexander Anderson
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  alexander@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Staff</td>
                           <td>Active</td>
                           <td>2023-10-25</td>
@@ -599,10 +641,31 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Michael Johnson</td>
-                          <td>michael.j@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-1.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  Amanda Anderson
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  amanda@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Admin</td>
-                          <td>Inactive</td>
+                          <td>Passive</td>
                           <td>2023-09-30</td>
                           <td>
                             <i
@@ -612,8 +675,29 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Emily Davis</td>
-                          <td>emily.d@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-4.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  Benjamin Brown
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  benjamin@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Staff</td>
                           <td>Active</td>
                           <td>2023-10-27</td>
@@ -625,8 +709,29 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>David Brown</td>
-                          <td>david.b@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-3.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  James Taylor
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  james@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Admin</td>
                           <td>Active</td>
                           <td>2023-10-20</td>
@@ -638,10 +743,31 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Sarah Wilson</td>
-                          <td>sarah.w@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-2.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  William Davies
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  william@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Staff</td>
-                          <td>Inactive</td>
+                          <td>Passive</td>
                           <td>2023-10-10</td>
                           <td>
                             <i
@@ -651,8 +777,29 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>James Miller</td>
-                          <td>james.m@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-1.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  Emily Garcia
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  e.garcia@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Admin</td>
                           <td>Active</td>
                           <td>2023-10-18</td>
@@ -664,10 +811,31 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Lisa Martinez</td>
-                          <td>lisa.m@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-4.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  Michael Garcia
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  m.garcia@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Staff</td>
-                          <td>Inactive</td>
+                          <td>Passive</td>
                           <td>2023-10-05</td>
                           <td>
                             <i
@@ -677,8 +845,29 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Robert Lee</td>
-                          <td>robert.l@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-3.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  Noah Johnson
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  noahj@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Admin</td>
                           <td>Active</td>
                           <td>2023-10-23</td>
@@ -690,8 +879,29 @@
                           </td>
                         </tr>
                         <tr>
-                          <td>Jessica Harris</td>
-                          <td>jessica.h@example.com</td>
+                          <td>
+                            <div class="flex px-2 py-1">
+                              <div>
+                                <img
+                                  src="../assets/img/team-1.jpg"
+                                  class="mr-4 h-9 w-9 rounded-xl duration-200"
+                                  alt="user1"
+                                />
+                              </div>
+                              <div class="flex flex-col justify-center">
+                                <h6
+                                  class="mb-0 text-sm leading-normal text-white"
+                                >
+                                  Linda Smith
+                                </h6>
+                                <p
+                                  class="mb-0 text-xs leading-tight text-white/50"
+                                >
+                                  linda@walletco.com
+                                </p>
+                              </div>
+                            </div>
+                          </td>
                           <td>Staff</td>
                           <td>Active</td>
                           <td>2023-10-29</td>
@@ -702,206 +912,7 @@
                             ></i>
                           </td>
                         </tr>
-                        <tr>
-                          <td>William Smith</td>
-                          <td>william.s@example.com</td>
-                          <td>Admin</td>
-                          <td>Active</td>
-                          <td>2023-10-14</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Mary Taylor</td>
-                          <td>mary.t@example.com</td>
-                          <td>Staff</td>
-                          <td>Inactive</td>
-                          <td>2023-10-08</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td
-                            class="cursor-pointer"
-                            onclick="window.location.href='./admin-profile.html'"
-                          >
-                            Christopher Clark
-                          </td>
-                          <td>christopher.c@example.com</td>
-                          <td>Admin</td>
-                          <td>Active</td>
-                          <td>2023-10-17</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Laura White</td>
-                          <td>laura.w@example.com</td>
-                          <td>Staff</td>
-                          <td>Inactive</td>
-                          <td>2023-10-09</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Daniel Walker</td>
-                          <td>daniel.w@example.com</td>
-                          <td>Admin</td>
-                          <td>Active</td>
-                          <td>2023-10-21</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>John Doe</td>
-                          <td>john.doe@example.com</td>
-                          <td>Admin</td>
-                          <td>Active</td>
-                          <td>2023-10-15</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Jane Smith</td>
-                          <td>jane.smith@example.com</td>
-                          <td>Staff</td>
-                          <td>Active</td>
-                          <td>2023-10-25</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Michael Johnson</td>
-                          <td>michael.j@example.com</td>
-                          <td>Admin</td>
-                          <td>Inactive</td>
-                          <td>2023-09-30</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Emily Davis</td>
-                          <td>emily.d@example.com</td>
-                          <td>Staff</td>
-                          <td>Active</td>
-                          <td>2023-10-27</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>David Brown</td>
-                          <td>david.b@example.com</td>
-                          <td>Admin</td>
-                          <td>Active</td>
-                          <td>2023-10-20</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Sarah Wilson</td>
-                          <td>sarah.w@example.com</td>
-                          <td>Staff</td>
-                          <td>Inactive</td>
-                          <td>2023-10-10</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>James Miller</td>
-                          <td>james.m@example.com</td>
-                          <td>Admin</td>
-                          <td>Active</td>
-                          <td>2023-10-18</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Lisa Martinez</td>
-                          <td>lisa.m@example.com</td>
-                          <td>Staff</td>
-                          <td>Inactive</td>
-                          <td>2023-10-05</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Robert Lee</td>
-                          <td>robert.l@example.com</td>
-                          <td>Admin</td>
-                          <td>Active</td>
-                          <td>2023-10-23</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>Jessica Harris</td>
-                          <td>jessica.h@example.com</td>
-                          <td>Staff</td>
-                          <td>Active</td>
-                          <td>2023-10-29</td>
-                          <td>
-                            <i
-                              onclick="this.parentElement.parentElement.remove()"
-                              class="fa-solid fa-trash flex items-center justify-center"
-                            ></i>
-                          </td>
-                        </tr>
+
                         <!-- Example Inputs End -->
                       </tbody>
                     </table>
@@ -1029,6 +1040,6 @@
       async
     ></script>
     <script src="../assets/js/sidenav-burger.js"></script>
-    <script src="../assets/js/staff-table.js"></script>
+    <script src="../assets/js/filter.js"></script>
   </body>
 </html>

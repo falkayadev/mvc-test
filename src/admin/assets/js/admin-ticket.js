@@ -1,9 +1,3 @@
-$(document).ready(function () {
-  $("#myTable").DataTable({
-    paging: true,
-  });
-});
-
 const triggers = document.querySelectorAll(".trigger-chat");
 const chatbox = document.querySelector("#supChatBox");
 
