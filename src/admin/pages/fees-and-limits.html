@@ -791,8 +791,21 @@
           <div
             class="-order-1 col-span-4 flex place-content-center items-center rounded-lg bg-yellow-400 py-4 md:col-span-6"
           >
-            <h2 class="text-2xl text-slate-700 md:text-3xl">
-              Limit Regulations
+            <h2
+              class="flex items-center gap-4 text-2xl text-slate-700 md:text-3xl"
+            >
+              <div>
+                <select
+                  name="curSel"
+                  id="curSel"
+                  class="appearance-none rounded-lg bg-primary-2 p-2 text-yellow-400"
+                >
+                  <option value="chf">CHF</option>
+                  <option value="eur">EUR</option>
+                  <option value="try">TRY</option>
+                </select>
+              </div>
+              <span>Limit Regulations</span>
             </h2>
           </div>
           <button

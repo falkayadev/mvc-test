@@ -30,8 +30,7 @@ const rowData = [];
 const gridOptions = {
   columnDefs: columnDefs,
   rowData: rowData,
-  defaultColDef: { sortable: true, filter: true, resizable: true },
-  animateRows: true,
+  defaultColDef: { sortable: true, resizable: false },
   pagination: true,
   paginationPageSize: 10,
   domLayout: "autoHeight",

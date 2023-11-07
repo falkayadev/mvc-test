@@ -50,5 +50,3 @@ function banUser(userId) {
   statusElement.textContent = "Banned";
   statusElement.setAttribute("data-status", "banned");
 }
-
-let table = new DataTable("#clientTable");

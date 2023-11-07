@@ -553,50 +553,6 @@
         </div>
       </div>
 
-      <!-- Wallets -->
-      <div class="-mx-3 mt-6 grid grid-cols-3 gap-8 px-6">
-        <div class="col-span-3 mx-6 px-3">
-          <div
-            class="grid h-20 grid-cols-3 divide-x-2 rounded-lg border-4 bg-primary-2"
-          >
-            <div class="flex items-center justify-around hover:bg-primary-3">
-              <span>EUR</span>
-              <div>
-                <i
-                  class="fa-solid fa-xmark rounded-full p-1 hover:bg-red-400"
-                ></i>
-                <i
-                  class="fa-solid fa-check rounded-full p-1 hover:bg-green-400"
-                ></i>
-              </div>
-            </div>
-            <div class="flex items-center justify-around hover:bg-primary-3">
-              <span>CHF</span>
-              <div>
-                <i
-                  class="fa-solid fa-xmark rounded-full p-1 hover:bg-red-400"
-                ></i>
-                <i
-                  class="fa-solid fa-check rounded-full p-1 hover:bg-green-400"
-                ></i>
-              </div>
-            </div>
-            <div class="flex items-center justify-around hover:bg-primary-3">
-              <span>TRY</span>
-              <div>
-                <i
-                  class="fa-solid fa-xmark rounded-full p-1 hover:bg-red-400"
-                ></i>
-                <i
-                  class="fa-solid fa-check rounded-full p-1 hover:bg-green-400"
-                ></i>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Wallets End -->
-
       <!-- Transaction Table -->
       <div class="flex w-full flex-col">
         <div
@@ -633,7 +589,21 @@
         </div>
         <div id="table-wrapper" class="mx-10 my-14">
           <div id="myGrid" class="ag-theme-alpine-dark">
-            <div class="mb-4 flex justify-between text-white">
+            <div
+              class="mb-4 flex flex-col items-start gap-2 text-white sm:!flex-row sm:!items-center sm:justify-around sm:gap-0"
+            >
+              <div>
+                <span>Currency:</span>
+                <select
+                  name="cur"
+                  id="cur"
+                  class="rounded-lg bg-yellow-400 p-2 text-slate-700"
+                >
+                  <option value="try">₺ - TRY</option>
+                  <option value="chf" selected>₣ - CHF</option>
+                  <option value="eur">€ - EUR</option>
+                </select>
+              </div>
               <div>
                 <span>Quick Filter:</span>
                 <input
@@ -644,12 +614,20 @@
                   oninput="onFilterTextBoxChanged()"
                 />
               </div>
-              <button
-                onclick="onBtnExport()"
-                class="rounded-lg border-2 border-primary-2 bg-yellow-400 p-2 text-slate-700"
-              >
-                EXPORT
-              </button>
+              <div>
+                <span>Start Date:</span>
+                <input
+                  type="date"
+                  class="rounded-lg bg-yellow-400 p-2 text-slate-700"
+                />
+              </div>
+              <div>
+                <span>End Date:</span>
+                <input
+                  type="date"
+                  class="rounded-lg bg-yellow-400 p-2 text-slate-700"
+                />
+              </div>
             </div>
           </div>
         </div>
