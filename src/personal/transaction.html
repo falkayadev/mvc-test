@@ -10,32 +10,9 @@
       @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Inconsolata&display=swap");
-
-      html {
-        --s: 100px;
-        /* control the size */
-        --c: #0f2557;
-        /* first color */
-
-        --_g1: var(--c) calc(25% / 3), #0000 0 calc(50% / 3), var(--c) 0 25%,
-          #0000 0 75%, var(--c) 0 calc(250% / 3), #0000 0 calc(275% / 3),
-          var(--c) 0;
-        --_g2: #0000 calc(25% / 3), var(--c) 0 calc(50% / 3),
-          #0000 0 calc(250% / 3), var(--c) 0 calc(275% / 3), #0000 0;
-        background:
-          linear-gradient(45deg, var(--_g2)),
-          linear-gradient(45deg, var(--_g1)),
-          linear-gradient(-45deg, var(--_g2)),
-          linear-gradient(-45deg, var(--_g1)) #4b9fe1;
-        /* second color */
-        background-position:
-          0 0,
-          var(--s) var(--s);
-        background-size: calc(2 * var(--s)) calc(2 * var(--s));
-      }
     </style>
-    <link rel="stylesheet" href="../admin/assets/css/ag-grid.css">
-    <link rel="stylesheet" href="../admin/assets/css/ag-theme-alpine.css">
+    <link rel="stylesheet" href="../admin/assets/css/ag-grid.css" />
+    <link rel="stylesheet" href="../admin/assets/css/ag-theme-alpine.css" />
     <script src="https://cdn.jsdelivr.net/npm/ag-grid-community/dist/ag-grid-community.min.noStyle.js"></script>
     <script src="../admin/assets/js/trans-control-data.js"></script>
     <link
@@ -48,22 +25,22 @@
   </head>
 
   <body class="font-poppins text-white">
-    <header class="fixed w-full z-30">
+    <header class="fixed z-30 w-full">
       <div class="bg-primary-2 p-8">
         <div class="container mx-auto">
-          <div class="flex justify-between items-center">
+          <div class="flex items-center justify-between">
             <!-- Logo Section -->
             <div class="flex items-center">
               <a
                 href="../index.html"
-                class="text-white text-2xl font-comfortaa mr-2"
+                class="mr-2 font-comfortaa text-2xl text-white"
                 >walletCo</a
               >
-              <div class="bg-gray-400 h-4 w-[1px]"></div>
+              <div class="h-4 w-[1px] bg-gray-400"></div>
               <a href="./dashboard.html" class="fa-solid fa-home ml-2"></a>
             </div>
             <!-- Desktop Menu -->
-            <div class="hidden lg:flex space-x-20">
+            <div class="hidden space-x-20 lg:flex">
               <a href="./my-wallet.html" class="text-white hover:text-primary-5"
                 >My Wallet</a
               >
@@ -79,23 +56,23 @@
             </div>
 
             <!-- User Bar-->
-            <div class="flex items-center gap-3 relative">
+            <div class="relative flex items-center gap-3">
               <!-- Greetings -->
               <div>
-                <p class="z-30 relative">Hi, John!</p>
+                <p class="relative z-30">Hi, John!</p>
               </div>
               <!-- Greetings End -->
 
               <!-- Avatar Menu Button-->
               <div>
                 <button
-                  class="block w-20 h-20 rounded-full bg-primary-3 duration-300"
+                  class="block h-20 w-20 rounded-full bg-primary-3 duration-300"
                 >
                   <img
                     id="avatar"
                     src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                     alt="profile foto"
-                    class="rounded-full border hover:border-primary-5 z-30 hover:scale-[102%] relative"
+                    class="relative z-30 rounded-full border hover:scale-[102%] hover:border-primary-5"
                     draggable="false"
                     onclick="document.getElementById('dropBar').classList.toggle('hidden');"
                   />
@@ -104,26 +81,26 @@
                 <!-- DropBar Box -->
 
                 <div
-                  class="w-screen md:w-80 absolute -right-8 md:right-0 bg-gray-50 text-primary-2 mt-2 py-6 px-2 rounded-lg shadow-xl hidden border border-primary-2"
+                  class="absolute -right-8 mt-2 hidden w-screen rounded-lg border border-primary-2 bg-gray-50 px-2 py-6 text-primary-2 shadow-xl md:right-0 md:w-80"
                   id="dropBar"
                 >
                   <!-- Dropbar Box User Preview -->
-                  <div class="flex justify-center items-center gap-4 p-4">
+                  <div class="flex items-center justify-center gap-4 p-4">
                     <div>
                       <img
                         src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
                         alt="avatar"
-                        class="w-14 h-14 rounded-full border hover:border-primary-5 hover:scale-[102%] relative z-30"
+                        class="relative z-30 h-14 w-14 rounded-full border hover:scale-[102%] hover:border-primary-5"
                       />
                     </div>
                     <div class="flex flex-col items-center">
                       <p class="text-lg">
                         John Doe
                         <i
-                          class="fa-solid fa-circle-check text-green-300 text-xl"
+                          class="fa-solid fa-circle-check text-xl text-green-300"
                         ></i>
                         <i
-                          class="fa-solid fa-circle-xmark text-red-300 text-xl hidden"
+                          class="fa-solid fa-circle-xmark hidden text-xl text-red-300"
                           style="display: none"
                         ></i>
                       </p>
@@ -135,10 +112,10 @@
                   <!-- Dropbar Box User Preview End -->
 
                   <!-- Dropbar Items -->
-                  <div class="flex flex-col px-8 mt-4 gap-2 text-white">
+                  <div class="mt-4 flex flex-col gap-2 px-8 text-white">
                     <!-- ITEM 1 -->
                     <div
-                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                      class="space-x-2 rounded-xl bg-primary-4 px-4 py-1 text-lg"
                     >
                       <i class="fa-solid fa-circle-user"></i>
                       <a href="./account.html">Account Details</a>
@@ -146,7 +123,7 @@
 
                     <!-- ITEM 2 -->
                     <div
-                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                      class="space-x-2 rounded-xl bg-primary-4 px-4 py-1 text-lg"
                     >
                       <i class="fa-solid fa-clock-rotate-left"></i>
                       <a href="#">Transaction</a>
@@ -154,7 +131,7 @@
 
                     <!-- ITEM 4 -->
                     <div
-                      class="bg-primary-4 rounded-xl px-4 py-1 text-lg space-x-2"
+                      class="space-x-2 rounded-xl bg-primary-4 px-4 py-1 text-lg"
                     >
                       <i class="fa-solid fa-circle-question"></i>
                       <a href="./support.html">Help</a>
@@ -162,7 +139,7 @@
 
                     <!-- ITEM 5 -->
                     <div
-                      class="bg-red-400 rounded-xl px-4 py-1 text-lg space-x-2"
+                      class="space-x-2 rounded-xl bg-red-400 px-4 py-1 text-lg"
                     >
                       <i class="fa-solid fa-door-open"></i>
                       <a href="../index.html">Log Out</a>
@@ -180,15 +157,14 @@
       </div>
     </header>
 
-    <div class="bg-white text-primary-2 h-full w-full mx-auto pt-48">
-      <div class="flex flex-col justify-center items-center w-[80%] h-full mx-auto">
-        <h1 class="text-2xl font-semibold mb-6 text-center">
+    <div class="mb-48 h-screen w-full bg-white pt-48 text-primary-2">
+      <div class="mx-auto flex w-[80%] flex-col items-center justify-center">
+        <h1 class="mb-6 text-center text-2xl font-semibold">
           Transaction History
         </h1>
         <div
-          class="mb-4 flex items-center justify-start gap-1 md:gap-10 h-full w-full"
+          class="mb-4 flex h-full w-full items-center justify-start gap-1 md:gap-10"
         >
-       
           <div class="flex items-end justify-center gap-4">
             <div class="flex flex-col items-center justify-center">
               <label for="curSelector" class="text-sm font-medium text-gray-700"
@@ -197,22 +173,118 @@
               <select
                 name="curSelector"
                 id="curSelector"
-                class="font-poppins mt-1 p-2 rounded-lg border"
+                class="mt-1 rounded-lg border p-2 font-poppins"
               >
                 <option value="CHF">CHF</option>
                 <option value="EUR">EUR</option>
                 <option value="TRY">TRY</option>
               </select>
             </div>
+            <div class="flex flex-col items-center justify-center">
+              <label for="page" class="text-sm font-medium text-gray-700"
+                >Paginate</label
+              >
+              <select
+                name="paginate"
+                id="page"
+                class="mt-1 rounded-lg border p-2 font-poppins"
+              >
+                <option value="10">10</option>
+                <option value="25">25</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+              </select>
+            </div>
             <div>
-              <input type="text" placeholder="..." class="p-2 rounded-lg bg-yellow-400 text-slate-700 placeholder:text-slate-500" id="filter-text-box" oninput="onFilterTextBoxChanged()">
+              <input
+                type="text"
+                placeholder="..."
+                class="rounded-lg bg-yellow-400 p-2 text-slate-700 placeholder:text-slate-500"
+                id="filter-text-box"
+                oninput="onFilterTextBoxChanged()"
+              />
             </div>
           </div>
         </div>
-        <table class="ag-theme-alpine w-full h-full" id="myTable">
-        </table>
+        <div class="mx-auto w-full min-w-[35rem] overflow-x-scroll">
+          <table id="myTable" class="w-full overflow-x-auto">
+            <thead class="bg-primary-2 text-center text-white">
+              <tr>
+                <th class="rounded-ss-lg p-4">Date</th>
+                <th class="p-2">Amount</th>
+                <th class="p-2">Sender/Receiver</th>
+                <th class="rounded-se-lg p-2">Description</th>
+              </tr>
+            </thead>
+            <tbody class="bg-primary-4 text-center text-white">
+              <!-- Example Inputs -->
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-red-400">₺ 1.234,56</td>
+                <td>John Doe</td>
+                <td>Some random description</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-green-400">₺ 2.345,67</td>
+                <td>Jane Smith</td>
+                <td>Transaction for groceries</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-green-400">₺ 3.456,78</td>
+                <td>John Smith</td>
+                <td>Transaction for rent</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-red-400">₺ 4.567,89</td>
+                <td>Jane Doe</td>
+                <td>Transaction for utilities</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-red-400">₺ 5.678,90</td>
+                <td>John Doe</td>
+                <td>Transaction for groceries</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-red-400">₺ 6.789,01</td>
+                <td>Jane Smith</td>
+                <td>Transaction for rent</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-green-400">₺ 7.890,12</td>
+                <td>John Smith</td>
+                <td>Transaction for utilities</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-green-400">₺ 8.901,23</td>
+                <td>Jane Doe</td>
+                <td>Transaction for groceries</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="p-2">2023-11-08</td>
+                <td class="bg-green-400">₺ 9.012,34</td>
+                <td>John Doe</td>
+                <td>Transaction for rent</td>
+              </tr>
+              <tr class="hover:bg-primary-5">
+                <td class="rounded-es-lg p-2">2023-11-08</td>
+                <td class="bg-red-400">₺ 1.234,56</td>
+                <td>Jane Smith</td>
+                <td class="rounded-ee-lg">Transaction for utilities</td>
+              </tr>
+              <!-- Example Inputs End -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
     <script src="transaction.js"></script>
+    <script src="../admin/assets/js/filter.js"></script>
   </body>
 </html>
