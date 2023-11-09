@@ -327,26 +327,33 @@
           <div
             class="mt-2 flex grow items-center sm:mr-6 sm:mt-0 md:mr-0 lg:flex lg:basis-auto"
           >
-            <div class="flex items-center md:ml-auto md:pr-4">
-              <div
-                class="ease-soft relative flex w-full flex-wrap items-stretch rounded-lg transition-all"
-              >
-                <span
-                  class="ease-soft leading-5.6 absolute z-50 -ml-px flex h-full items-center whitespace-nowrap rounded-lg rounded-br-none rounded-tr-none border border-r-0 border-transparent bg-transparent px-2.5 py-2 text-center text-sm font-normal text-slate-500 transition-all"
-                >
-                  <i class="fas fa-search" aria-hidden="true"></i>
-                </span>
-                <input
-                  type="text"
-                  class="pl-8.75 focus:shadow-soft-primary-outline ease-soft w-1/100 leading-5.6 relative -ml-px block min-w-0 flex-auto rounded-lg border border-solid border-gray-300 bg-white bg-clip-padding py-2 pr-3 text-sm text-gray-700 transition-all placeholder:text-gray-500 focus:border-fuchsia-300 focus:outline-none focus:transition-shadow"
-                  placeholder="Type here..."
-                />
-              </div>
-            </div>
             <ul
-              class="md-max:w-full mb-0 flex list-none flex-row justify-end pl-0"
+              class="md-max:w-full mb-0 ml-auto flex list-none flex-row justify-end pl-0"
             >
-              <li class="flex items-center pl-4 xl:hidden">
+              <li
+                class="relative mr-4 flex w-full items-center justify-end rounded-xl"
+              >
+                <div class="flex flex-col items-center justify-center">
+                  <div
+                    onclick="window.location.href = '../pages/admin-self.html' "
+                  >
+                    <a href="javascript:;">
+                      <img
+                        src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                        alt="profile foto"
+                        class="w-16 rounded-full border-2 border-primary-4"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </li>
+
+              <!-- notifications -->
+              <li class="mr-4 flex list-none items-center">
+                <i class="fa-solid fa-right-from-bracket"></i>
+              </li>
+
+              <li class="flex items-center xl:hidden">
                 <a
                   href="javascript:;"
                   class="ease-soft-in-out block p-0 text-sm text-white transition-all"
@@ -364,131 +371,6 @@
                     ></i>
                   </div>
                 </a>
-              </li>
-              <li class="flex items-center px-4">
-                <a
-                  href="javascript:;"
-                  class="ease-soft-in-out p-0 text-sm text-white transition-all"
-                >
-                  <i
-                    fixed-plugin-button-nav
-                    class="fa fa-cog cursor-pointer"
-                    aria-hidden="true"
-                  ></i>
-                  <!-- fixed-plugin-button-nav  -->
-                </a>
-              </li>
-
-              <!-- notifications -->
-              <li class="mr-4 flex list-none items-center">
-                <i class="fa-solid fa-right-from-bracket"></i>
-              </li>
-
-              <li class="relative flex items-center pr-2">
-                <p class="transform-dropdown-show hidden"></p>
-                <a
-                  dropdown-trigger
-                  href="javascript:;"
-                  class="ease-nav-brand block p-0 text-sm text-white transition-all"
-                  aria-expanded="false"
-                >
-                  <i class="fa fa-bell cursor-pointer" aria-hidden="true"></i>
-                </a>
-
-                <ul
-                  dropdown-menu
-                  class="transform-dropdown before:font-awesome before:leading-default before:duration-350 before:ease-soft lg:shadow-soft-3xl duration-250 min-w-44 before:sm:right-7.5 before:text-5.5 pointer-events-none absolute right-0 top-0 z-50 origin-top list-none rounded-lg border-0 border-solid border-transparent bg-white bg-clip-padding px-2 py-4 text-left text-sm text-slate-500 opacity-0 transition-all before:absolute before:left-auto before:right-2 before:top-0 before:z-50 before:inline-block before:font-normal before:text-white before:antialiased before:transition-all before:content-['\f0d8'] sm:-mr-6 lg:absolute lg:left-auto lg:right-0 lg:mt-2 lg:block lg:cursor-pointer"
-                >
-                  <!-- add show class on dropdown open js -->
-                  <li class="relative mb-2">
-                    <a
-                      class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg bg-transparent px-4 duration-300 lg:transition-colors"
-                      href="javascript:;"
-                    >
-                      <div class="flex py-1">
-                        <div class="my-auto">
-                          <img
-                            src="../assets/img/team-2.jpg"
-                            class="mr-4 inline-flex h-9 w-9 max-w-none items-center justify-center rounded-xl text-sm text-white"
-                          />
-                        </div>
-                        <div class="flex flex-col justify-center">
-                          <h6 class="mb-1 text-sm font-normal leading-normal">
-                            <span class="font-semibold">New message</span> from
-                            Laur
-                          </h6>
-                          <p class="mb-0 text-xs leading-tight text-slate-400">
-                            <i class="fa fa-clock mr-1" aria-hidden="true"></i>
-                            13 minutes ago
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-
-                  <li class="relative">
-                    <a
-                      class="ease-soft py-1.2 clear-both block w-full whitespace-nowrap rounded-lg px-4 duration-300 lg:transition-colors"
-                      href="javascript:;"
-                    >
-                      <div class="flex py-1">
-                        <div
-                          class="ease-soft-in-out my-auto mr-4 inline-flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-tl from-slate-600 to-slate-300 text-sm text-white transition-all duration-200"
-                        >
-                          <svg
-                            width="12px"
-                            height="12px"
-                            viewBox="0 0 43 36"
-                            version="1.1"
-                            xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink"
-                          >
-                            <title>credit-card</title>
-                            <g
-                              stroke="none"
-                              stroke-width="1"
-                              fill="none"
-                              fill-rule="evenodd"
-                            >
-                              <g
-                                transform="translate(-2169.000000, -745.000000)"
-                                fill="#FFFFFF"
-                                fill-rule="nonzero"
-                              >
-                                <g
-                                  transform="translate(1716.000000, 291.000000)"
-                                >
-                                  <g
-                                    transform="translate(453.000000, 454.000000)"
-                                  >
-                                    <path
-                                      class="color-background"
-                                      d="M43,10.7482083 L43,3.58333333 C43,1.60354167 41.3964583,0 39.4166667,0 L3.58333333,0 C1.60354167,0 0,1.60354167 0,3.58333333 L0,10.7482083 L43,10.7482083 Z"
-                                      opacity="0.593633743"
-                                    ></path>
-                                    <path
-                                      class="color-background"
-                                      d="M0,16.125 L0,32.25 C0,34.2297917 1.60354167,35.8333333 3.58333333,35.8333333 L39.4166667,35.8333333 C41.3964583,35.8333333 43,34.2297917 43,32.25 L43,16.125 L0,16.125 Z M19.7083333,26.875 L7.16666667,26.875 L7.16666667,23.2916667 L19.7083333,23.2916667 L19.7083333,26.875 Z M35.8333333,26.875 L28.6666667,26.875 L28.6666667,23.2916667 L35.8333333,23.2916667 L35.8333333,26.875 Z"
-                                    ></path>
-                                  </g>
-                                </g>
-                              </g>
-                            </g>
-                          </svg>
-                        </div>
-                        <div class="flex flex-col justify-center">
-                          <h6 class="mb-1 text-sm font-normal leading-normal">
-                            Payment successfully completed
-                          </h6>
-                          <p class="mb-0 text-xs leading-tight text-slate-400">
-                            <i class="fa fa-clock mr-1" aria-hidden="true"></i>
-                            2 days
-                          </p>
-                        </div>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
               </li>
             </ul>
           </div>
@@ -541,62 +423,16 @@
           </div>
         </div>
       </div>
-      <div class="mx-6 p-6">
-        <div class="-mx-3 grid grid-cols-3 gap-8">
-          <div class="col-span-3 w-full max-w-full px-3">
-            <div
-              class="grid h-20 grid-cols-3 divide-x-2 rounded-lg border-4 bg-primary-2"
-            >
-              <div class="flex items-center justify-around hover:bg-primary-3">
-                <span>EUR</span>
-                <div>
-                  <i
-                    class="fa-solid fa-xmark rounded-full p-1 hover:bg-red-400"
-                  ></i>
-                  <i
-                    class="fa-solid fa-check rounded-full p-1 hover:bg-green-400"
-                  ></i>
-                </div>
-              </div>
-              <div class="flex items-center justify-around hover:bg-primary-3">
-                <span>CHF</span>
-                <div>
-                  <i
-                    class="fa-solid fa-xmark rounded-full p-1 hover:bg-red-400"
-                  ></i>
-                  <i
-                    class="fa-solid fa-check rounded-full p-1 hover:bg-green-400"
-                  ></i>
-                </div>
-              </div>
-              <div class="flex items-center justify-around hover:bg-primary-3">
-                <span>TRY</span>
-                <div>
-                  <i
-                    class="fa-solid fa-xmark rounded-full p-1 hover:bg-red-400"
-                  ></i>
-                  <i
-                    class="fa-solid fa-check rounded-full p-1 hover:bg-green-400"
-                  ></i>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-span-3 w-full max-w-full px-3 lg:col-span-1">
-            <div
-              class="shadow-soft-xl relative flex min-w-0 flex-col break-words rounded-2xl border-0 bg-white bg-clip-border"
-            >
-              <div class="mb-0 rounded-t-2xl border-b-0 bg-white p-4 pb-0">
-                <div class="-mx-3 flex flex-wrap">
-                  <div
-                    class="flex w-full max-w-full shrink-0 items-center px-3 md:w-8/12 md:flex-none"
-                  >
-                    <h6 class="mb-0">Profile Information</h6>
+      <div class="p-6">
+        <div class="grid grid-cols-3 gap-4">
+          <div class="col-span-3 w-full lg:col-span-1">
+            <div class="flex h-96 flex-col rounded-2xl bg-white p-4">
+              <div class="rounded-t-2xl bg-white">
+                <div class="flex flex-wrap">
+                  <div class="mb-4 flex items-center md:w-8/12 md:flex-none">
+                    <h6 class="mb-0 text-2xl">Profile Information</h6>
                   </div>
-                  <div
-                    class="w-full max-w-full shrink-0 px-3 text-right md:w-4/12 md:flex-none"
-                  >
+                  <div class="px-3 text-right md:w-4/12 md:flex-none">
                     <a
                       href="javascript:;"
                       data-target="tooltip_trigger"
@@ -606,58 +442,44 @@
                         class="fas fa-user-edit text-sm leading-normal text-slate-400"
                       ></i>
                     </a>
-                    <div
-                      data-target="tooltip"
-                      class="hidden rounded-lg bg-black px-2 py-1 text-center text-sm text-white"
-                      role="tooltip"
-                    >
-                      Edit Profile
-                      <div
-                        class="invisible absolute h-2 w-2 bg-inherit before:visible before:absolute before:h-2 before:w-2 before:rotate-45 before:bg-inherit before:content-['']"
-                        data-popper-arrow
-                      ></div>
-                    </div>
                   </div>
                 </div>
               </div>
-              <div class="flex-auto p-4 text-primary-2">
+              <div class="overflow-hidden text-primary-2">
                 <p class="text-sm leading-normal">
                   Hi, I’m Alec Thompson, Decisions: If you can’t decide, the
                   answer is no. If two equally difficult paths, choose the one
                   more painful in the short term (pain avoidance is creating an
                   illusion of equality).
                 </p>
-                <hr
-                  class="my-6 h-px bg-transparent bg-gradient-to-r from-transparent via-white to-transparent"
-                />
-                <ul class="mb-0 flex flex-col rounded-lg pl-0 text-primary-2">
-                  <li
-                    class="relative block rounded-t-lg border-0 bg-white px-4 py-2 pl-0 pt-0 text-sm leading-normal text-inherit"
-                  >
-                    <strong class="text-slate-700">Full Name:</strong> &nbsp;
-                    Alec M. Thompson
+                <ul class="flex flex-col gap-4 rounded-lg text-primary-2">
+                  <li class="bg-white text-sm leading-normal">
+                    <span class="text-base font-semibold text-slate-700"
+                      >Full Name:</span
+                    >
+                    &nbsp; Alec M. Thompson
                   </li>
-                  <li
-                    class="relative block border-0 border-t-0 bg-white px-4 py-2 pl-0 text-sm leading-normal text-inherit"
-                  >
-                    <strong class="text-slate-700">Mobile:</strong> &nbsp; (44)
-                    123 1234 123
+                  <li class="bg-white text-sm leading-normal">
+                    <span class="text-base font-semibold text-slate-700"
+                      >Mobile:</span
+                    >
+                    &nbsp; (44) 123 1234 123
                   </li>
-                  <li
-                    class="relative block border-0 border-t-0 bg-white px-4 py-2 pl-0 text-sm leading-normal text-inherit"
-                  >
-                    <strong class="text-slate-700">Email:</strong> &nbsp;
-                    alecthompson@mail.com
+                  <li>
+                    <span class="text-base font-semibold text-slate-700"
+                      >Email:</span
+                    >
+                    &nbsp; alecthompson@mail.com
                   </li>
-                  <li
-                    class="relative block border-0 border-t-0 bg-white px-4 py-2 pl-0 text-sm leading-normal text-inherit"
-                  >
-                    <label for="countryEdit" class="font-bold text-slate-700"
+                  <li>
+                    <label
+                      for="countryEdit"
+                      class="text-slate-70 text-base font-semibold"
                       >Location:</label
                     ><select
                       name="country"
                       id="countryEdit"
-                      class="ml-2 appearance-none rounded-lg bg-primary-6 px-2 py-1"
+                      class="rounded-lg bg-primary-6"
                       disabled
                     >
                       <option value="swiss">Switzerland</option>
@@ -665,14 +487,15 @@
                       <option value="turkey">Turkey</option>
                     </select>
                     <i
-                      class="fa-solid fa-pen ml-2 cursor-pointer rounded-full bg-gray-200 p-2 text-xs"
+                      class="fa-solid fa-pen cursor-pointer rounded-full bg-gray-200 text-xs"
                       id="country-edit-btn"
                     ></i>
                   </li>
-                  <li
-                    class="relative block border-0 border-t-0 bg-white px-4 py-2 pl-0 text-sm leading-normal text-inherit"
-                  >
-                    <strong class="text-slate-700">Status:</strong> &nbsp;
+                  <li>
+                    <span class="text-base font-semibold text-slate-700"
+                      >Status:</span
+                    >
+                    &nbsp;
                     <button
                       class="rounded-lg bg-green-400 px-2 py-1"
                       id="profileStatus"
@@ -692,42 +515,38 @@
               </div>
             </div>
           </div>
-          <div
-            class="col-span-3 w-full max-w-full overflow-y-auto px-3 lg:col-span-1"
-          >
-            <div
-              class="shadow-soft-xl relative flex min-w-0 flex-col break-words rounded-2xl border-0 bg-white bg-clip-border"
-            >
+          <div class="col-span-3 w-full lg:col-span-1">
+            <div class="flex flex-col rounded-xl bg-white">
               <div class="shadow-lg" id="chfHistory">
-                <div
-                  class="w-full overflow-y-scroll rounded-xl border-4 border-primary-2 bg-white text-slate-700"
-                >
+                <div class="h-96 w-full rounded-xl bg-white text-slate-700">
                   <div
-                    class="flex flex-col justify-center space-y-0 rounded-3xl py-6 shadow-lg"
+                    class="flex flex-col justify-center overflow-y-hidden rounded-xl"
                   >
-                    <p
-                      class="bg-primary-5 text-center text-2xl font-semibold text-slate-700"
-                    >
-                      Transaction Tracker
-                    </p>
-                    <div class="flex flex-col divide-y-2 divide-primary-2">
+                    <div>
+                      <p
+                        class="mb-0 flex items-center justify-center rounded-t-lg bg-primary-5 p-2 text-2xl font-semibold text-white"
+                      >
+                        Transaction Tracker
+                      </p>
+                    </div>
+                    <div class="flex flex-col divide-y-2 divide-primary-2 p-2">
                       <div
                         id="item"
-                        class="flex items-center justify-between px-10 py-2 hover:bg-yellow-400"
+                        class="flex items-center justify-between hover:bg-yellow-400"
                       >
-                        <div id="itemDesc" class="flex w-[160px] flex-col">
+                        <div id="itemDesc" class="flex flex-1 flex-col">
                           <p>Restaurant Da Paolo CHF</p>
                           <div
                             id="itemDescDate"
-                            class="flex items-center justify-between"
+                            class="flex w-1/2 items-center justify-between text-sm text-slate-700"
                           >
-                            <p class="text-sm text-slate-700">28.01.2024</p>
-                            <p class="text-sm text-slate-700">02.45PM</p>
+                            <p>28.01.2024</p>
+                            <p>02.45PM</p>
                           </div>
                         </div>
                         <div
                           id="itemAmount"
-                          class="flex items-center justify-center"
+                          class="mr-2 flex items-center justify-center"
                         >
                           <p class="rounded-lg bg-primary-2 p-2 text-red-300">
                             -$96.50
@@ -736,95 +555,67 @@
                       </div>
                       <div
                         id="item2"
-                        class="flex items-center justify-between px-10 py-2 hover:bg-yellow-400"
+                        class="flex items-center justify-between hover:bg-yellow-400"
                       >
-                        <div id="itemDesc2" class="flex w-[160px] flex-col">
+                        <div id="itemDesc2" class="flex flex-1 flex-col">
                           <p>Cash Inflow</p>
-                          <div id="itemDescDate2" class="flex justify-between">
+                          <div
+                            id="itemDescDate2"
+                            class="flex w-1/2 justify-between"
+                          >
                             <p class="text-sm text-slate-700">28.01.2024</p>
                             <p class="text-sm text-slate-700">02.45PM</p>
                           </div>
                         </div>
                         <div id="itemAmount2">
-                          <p class="rounded-lg bg-primary-2 p-2 text-green-300">
+                          <p
+                            class="mr-2 rounded-lg bg-primary-2 p-2 text-green-300"
+                          >
                             +$22.50
                           </p>
                         </div>
                       </div>
                       <div
                         id="item3"
-                        class="flex items-center justify-between px-10 py-2 hover:bg-yellow-400"
+                        class="flex items-center justify-between hover:bg-yellow-400"
                       >
-                        <div id="itemDesc3" class="flex flex-col">
+                        <div id="itemDesc3" class="flex flex-1 flex-col">
                           <p>Python E-Book</p>
                           <div
                             id="itemDescDate3"
-                            class="flex w-[160px] justify-between"
+                            class="flex w-1/2 justify-between"
                           >
                             <p class="text-sm text-slate-700">28.01.2024</p>
                             <p class="text-sm text-slate-700">02.45PM</p>
                           </div>
                         </div>
                         <div id="itemAmount3">
-                          <p class="rounded-lg bg-primary-2 p-2 text-red-300">
+                          <p
+                            class="mr-2 rounded-lg bg-primary-2 p-2 text-red-300"
+                          >
                             -$14.90
                           </p>
                         </div>
                       </div>
                       <div
                         id="item4"
-                        class="flex items-center justify-between px-10 py-2 hover:bg-yellow-400"
+                        class="flex items-center justify-between hover:bg-yellow-400"
                       >
-                        <div id="itemDesc4" class="flex w-[160px] flex-col">
+                        <div id="itemDesc4" class="flex flex-1 flex-col">
                           <p>GYM Membership</p>
-                          <div id="itemDescDate4" class="flex justify-between">
+                          <div
+                            id="itemDescDate4"
+                            class="flex w-1/2 justify-between"
+                          >
                             <p class="text-sm text-slate-700">28.01.2024</p>
                             <p class="text-sm text-slate-700">02.45PM</p>
                           </div>
                         </div>
                         <div id="itemAmount4">
-                          <p class="rounded-lg bg-primary-2 p-2 text-red-300">
+                          <p
+                            class="mr-2 rounded-lg bg-primary-2 p-2 text-red-300"
+                          >
                             -$46.40
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        id="item5"
-                        class="flex items-center justify-between px-10 py-2 hover:bg-yellow-400"
-                      >
-                        <div id="itemDesc5" class="flex flex-col">
-                          <p>Refund</p>
-                          <div
-                            id="itemDescDate5"
-                            class="flex w-[160px] justify-between"
-                          >
-                            <p class="text-sm text-slate-700">28.01.2024</p>
-                            <p class="text-sm text-slate-700">02.45PM</p>
-                          </div>
-                        </div>
-                        <div id="itemAmount5">
-                          <p class="rounded-lg bg-primary-2 p-2 text-green-300">
-                            +$32.50
-                          </p>
-                        </div>
-                      </div>
-                      <div
-                        id="item6"
-                        class="flex items-center justify-between px-10 py-2 hover:bg-yellow-400"
-                      >
-                        <div id="itemDesc6" class="flex flex-col">
-                          <p>Restauran Da Paolo</p>
-                          <div
-                            id="itemDescDate6"
-                            class="flex w-[160px] justify-between"
-                          >
-                            <p class="text-sm text-slate-700">28.01.2024</p>
-                            <p class="text-sm text-slate-700">02.45PM</p>
-                          </div>
-                        </div>
-                        <div id="itemAmount6">
-                          <p class="rounded-lg bg-primary-2 p-2 text-red-300">
-                            -$96.50
                           </p>
                         </div>
                       </div>
@@ -834,92 +625,83 @@
               </div>
             </div>
           </div>
-          <div class="col-span-3 w-full max-w-full px-3 lg:col-span-1">
-            <div
-              class="shadow-soft-xl relative grid min-w-0 overflow-y-scroll break-words rounded-md border-4 border-primary-5 bg-white bg-clip-border px-4 py-6"
-            >
-              <p
-                class="bg-primary-5 text-center text-2xl font-semibold text-slate-700"
-              >
-                Session Tracker
-              </p>
-              <div
-                class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
-              >
-                <div class="col-span-4 row-span-1 rounded-t-md bg-blue-500">
-                  Session 1
-                </div>
-                <div class="col-span-2 bg-green-500 text-white">
-                  28-01-2024 02:44:22
-                </div>
-                <div class="col-span-2 bg-red-500 text-white">
-                  28-01-2024 3:01:22
-                </div>
+          <div class="col-span-3 w-full lg:col-span-1">
+            <div class="grid h-96 overflow-hidden rounded-lg bg-white">
+              <!--Heading Wrapper-->
+              <div>
+                <p
+                  class="mb-0 flex items-center justify-center rounded-t-lg bg-primary-5 p-2 text-2xl font-semibold text-white"
+                >
+                  Session Tracker
+                </p>
               </div>
-              <div
-                class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
-              >
-                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
-                <div class="col-span-2 bg-green-500 text-white">
-                  28-01-2024 02:44:22
+              <!--Content Wrapper-->
+              <div>
+                <div
+                  class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
+                >
+                  <div class="col-span-4 bg-blue-500">Session 1</div>
+                  <div class="col-span-2 bg-green-500 text-white">
+                    28-01-2024 02:44:22
+                  </div>
+                  <div class="col-span-2 bg-red-500 text-white">
+                    28-01-2024 3:01:22
+                  </div>
                 </div>
-                <div class="col-span-2 bg-red-500 text-white">
-                  28-01-2024 3:01:22
+                <div
+                  class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
+                >
+                  <div class="col-span-4 bg-blue-500">Session 1</div>
+                  <div class="col-span-2 bg-green-500 text-white">
+                    28-01-2024 02:44:22
+                  </div>
+                  <div class="col-span-2 bg-red-500 text-white">
+                    28-01-2024 3:01:22
+                  </div>
                 </div>
-              </div>
-              <div
-                class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
-              >
-                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
-                <div class="col-span-2 bg-green-500 text-white">
-                  28-01-2024 02:44:22
+                <div
+                  class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
+                >
+                  <div class="col-span-4 bg-blue-500">Session 1</div>
+                  <div class="col-span-2 bg-green-500 text-white">
+                    28-01-2024 02:44:22
+                  </div>
+                  <div class="col-span-2 bg-red-500 text-white">
+                    28-01-2024 3:01:22
+                  </div>
                 </div>
-                <div class="col-span-2 bg-red-500 text-white">
-                  28-01-2024 3:01:22
+                <div
+                  class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
+                >
+                  <div class="col-span-4 bg-blue-500">Session 1</div>
+                  <div class="col-span-2 bg-green-500 text-white">
+                    28-01-2024 02:44:22
+                  </div>
+                  <div class="col-span-2 bg-red-500 text-white">
+                    28-01-2024 3:01:22
+                  </div>
                 </div>
-              </div>
-              <div
-                class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
-              >
-                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
-                <div class="col-span-2 bg-green-500 text-white">
-                  28-01-2024 02:44:22
+                <div
+                  class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
+                >
+                  <div class="col-span-4 bg-blue-500">Session 1</div>
+                  <div class="col-span-2 bg-green-500 text-white">
+                    28-01-2024 02:44:22
+                  </div>
+                  <div class="col-span-2 bg-red-500 text-white">
+                    28-01-2024 3:01:22
+                  </div>
                 </div>
-                <div class="col-span-2 bg-red-500 text-white">
-                  28-01-2024 3:01:22
-                </div>
-              </div>
-              <div
-                class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
-              >
-                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
-                <div class="col-span-2 bg-green-500 text-white">
-                  28-01-2024 02:44:22
-                </div>
-                <div class="col-span-2 bg-red-500 text-white">
-                  28-01-2024 3:01:22
-                </div>
-              </div>
-              <div
-                class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
-              >
-                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
-                <div class="col-span-2 bg-green-500 text-white">
-                  28-01-2024 02:44:22
-                </div>
-                <div class="col-span-2 bg-red-500 text-white">
-                  28-01-2024 3:01:22
-                </div>
-              </div>
-              <div
-                class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
-              >
-                <div class="col-span-4 row-span-1 bg-blue-500">Session 1</div>
-                <div class="col-span-2 rounded-es-xl bg-green-500 text-white">
-                  28-01-2024 02:44:22
-                </div>
-                <div class="col-span-2 rounded-ee-xl bg-red-500 text-white">
-                  28-01-2024 3:01:22
+                <div
+                  class="grid w-full grid-cols-4 grid-rows-2 text-center text-white"
+                >
+                  <div class="col-span-4 bg-blue-500">Session 1</div>
+                  <div class="col-span-2 bg-green-500 text-white">
+                    28-01-2024 02:44:22
+                  </div>
+                  <div class="col-span-2 bg-red-500 text-white">
+                    28-01-2024 3:01:22
+                  </div>
                 </div>
               </div>
             </div>

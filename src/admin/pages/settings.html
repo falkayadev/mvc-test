@@ -613,12 +613,6 @@
           class="grid auto-rows-[4rem] grid-cols-6 gap-4 px-10 text-slate-700"
           id="supportedCurrencyList"
         >
-          <button
-            class="order-2 col-span-2 col-start-3 row-start-3 mx-auto h-full w-full rounded-lg bg-white font-semibold text-slate-700"
-            id="currencyAdder"
-          >
-            SAVE CHANGES
-          </button>
           <div
             class="col-span-6 flex items-center justify-between rounded-lg bg-yellow-400 px-10 md:col-span-2"
           >
@@ -638,7 +632,7 @@
             <button><i class="fa-solid fa-trash"></i></button>
           </div>
           <div
-            class="order-1 col-span-6 flex items-center justify-between rounded-lg bg-gray-400 px-10 md:col-span-2"
+            class="col-span-6 flex items-center justify-between rounded-lg bg-gray-400 px-10 md:col-span-2"
           >
             <select
               name="newcur"
@@ -650,9 +644,20 @@
               <option value="gbp">GBP</option>
             </select>
           </div>
+          <button
+            class="col-span-2 col-start-3 row-start-6 mx-auto h-full w-full rounded-lg bg-white font-semibold text-slate-700 md:row-start-3"
+            id="currencyAdder"
+          >
+            SAVE CHANGES
+          </button>
         </div>
       </div>
     </main>
     <script src="../assets/js/settings.js"></script>
+    <script
+      src="../assets/js/soft-ui-dashboard-tailwind.js?v=1.0.5"
+      async
+    ></script>
+    <script src="../assets/js/sidenav-burger.js"></script>
   </body>
 </html>
