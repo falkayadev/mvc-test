@@ -68,3 +68,28 @@ function permFunc() {
   profileStatus.innerHTML = statusContent;
   profileRole.innerHTML = roleContent;
 }
+
+const log = document.querySelector("#detailLog");
+const activity = document.querySelector("#detailActivity");
+const logTrigger = document.querySelector("#detailLog-Trigger");
+const activityTrigger = document.querySelector("#detailActivity-Trigger");
+const home = document.querySelector("#home");
+
+logTrigger.addEventListener("click", detailLog);
+activityTrigger.addEventListener("click", detailActivity);
+
+function detailLog() {
+  home.classList.add("hidden");
+  log.classList.remove("hidden");
+  if (activity.classList.contains("hidden") === false) {
+    activity.classList.add("hidden");
+  }
+}
+
+function detailActivity() {
+  home.classList.add("hidden");
+  activity.classList.remove("hidden");
+  if (log.classList.contains("hidden") === false) {
+    log.classList.add("hidden");
+  }
+}

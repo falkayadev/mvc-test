@@ -27,6 +27,14 @@
       #logInOutLog td:last-child {
         background: #f53939;
       }
+
+      #logDetail td:first-child {
+        background: #17ad37;
+      }
+
+      #logDetail td:last-child {
+        background: #f53939;
+      }
     </style>
 
     <!-- Nucleo Icons -->
@@ -64,7 +72,7 @@
           href="../admin.html"
         >
           <span
-            class="ease-nav-brand font-comfo ml-1 font-semibold transition-all duration-200"
+            class="ease-nav-brand ml-1 font-comfortaa font-semibold transition-all duration-200"
             >walletCo. Dashboard</span
           >
         </a>
@@ -349,7 +357,7 @@
                     <a href="javascript:;">
                       <img
                         src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
-                        alt="profile foto"
+                        alt="profile photo"
                         class="w-16 rounded-full border-2 border-primary-4"
                       />
                     </a>
@@ -395,27 +403,47 @@
           ></span>
         </div>
         <div
-          class="shadow-blur relative mx-6 -mt-16 flex min-w-0 flex-auto flex-col overflow-hidden break-words rounded-2xl border-0 bg-primary-2/80 bg-clip-border p-4 backdrop-blur-2xl backdrop-saturate-200"
+          class="shadow-blur mx-6 -mt-16 flex min-w-0 flex-auto flex-col overflow-hidden break-words rounded-2xl border-0 bg-primary-2/80 bg-clip-border p-4 backdrop-blur-2xl backdrop-saturate-200"
         >
-          <div class="flex items-center justify-between">
-            <div class="flex flex-wrap">
-              <div class="w-auto max-w-full flex-none px-3">
-                <div
-                  class="ease-soft-in-out h-18.5 w-18.5 relative inline-flex items-center justify-center rounded-xl text-base text-white transition-all duration-200"
-                >
-                  <img
-                    src="../assets/img/bruce-mars.jpg"
-                    alt="profile_image"
-                    class="shadow-soft-sm w-full rounded-xl"
-                  />
+          <div>
+            <div class="flex w-full items-center justify-between">
+              <div class="flex items-center justify-center">
+                <div class="h-full px-3">
+                  <div
+                    class="h-18.5 w-18.5 flex items-center justify-center rounded-xl text-base text-white transition-all duration-200"
+                  >
+                    <img
+                      src="../assets/img/bruce-mars.jpg"
+                      alt="profile_image"
+                      class="shadow-soft-sm w-full rounded-xl"
+                    />
+                  </div>
+                </div>
+                <div class="px-3">
+                  <div>
+                    <h5 class="mb-1 whitespace-nowrap text-sm text-white">
+                      Alec Thompson
+                    </h5>
+                    <p class="mb-0 whitespace-nowrap text-xs">
+                      CEO / Co-Founder
+                    </p>
+                  </div>
                 </div>
               </div>
-              <div class="my-auto w-auto max-w-full flex-none px-3">
-                <div class="h-full">
-                  <h5 class="mb-1 text-white">Alec Thompson</h5>
-                  <p class="mb-0 text-sm font-semibold leading-normal">
-                    CEO / Co-Founder
-                  </p>
+              <div class="flex items-center justify-center gap-10">
+                <div
+                  class="flex w-full basis-1/2 cursor-pointer items-center gap-2 hover:text-blue-400"
+                  id="detailActivity-Trigger"
+                >
+                  <i class="fa-solid fa-file-excel fa-xl"></i>
+                  <span class="hidden sm:!inline">Activity</span>
+                </div>
+                <div
+                  class="flex w-full basis-1/2 cursor-pointer items-center gap-2 hover:text-blue-400"
+                  id="detailLog-Trigger"
+                >
+                  <i class="fa-solid fa-file-lines fa-xl"></i>
+                  <span class="hidden sm:!inline">Log</span>
                 </div>
               </div>
             </div>
@@ -424,6 +452,7 @@
       </div>
       <div
         class="mx-auto grid w-full auto-rows-[24rem] grid-cols-1 gap-4 p-6 md:grid-cols-2 xl:grid-cols-6"
+        id="home"
       >
         <div class="col-span-6 w-full max-w-full px-3 lg:col-span-2">
           <div
@@ -752,6 +781,90 @@
           </div>
         </div>
       </div>
+      <div id="detailActivity" class="hidden">
+        <div class="mx-10 py-10">
+          <table
+            class="mx-auto w-1/2 border-collapse border-4 border-yellow-400 bg-primary-2 text-center text-slate-700"
+            id="activityDetail"
+          >
+            <thead>
+              <tr class="bg-yellow-400">
+                <th class="border-b-2 border-yellow-400 p-2">Date</th>
+                <th class="border-b-2 border-yellow-400 p-2">Client</th>
+                <th class="border-b-2 border-yellow-400 p-2">Activity</th>
+                <th class="border-b-2 border-yellow-400 p-2">Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-primary-2 text-white">
+                <td>12-02-2022</td>
+                <td>John Lennon</td>
+                <td>Ban</td>
+                <td>Illegal Transaction</td>
+              </tr>
+              <tr class="bg-primary-2 text-white">
+                <td>12-02-2022</td>
+                <td>John Lennon</td>
+                <td>Ban</td>
+                <td>Illegal Transaction</td>
+              </tr>
+              <tr class="bg-primary-2 text-white">
+                <td>12-02-2022</td>
+                <td>John Lennon</td>
+                <td>Passive</td>
+                <td>Illegal Transaction</td>
+              </tr>
+              <tr class="bg-primary-2 text-white">
+                <td>12-02-2022</td>
+                <td>John Lennon</td>
+                <td>Ban</td>
+                <td>Illegal Transaction</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div id="detailLog" class="hidden">
+        <div class="mx-10 py-10">
+          <table
+            class="mx-auto w-1/2 border-collapse border-4 border-yellow-400 bg-primary-2 text-center text-slate-700"
+            id="logDetail"
+          >
+            <thead>
+              <tr class="bg-yellow-400">
+                <th class="border-b-2 border-yellow-400 p-2">Login</th>
+                <th class="border-b-2 border-yellow-400 p-2">Logout</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-primary-2 text-white">
+                <td>28-02-2020 13:22</td>
+                <td>28-02-2020 14:02</td>
+              </tr>
+              <tr class="bg-primary-2 text-white">
+                <td>28-02-2020 13:22</td>
+                <td>28-02-2020 14:02</td>
+              </tr>
+              <tr class="bg-primary-2 text-white">
+                <td>28-02-2020 13:22</td>
+                <td>28-02-2020 14:02</td>
+              </tr>
+              <tr class="bg-primary-2 text-white">
+                <td>28-02-2020 13:22</td>
+                <td>28-02-2020 14:02</td>
+              </tr>
+              <tr class="bg-primary-2 text-white">
+                <td>28-02-2020 13:22</td>
+                <td>28-02-2020 14:02</td>
+              </tr>
+              <tr class="bg-primary-2 text-white">
+                <td>28-02-2020 13:22</td>
+                <td>28-02-2020 14:02</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
       <footer class="pt-4">
         <div class="mx-auto w-full px-6">
           <div class="-mx-3 flex flex-wrap items-center lg:justify-between">
@@ -799,6 +912,20 @@
         target.classList.add("bg-red-400");
       } else {
         target.classList.add("bg-slate-400");
+      }
+    });
+  </script>
+  <script>
+    const detailTable = document.querySelector("#activityDetail");
+    const detailTbody = detailTable.querySelector("tbody");
+    const detailRows = detailTbody.querySelectorAll("tr");
+
+    detailRows.forEach((row) => {
+      const detailTarget = row.getElementsByTagName("td")[2];
+      if (detailTarget.innerHTML === "Ban") {
+        detailTarget.classList.add("bg-red-400");
+      } else {
+        detailTarget.classList.add("bg-slate-400");
       }
     });
   </script>
