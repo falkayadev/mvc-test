@@ -12,7 +12,6 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="../../../dist/output.css" />
-    <link rel="stylesheet" href="../assets/css/admin-ticket.css" />
     <title>walletCo. - Support</title>
     <!--     Fonts and icons     -->
     <style>
@@ -296,7 +295,6 @@
         </ul>
       </div>
     </aside>
-
     <!-- end sidenav -->
 
     <main
@@ -382,191 +380,65 @@
           </div>
         </div>
       </nav>
-      <!-- end Navbar -->
-      <!-- main content start -->
-      <div id="contentContainer" class="flex flex-col gap-4 px-6 lg:flex-row">
-        <div
-          class="order-1 flex w-full flex-col gap-2 rounded-lg border-4 border-primary-2 bg-primary-4 px-2 py-5 lg:w-1/2"
-        >
-          <span class="text-center text-2xl font-semibold"
-            >Client's Active Requests</span
-          >
+      <!--end Navbar -->
 
-          <div
-            class="trigger-chat flex h-14 w-full cursor-pointer items-center justify-between rounded-lg bg-primary-2 px-6 text-base hover:bg-yellow-400 hover:text-slate-700"
-          >
-            <span>Subject: Ewallet Account Access Issue</span>
-          </div>
-          <div
-            class="trigger-chat flex h-14 w-full cursor-pointer items-center justify-start rounded-lg bg-primary-2 px-6 text-base hover:bg-yellow-400 hover:text-slate-700"
-          >
-            <span>Subject: Request for Ewallet Account Password Reset</span>
-          </div>
-          <div
-            class="trigger-chat flex h-14 w-full cursor-pointer items-center justify-start rounded-lg bg-primary-2 px-6 text-base hover:bg-yellow-400 hover:text-slate-700"
-          >
-            <span>Subject: Reporting Payment Issue</span>
-          </div>
-          <div
-            class="trigger-chat flex h-14 w-full cursor-pointer items-center justify-start rounded-lg bg-primary-2 px-6 text-base hover:bg-yellow-400 hover:text-slate-700"
-          >
-            <span>Subject: Ewallet Account Access Issue</span>
-          </div>
-          <div
-            class="trigger-chat flex h-14 w-full cursor-pointer items-center justify-start rounded-lg bg-primary-2 px-6 text-base hover:bg-yellow-400 hover:text-slate-700"
-          >
-            <span>Subject: Request for Ewallet Account Password Reset</span>
-          </div>
-          <div
-            class="trigger-chat flex h-14 w-full cursor-pointer items-center justify-start rounded-lg bg-primary-2 px-6 text-base hover:bg-yellow-400 hover:text-slate-700"
-          >
-            <span>Subject: Reporting Payment Issue</span>
-          </div>
-        </div>
-        <div
-          class="grid w-full place-content-center rounded-lg border-4 border-primary-2 bg-primary-4 p-4 lg:w-1/2"
-          id="tableContainer"
-        >
-          <div>
-            <input
-              type="text"
-              id="filterInput"
-              class="mb-2 rounded-lg bg-yellow-400 p-2 text-slate-700 placeholder:text-slate-700"
-              placeholder="Quick Filter.."
-              spellcheck="false"
-            />
-          </div>
-          <table
-            id="myTable"
-            class="rounded-lg border-2 border-yellow-400 bg-primary-2 p-4"
-          >
-            <thead class="bg-primary-2 text-white">
-              <tr>
-                <th>Client</th>
-                <th>Pending Requests</th>
-                <th>Request Date</th>
-              </tr>
-            </thead>
-            <tbody class="bg-primary-4 text-white">
-              <!-- Example Inputs -->
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>John Doe</span>
-                </td>
-                <td>
-                  <span>3</span>
-                </td>
-                <td>
-                  <span>2018-04-23</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>Alice Johnson</span>
-                </td>
-                <td>
-                  <span>4</span>
-                </td>
-                <td>
-                  <span>2019-06-21</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>David Smith</span>
-                </td>
-                <td>
-                  <span>6</span>
-                </td>
-                <td>
-                  <span>2020-12-08</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>Sarah Brown</span>
-                </td>
-                <td>
-                  <span>2</span>
-                </td>
-                <td>
-                  <span>2022-03-13</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>Michael Davis</span>
-                </td>
-                <td>
-                  <span>8</span>
-                </td>
-                <td>
-                  <span>2018-09-05</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>Olivia Lee</span>
-                </td>
-                <td>
-                  <span>1</span>
-                </td>
-                <td>
-                  <span>2021-04-27</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>Ethan Hall</span>
-                </td>
-                <td>
-                  <span>9</span>
-                </td>
-                <td>
-                  <span>2017-10-17</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>Isabella Taylor</span>
-                </td>
-                <td>
-                  <span>3</span>
-                </td>
-                <td>
-                  <span>2020-01-10</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>Mason Clark</span>
-                </td>
-                <td>
-                  <span>5</span>
-                </td>
-                <td>
-                  <span>2021-08-14</span>
-                </td>
-              </tr>
-              <tr class="cursor-pointer hover:bg-primary-3">
-                <td>
-                  <span>Grace White</span>
-                </td>
-                <td>
-                  <span>7</span>
-                </td>
-                <td>
-                  <span>2016-05-02</span>
-                </td>
-              </tr>
-              <!-- Example Inputs End -->
-            </tbody>
-          </table>
-        </div>
+      <!--Table Start-->
+
+      <div class="mx-10 mt-10 rounded-lg border-2 bg-blue-500 p-4">
+        <input
+          id="filterInput"
+          type="text"
+          placeholder="Quick Filter.."
+          class="mb-4 rounded-lg p-2 text-slate-700"
+        />
+        <table class="w-full border-collapse text-center" id="myTable">
+          <thead>
+            <tr>
+              <th class="border-b-2 p-2">Client</th>
+              <th class="border-b-2 p-2">Status</th>
+              <th class="border-b-2 p-2">Request Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+              <td>John Doe</td>
+              <td class="bg-yellow-400 text-slate-700">Current</td>
+              <td>12-02-2020</td>
+            </tr>
+            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+              <td>Don Joe</td>
+              <td class="bg-yellow-400 text-slate-700">Current</td>
+              <td>12-02-2020</td>
+            </tr>
+            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+              <td>Marry Oxford</td>
+              <td class="bg-green-400 text-slate-700">Solved</td>
+              <td>12-02-2020</td>
+            </tr>
+            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+              <td>Gayle Manner</td>
+              <td class="bg-yellow-400 text-slate-700">Current</td>
+              <td>12-02-2020</td>
+            </tr>
+            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+              <td>Charles Brown</td>
+              <td class="bg-green-400 text-slate-700">Solved</td>
+              <td>12-02-2020</td>
+            </tr>
+            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+              <td>Gareth Nicolas</td>
+              <td class="bg-green-400 text-slate-700">Solved</td>
+              <td>12-02-2020</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-      <!-- main content end -->
+
+      <!--Table End-->
+
+      <!--chatbox-->
       <div
-        class="flex hidden h-[30rem] flex-auto flex-col px-6 pb-2 pt-6 text-slate-700 md:h-[35rem] lg:h-full"
+        class="mx-10 mt-10 flex hidden h-[30rem] flex-auto flex-col text-slate-700 md:h-[35rem] lg:h-full"
         id="supChatBox"
       >
         <div
@@ -842,6 +714,7 @@
           </div>
         </div>
       </div>
+      <!--      chatbox end-->
     </main>
     <!-- plugin for charts  -->
     <script src="../assets/js/plugins/chartjs.min.js" async></script>
