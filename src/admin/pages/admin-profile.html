@@ -783,10 +783,48 @@
       </div>
       <div id="detailActivity" class="hidden">
         <div class="mx-10 py-10">
+          <div class="mb-4 flex items-center justify-between gap-4">
+            <div class="flex items-center gap-4">
+              <div>
+                <label for="startDate">Start Date:</label>
+                <input
+                  type="date"
+                  id="startDate"
+                  class="rounded-lg px-2 text-slate-700"
+                />
+              </div>
+              <div>
+                <label for="endDate">End Date:</label>
+                <input
+                  type="date"
+                  id="endDate"
+                  class="rounded-lg px-2 text-slate-700"
+                />
+              </div>
+            </div>
+            <div>
+              <label for="activitySel">Activity:</label>
+              <select
+                name="activitySel"
+                id="activitySel"
+                class="rounded-lg px-2 text-slate-700"
+              >
+                <option value="ban">Ban</option>
+                <option value="passive">Passive</option>
+                <option value="active">Active</option>
+              </select>
+            </div>
+          </div>
           <table
-            class="mx-auto w-1/2 border-collapse border-4 border-yellow-400 bg-primary-2 text-center text-slate-700"
+            class="w-full table-fixed border-collapse border-4 border-yellow-400 bg-primary-2 text-center text-slate-700"
             id="activityDetail"
           >
+            <colgroup>
+              <col class="w-1/6" />
+              <col class="w-1/6" />
+              <col class="w-1/6" />
+              <col class="w-3/6" />
+            </colgroup>
             <thead>
               <tr class="bg-yellow-400">
                 <th class="border-b-2 border-yellow-400 p-2">Date</th>
@@ -826,8 +864,27 @@
       </div>
       <div id="detailLog" class="hidden">
         <div class="mx-10 py-10">
+          <div class="mb-4 flex items-center justify-between">
+            <div>
+              <label for="startDateLog">Start Date:</label>
+              <input
+                type="date"
+                id="startDateLog"
+                class="rounded-lg px-2 text-slate-700"
+              />
+            </div>
+            <div>
+              <label for="endDateLog">End Date:</label>
+              <input
+                type="date"
+                id="endDateLog"
+                class="rounded-lg px-2 text-slate-700"
+              />
+            </div>
+          </div>
+
           <table
-            class="mx-auto w-1/2 border-collapse border-4 border-yellow-400 bg-primary-2 text-center text-slate-700"
+            class="w-full border-collapse border-4 border-yellow-400 bg-primary-2 text-center text-slate-700"
             id="logDetail"
           >
             <thead>
