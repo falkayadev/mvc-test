@@ -33,3 +33,16 @@ function adminTableChanger() {
     activity.classList.add("hidden");
   }
 }
+
+const optLogClient = document.querySelector("#optLog2");
+const clientActivity = document.querySelector("#clientLoginLogoutTable");
+const transaction = document.querySelector("#clientTransactionTable");
+function clientTableChanger() {
+  if (optLogClient.value === "clientActivity") {
+    clientActivity.classList.remove("hidden");
+    transaction.classList.add("hidden");
+  } else if (optLogClient.value === "transaction") {
+    transaction.classList.remove("hidden");
+    clientActivity.classList.add("hidden");
+  }
+}
