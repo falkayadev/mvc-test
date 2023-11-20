@@ -449,7 +449,7 @@
           </div>
           <!-- Admin Logs -->
           <div class="basis-5/6" data-target="admin">
-            <!-- Filter Options -->
+            <!-- Table Options -->
             <div class="w-full text-slate-700">
               <div class="flex justify-center gap-2 bg-white p-2">
                 <select
@@ -468,6 +468,34 @@
                 </button>
               </div>
             </div>
+
+            <!-- Filter Options -->
+            <div class="w-full text-slate-700">
+              <div
+                class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
+              >
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Quick Search"
+                    class="rounded-lg p-2 placeholder:text-slate-700"
+                  />
+                </div>
+                <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
+                  <div class="flex items-center justify-end gap-2">
+                    <label for="startDate" class="text-white"
+                      >Start Date:</label
+                    >
+                    <input type="date" class="rounded-lg p-2" id="startDate" />
+                  </div>
+                  <div class="flex items-center justify-end gap-2">
+                    <label for="endDate" class="text-white">End Date:</label>
+                    <input type="date" class="rounded-lg p-2" id="endDate" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Filter Options End -->
 
             <!-- Active/Passive Table -->
             <div class="whitespace-nowrap bg-slate-700 p-2" id="activityTable">
