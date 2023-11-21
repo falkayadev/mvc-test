@@ -469,36 +469,52 @@
               </div>
             </div>
 
-            <!-- Filter Options -->
-            <div class="w-full text-slate-700">
-              <div
-                class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
-              >
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Quick Search"
-                    class="rounded-lg p-2 placeholder:text-slate-700"
-                  />
-                </div>
-                <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
-                  <div class="flex items-center justify-end gap-2">
-                    <label for="startDate" class="text-white"
-                      >Start Date:</label
-                    >
-                    <input type="date" class="rounded-lg p-2" id="startDate" />
+            <!-- Active/Passive Table -->
+            <div class="whitespace-nowrap bg-slate-700 p-2" id="activityTable">
+              <!-- Filter Options -->
+              <div class="w-full text-slate-700">
+                <div
+                  class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
+                >
+                  <div class="flex items-center gap-4">
+                    <div>
+                      <select
+                        name="maxItem"
+                        id="maxItem"
+                        class="rounded-lg p-2"
+                      >
+                        <option value="10">10</option>
+                        <option value="10">25</option>
+                        <option value="10">50</option>
+                      </select>
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Quick Search"
+                        class="rounded-lg p-2 placeholder:text-slate-700"
+                      />
+                    </div>
                   </div>
-                  <div class="flex items-center justify-end gap-2">
-                    <label for="endDate" class="text-white">End Date:</label>
-                    <input type="date" class="rounded-lg p-2" id="endDate" />
+                  <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
+                    <div class="flex items-center justify-end gap-2">
+                      <label for="startDate" class="text-white"
+                        >Start Date:</label
+                      >
+                      <input
+                        type="date"
+                        class="rounded-lg p-2"
+                        id="startDate"
+                      />
+                    </div>
+                    <div class="flex items-center justify-end gap-2">
+                      <label for="endDate" class="text-white">End Date:</label>
+                      <input type="date" class="rounded-lg p-2" id="endDate" />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <!-- Filter Options End -->
-
-            <!-- Active/Passive Table -->
-            <div class="whitespace-nowrap bg-slate-700 p-2" id="activityTable">
+              <!-- Filter Options End -->
               <table
                 class="w-full border-spacing-0 rounded-lg border-2 bg-white p-2 text-center text-slate-700"
               >
@@ -585,7 +601,7 @@
                 </tbody>
               </table>
               <!-- Pagination Component -->
-              <div class="ml-auto mt-2 h-12 rounded-lg bg-primary-5 p-2">
+              <div class="ml-auto mt-2 h-12 rounded-lg bg-primary-2 p-2">
                 <div class="flex h-full justify-around">
                   <div
                     class="flex cursor-pointer items-center gap-2 rounded-lg bg-yellow-400 p-2 text-slate-700"
@@ -620,6 +636,37 @@
             </div>
             <!-- Login/Logout Table -->
             <div class="hidden bg-slate-700 p-2" id="loginLogoutTable">
+              <!-- Filter Options -->
+              <div class="w-full text-slate-700">
+                <div
+                  class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
+                >
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Quick Search"
+                      class="rounded-lg p-2 placeholder:text-slate-700"
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
+                    <div class="flex items-center justify-end gap-2">
+                      <label for="startDate" class="text-white"
+                        >Start Date:</label
+                      >
+                      <input
+                        type="date"
+                        class="rounded-lg p-2"
+                        id="startDate"
+                      />
+                    </div>
+                    <div class="flex items-center justify-end gap-2">
+                      <label for="endDate" class="text-white">End Date:</label>
+                      <input type="date" class="rounded-lg p-2" id="endDate" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Filter Options End -->
               <table
                 class="w-full border-spacing-0 rounded-lg border-2 bg-white p-2 text-center text-slate-700"
               >
@@ -688,12 +735,43 @@
                   </tr>
                 </tbody>
               </table>
+              <div class="ml-auto mt-2 h-12 rounded-lg bg-primary-2 p-2">
+                <div class="flex h-full justify-around">
+                  <div
+                    class="flex cursor-pointer items-center gap-2 rounded-lg bg-yellow-400 p-2 text-slate-700"
+                  >
+                    <i class="fa-solid fa-left-long"></i>
+                    <span>Previous Page</span>
+                  </div>
+                  <div>
+                    Page
+                    <select
+                      name="page"
+                      id="page"
+                      class="appearance-none rounded-lg px-2 text-center text-slate-700"
+                    >
+                      <option value="1">1</option>
+                      <option value="1">2</option>
+                      <option value="1">3</option>
+                      <option value="1">4</option>
+                      <option value="1">5</option>
+                    </select>
+                    of 10
+                  </div>
+                  <div
+                    class="flex cursor-pointer items-center gap-2 rounded-lg bg-yellow-400 p-2 text-slate-700"
+                  >
+                    <span>Next Page</span>
+                    <i class="fa-solid fa-right-long"></i>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <!-- Client Logs -->
         <div class="hidden basis-5/6" data-target="client">
-          <!-- Filter Options -->
+          <!-- Table Options -->
           <div class="w-full text-slate-700">
             <div class="flex justify-center gap-2 bg-white p-2">
               <select
@@ -714,6 +792,33 @@
           </div>
           <!-- Login/Logout Table -->
           <div class="bg-slate-700 p-2" id="clientLoginLogoutTable">
+            <!-- Filter Options -->
+            <div class="w-full text-slate-700">
+              <div
+                class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
+              >
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Quick Search"
+                    class="rounded-lg p-2 placeholder:text-slate-700"
+                  />
+                </div>
+                <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
+                  <div class="flex items-center justify-end gap-2">
+                    <label for="startDate" class="text-white"
+                      >Start Date:</label
+                    >
+                    <input type="date" class="rounded-lg p-2" id="startDate" />
+                  </div>
+                  <div class="flex items-center justify-end gap-2">
+                    <label for="endDate" class="text-white">End Date:</label>
+                    <input type="date" class="rounded-lg p-2" id="endDate" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Filter Options End -->
             <table
               class="w-full border-spacing-0 rounded-lg border-2 bg-white p-2 text-center text-slate-700"
             >
@@ -782,9 +887,69 @@
                 </tr>
               </tbody>
             </table>
+            <!-- Pagination Component -->
+            <div class="ml-auto mt-2 h-12 rounded-lg bg-primary-2 p-2">
+              <div class="flex h-full justify-around">
+                <div
+                  class="flex cursor-pointer items-center gap-2 rounded-lg bg-yellow-400 p-2 text-slate-700"
+                >
+                  <i class="fa-solid fa-left-long"></i>
+                  <span>Previous Page</span>
+                </div>
+                <div>
+                  Page
+                  <select
+                    name="page"
+                    id="page"
+                    class="appearance-none rounded-lg px-2 text-center text-slate-700"
+                  >
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                  </select>
+                  of 10
+                </div>
+                <div
+                  class="flex cursor-pointer items-center gap-2 rounded-lg bg-yellow-400 p-2 text-slate-700"
+                >
+                  <span>Next Page</span>
+                  <i class="fa-solid fa-right-long"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination Component End -->
           </div>
           <!-- Transaction Table -->
-          <div class="hidden bg-primary-4 p-2" id="clientTransactionTable">
+          <div class="hidden bg-slate-700 p-2" id="clientTransactionTable">
+            <!-- Filter Options -->
+            <div class="w-full text-slate-700">
+              <div
+                class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
+              >
+                <div>
+                  <input
+                    type="text"
+                    placeholder="Quick Search"
+                    class="rounded-lg p-2 placeholder:text-slate-700"
+                  />
+                </div>
+                <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
+                  <div class="flex items-center justify-end gap-2">
+                    <label for="startDate" class="text-white"
+                      >Start Date:</label
+                    >
+                    <input type="date" class="rounded-lg p-2" id="startDate" />
+                  </div>
+                  <div class="flex items-center justify-end gap-2">
+                    <label for="endDate" class="text-white">End Date:</label>
+                    <input type="date" class="rounded-lg p-2" id="endDate" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Filter Options End -->
             <table
               class="w-full border-spacing-0 rounded-lg border-2 bg-white p-2 text-center text-slate-700"
             >
@@ -870,6 +1035,39 @@
                 </tr>
               </tbody>
             </table>
+            <!-- Pagination Component -->
+            <div class="ml-auto mt-2 h-12 rounded-lg bg-primary-2 p-2">
+              <div class="flex h-full justify-around">
+                <div
+                  class="flex cursor-pointer items-center gap-2 rounded-lg bg-yellow-400 p-2 text-slate-700"
+                >
+                  <i class="fa-solid fa-left-long"></i>
+                  <span>Previous Page</span>
+                </div>
+                <div>
+                  Page
+                  <select
+                    name="page"
+                    id="page"
+                    class="appearance-none rounded-lg px-2 text-center text-slate-700"
+                  >
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                    <option value="1">5</option>
+                  </select>
+                  of 10
+                </div>
+                <div
+                  class="flex cursor-pointer items-center gap-2 rounded-lg bg-yellow-400 p-2 text-slate-700"
+                >
+                  <span>Next Page</span>
+                  <i class="fa-solid fa-right-long"></i>
+                </div>
+              </div>
+            </div>
+            <!-- Pagination Component End -->
           </div>
         </div>
         <!-- Client Logs End -->
