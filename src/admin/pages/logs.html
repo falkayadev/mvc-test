@@ -496,6 +496,25 @@
                       />
                     </div>
                   </div>
+                  <!-- Activity Filter -->
+                  <div class="flex items-center gap-4">
+                    <div class="text-white">
+                      <input type="radio" id="ban" />
+                      <label for="ban">Ban</label>
+                    </div>
+                    <div class="text-white">
+                      <input type="radio" id="passive" />
+                      <label for="ban">Passive</label>
+                    </div>
+                    <div class="text-white">
+                      <input type="radio" id="actives" />
+                      <label for="ban">Active</label>
+                    </div>
+                    <div>
+                      <button class="rounded-lg bg-white p-2">Reset</button>
+                    </div>
+                  </div>
+                  <!-- Activity Filter End -->
                   <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
                     <div class="flex items-center justify-end gap-2">
                       <label for="startDate" class="text-white"
@@ -641,13 +660,41 @@
                 <div
                   class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
                 >
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="Quick Search"
-                      class="rounded-lg p-2 placeholder:text-slate-700"
-                    />
+                  <div class="flex items-center gap-4">
+                    <div>
+                      <select
+                        name="maxItem"
+                        id="maxItem"
+                        class="rounded-lg p-2"
+                      >
+                        <option value="10">10</option>
+                        <option value="10">25</option>
+                        <option value="10">50</option>
+                      </select>
+                    </div>
+                    <div>
+                      <input
+                        type="text"
+                        placeholder="Quick Search"
+                        class="rounded-lg p-2 placeholder:text-slate-700"
+                      />
+                    </div>
                   </div>
+                  <!-- Activity Filter -->
+                  <div class="flex items-center gap-4">
+                    <div class="text-white">
+                      <input type="radio" id="login" />
+                      <label for="ban">Login</label>
+                    </div>
+                    <div class="text-white">
+                      <input type="radio" id="logout" />
+                      <label for="ban">Logout</label>
+                    </div>
+                    <div>
+                      <button class="rounded-lg bg-white p-2">Reset</button>
+                    </div>
+                  </div>
+                  <!-- Activity Filter End -->
                   <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
                     <div class="flex items-center justify-end gap-2">
                       <label for="startDate" class="text-white"
@@ -797,13 +844,41 @@
               <div
                 class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
               >
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Quick Search"
-                    class="rounded-lg p-2 placeholder:text-slate-700"
-                  />
+                <div class="flex items-center gap-4">
+                  <div>
+                    <select name="maxItem" id="maxItem" class="rounded-lg p-2">
+                      <option value="10">10</option>
+                      <option value="10">25</option>
+                      <option value="10">50</option>
+                    </select>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Quick Search"
+                      class="rounded-lg p-2 placeholder:text-slate-700"
+                    />
+                  </div>
                 </div>
+                <!-- Activity Filter -->
+                <div class="flex items-center gap-4">
+                  <div class="text-white">
+                    <input type="radio" id="Login" />
+                    <label for="ban">Login</label>
+                  </div>
+                  <div class="text-white">
+                    <input type="radio" id="Logout" />
+                    <label for="ban">Logout</label>
+                  </div>
+                  <div class="text-white">
+                    <input type="radio" id="Register" />
+                    <label for="ban">Register</label>
+                  </div>
+                  <div>
+                    <button class="rounded-lg bg-white p-2">Reset</button>
+                  </div>
+                </div>
+                <!-- Activity Filter End -->
                 <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
                   <div class="flex items-center justify-end gap-2">
                     <label for="startDate" class="text-white"
@@ -928,13 +1003,38 @@
               <div
                 class="flex flex-col items-center justify-between gap-2 bg-primary-2 px-10 py-2 sm:!flex-row"
               >
-                <div>
-                  <input
-                    type="text"
-                    placeholder="Quick Search"
-                    class="rounded-lg p-2 placeholder:text-slate-700"
-                  />
+                <div class="flex items-center gap-4">
+                  <div>
+                    <select name="maxItem" id="maxItem" class="rounded-lg p-2">
+                      <option value="10">10</option>
+                      <option value="10">25</option>
+                      <option value="10">50</option>
+                    </select>
+                  </div>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="Quick Search"
+                      class="rounded-lg p-2 placeholder:text-slate-700"
+                    />
+                  </div>
                 </div>
+                <!-- Activity Filter -->
+                <div class="flex items-center gap-4">
+                  <div class="text-white">
+                    <input type="radio" id="inflows" />
+                    <label for="ban">Inflows</label>
+                  </div>
+                  <div class="text-white">
+                    <input type="radio" id="outflows" />
+                    <label for="ban">Outflows</label>
+                  </div>
+
+                  <div>
+                    <button class="rounded-lg bg-white p-2">Reset</button>
+                  </div>
+                </div>
+                <!-- Activity Filter End -->
                 <div class="flex flex-col gap-2 md:!flex-row md:gap-20">
                   <div class="flex items-center justify-end gap-2">
                     <label for="startDate" class="text-white"
