@@ -34,7 +34,7 @@ input[type="number"]::-ms-clear {
 }
 
 ::-webkit-scrollbar {
-  @apply w-2;
+  @apply h-2 w-2;
 }
 
 ::-webkit-scrollbar-track {
@@ -42,7 +42,7 @@ input[type="number"]::-ms-clear {
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-primary-2 rounded-xl;
+  @apply rounded-xl bg-primary-2;
 }
 
 select {

@@ -3150,6 +3150,7 @@ input[type="number"]::-ms-clear {
 }
 
 ::-webkit-scrollbar {
+  height: 0.5rem;
   width: 0.5rem;
 }
 
@@ -3864,14 +3865,6 @@ select {
 
   .md\:items-start {
     align-items: flex-start;
-  }
-
-  .md\:items-end {
-    align-items: flex-end;
-  }
-
-  .md\:\!items-end {
-    align-items: flex-end !important;
   }
 
   .md\:items-center {
