@@ -424,105 +424,102 @@
 
       <!--Table Start-->
 
-      <div class="mx-10 mt-10 rounded-lg border-2 bg-blue-500 p-4">
+      <div class="mx-10 mt-10 rounded-lg border-2 bg-primary-4 p-4">
         <!-- Filter Options -->
-        <div class="flex items-center justify-between">
-          <div class="flex gap-4">
+        <div
+          class="flex flex-col justify-center gap-4 rounded-lg border-2 bg-primary-2 px-6 py-2 text-slate-700 md:!flex-row md:!justify-between"
+        >
+          <!-- Max Item and Quick Search -->
+          <div class="flex items-center justify-between gap-4">
             <div>
-              <select
-                name="maxItem"
-                id="maxItem"
-                class="rounded-lg p-2 text-slate-700"
-              >
+              <select name="maxItem" id="maxItem" class="rounded-lg p-2">
                 <option value="10">10</option>
                 <option value="25">25</option>
                 <option value="50">50</option>
               </select>
             </div>
             <div>
+              <select
+                name="statusFilter"
+                id="statusFilter"
+                class="rounded-lg p-2"
+              >
+                <option value="active">Active</option>
+                <option value="resolved">Resolved</option>
+                <option value="pending">Pending</option>
+              </select>
+            </div>
+            <div>
               <input
-                id="filterInput"
                 type="text"
-                placeholder="Quick Filter.."
-                class="mb-4 rounded-lg p-2 text-slate-700 placeholder:text-slate-700"
+                placeholder="Quick Search.."
+                class="w-full rounded-lg p-2 placeholder:text-slate-700"
               />
             </div>
           </div>
-
-          <div class="flex gap-4">
-            <div>
-              <label for="startDate">Start Date:</label>
-              <input
-                type="date"
-                id="startDate"
-                class="rounded-lg p-2 text-slate-700"
-              />
+          <!-- Date Filter -->
+          <div class="flex items-center justify-between gap-4">
+            <div class="flex flex-col items-center">
+              <label for="startDate" class="text-white">Start Date:</label>
+              <input type="date" class="rounded-lg p-2" id="startDate" />
             </div>
-            <div>
-              <label for="startDate">End Date:</label>
-              <input
-                type="date"
-                id="endDate"
-                class="rounded-lg p-2 text-slate-700"
-              />
+            <div class="flex flex-col items-center">
+              <label for="endDate" class="text-white">End Date:</label
+              ><input type="date" class="rounded-lg p-2" id="endDate" />
             </div>
           </div>
         </div>
         <!-- Filter Options End -->
-        <table class="w-full border-collapse text-center" id="myTable">
-          <colgroup>
-            <col class="md:w-2/12" />
-            <col class="md:w-2/12" />
-            <col class="md:w-1/12" />
-            <col class="md:w-7/12" />
-          </colgroup>
-          <thead>
-            <tr>
-              <th class="border-b-2 p-2">Date</th>
-              <th class="border-b-2 p-2">Client</th>
-              <th class="border-b-2 p-2">Status</th>
-              <th class="border-b-2 p-2">Request</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
-              <td>12-02-2020</td>
-              <td>John Doe</td>
-              <td class="bg-yellow-400 text-slate-700">Current</td>
-              <td>Account Access Issue</td>
-            </tr>
-            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
-              <td>12-02-2020</td>
-              <td>Don Joe</td>
-              <td class="bg-yellow-400 text-slate-700">Current</td>
-              <td>Transaction Problems</td>
-            </tr>
-            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
-              <td>12-02-2020</td>
-              <td>Marry Oxford</td>
-              <td class="bg-green-400 text-slate-700">Solved</td>
-              <td>Security Concerns</td>
-            </tr>
-            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
-              <td>12-02-2020</td>
-              <td>Gayle Manner</td>
-              <td class="bg-yellow-400 text-slate-700">Current</td>
-              <td>Fee and Commission Inquiries</td>
-            </tr>
-            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
-              <td>12-02-2020</td>
-              <td>Charles Brown</td>
-              <td class="bg-green-400 text-slate-700">Solved</td>
-              <td>Account Verification and Limit Increase</td>
-            </tr>
-            <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
-              <td>12-02-2020</td>
-              <td>Gareth Nicolas</td>
-              <td class="bg-green-400 text-slate-700">Solved</td>
-              <td>Money Inconsistency</td>
-            </tr>
-          </tbody>
-        </table>
+        <div class="table-wrapper overflow-auto whitespace-nowrap">
+          <table class="w-full border-collapse text-center" id="myTable">
+            <thead>
+              <tr>
+                <th class="border-b-2 px-10 py-2">Date</th>
+                <th class="border-b-2 px-10 py-2">Client</th>
+                <th class="border-b-2 px-10 py-2">Status</th>
+                <th class="border-b-2 px-10 py-2">Request</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+                <td>12-02-2020</td>
+                <td>John Doe</td>
+                <td class="bg-yellow-400 text-slate-700">Active</td>
+                <td>Account Access Issue</td>
+              </tr>
+              <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+                <td>12-02-2020</td>
+                <td>Don Joe</td>
+                <td class="bg-yellow-400 text-slate-700">Active</td>
+                <td>Transaction Problems</td>
+              </tr>
+              <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+                <td>12-02-2020</td>
+                <td>Marry Oxford</td>
+                <td class="bg-green-400 text-slate-700">Resolved</td>
+                <td>Security Concerns</td>
+              </tr>
+              <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+                <td>12-02-2020</td>
+                <td>Gayle Manner</td>
+                <td class="bg-yellow-400 text-slate-700">Active</td>
+                <td>Fee and Commission Inquiries</td>
+              </tr>
+              <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+                <td>12-02-2020</td>
+                <td>Charles Brown</td>
+                <td class="bg-green-400 text-slate-700">Resolved</td>
+                <td>Account Verification and Limit Increase</td>
+              </tr>
+              <tr class="trigger-chat cursor-pointer hover:bg-blue-600">
+                <td>12-02-2020</td>
+                <td>Gareth Nicolas</td>
+                <td class="bg-slate-400 text-slate-700">Pending</td>
+                <td>Money Inconsistency</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
         <!-- Pagination Component -->
         <div class="ml-auto mt-2 h-12 rounded-lg bg-primary-2 p-2">
           <div class="flex h-full justify-around">
