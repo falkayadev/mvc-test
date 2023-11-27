@@ -1,0 +1,117 @@
+<!-- Fees & Limits Section Start -->
+<div
+  id="feesAndLimits"
+  class="flex w-full items-center justify-center bg-primary-3 px-4 py-20 text-primary-2 md:px-0 md:py-40"
+>
+  <div
+    class="mx-auto w-full max-w-4xl rounded-lg bg-white p-2 shadow-md md:p-6"
+  >
+    <div class="md:mb-4">
+      <div class="tabs flex space-x-2 md:space-x-4">
+        <button
+          class="tab w-1/2 rounded-t-md bg-primary-4 p-2 text-base text-white md:px-4 md:py-2 md:text-2xl"
+          data-tab="fees"
+          id="feeTab"
+          onclick="feeChange()"
+        >
+          Fees
+        </button>
+        <button
+          class="tab w-1/2 rounded-t-md bg-primary-3 p-2 text-base text-white md:px-4 md:py-2 md:text-2xl"
+          data-tab="limits"
+          id="limitTab"
+          onclick="limitChange()"
+        >
+          Limits
+        </button>
+      </div>
+    </div>
+
+    <div
+      class="tab-content flex flex-col space-y-2 divide-y-2 divide-primary-1/20 px-2 py-4 md:px-5 md:py-10 md:text-xl"
+      data-content="fees"
+    >
+      <div class="flex items-center justify-between">
+        <p class="w-2/3">Opening and using account</p>
+        <p>FREE</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <p class="w-2/3">Money transfer to Wallet accounts</p>
+        <p>FREE</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <p class="w-2/3">Money transfer to IBANs</p>
+        <p>FREE</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <p class="w-2/3">Bills and other payments</p>
+        <p>FREE</p>
+      </div>
+      <div class="items-ceter flex justify-between">
+        <p class="w-2/3">Wihtdrawals via wire transfer</p>
+        <p>FREE</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <p class="w-2/3">Deposit via debit/credit card</p>
+        <p>3.50%</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <p class="w-2/3">Commerical use and Overage fee</p>
+        <div class="flex flex-col items-end">
+          <p>5.00%</p>
+          <span class="text-xs">(Excluding BITT)</span>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="tab-content hidden flex-col space-y-2 divide-y-2 divide-primary-1/20 px-2 py-4 text-sm md:px-5 md:py-10 md:text-xl"
+      data-content="limits"
+    >
+      <div class="flex items-center justify-between">
+        <p class="w-2/3">Balance Limit</p>
+        <p>2000$</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="w-2/3">Incoming Amount</p>
+        <p>2000$</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="w-2/3">Cash Deposit Limit</p>
+        <p>2000$</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="w-2/3">Send Money</p>
+        <p>2000$</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="w-2/3">Sending Money to IBAN</p>
+        <p>2000$</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="w-2/3">International Money Transfer Limit</p>
+        <p>2000$</p>
+      </div>
+      <div class="flex items-center justify-between">
+        <p class="w-2/3">Requesting Money Limit</p>
+        <div class="flex flex-col items-end justify-center">
+          <p>Daily 10</p>
+          <p>Monthly 30</p>
+        </div>
+      </div>
+      <div class="flex justify-between">
+        <p class="w-2/3">Payments via Bank Card</p>
+        <p>1000 <span class="hidden md:inline">Transaction</span></p>
+      </div>
+      <div class="flex justify-between">
+        <p class="w-2/3">Payments via Bank Card Amount Limit</p>
+        <p>2000$</p>
+      </div>
+      <div class="flex justify-between">
+        <p class="w-2/3">Recieving Payments via Debit/Credit Card</p>
+        <div><span>50</span> <span>Transaction</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Fees & Limits Section End -->
