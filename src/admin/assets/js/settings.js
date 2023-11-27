@@ -1,7 +1,6 @@
 const button = document.getElementById("currencyAdder");
 let newCur = document.getElementById("newCur").value;
 const list = document.getElementById("supportedCurrencyList");
-console.log(newCur);
 
 button.addEventListener("click", function () {
   const newDiv = document.createElement("div");

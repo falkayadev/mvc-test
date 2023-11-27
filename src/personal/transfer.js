@@ -4,7 +4,7 @@ accountButtons.forEach((button) => {
   button.addEventListener("click", function () {
     // Önceden seçilmiş ring efektini kaldır
     accountButtons.forEach((btn) =>
-      btn.classList.remove("ring", "ring-blue-500")
+      btn.classList.remove("ring", "ring-blue-500"),
     );
 
     // Yeni tıklanan butona ring efektini ekle
@@ -31,11 +31,14 @@ document.getElementById("tryButton").addEventListener("click", function () {
 });
 
 // a etiketi tıklandığında içeriği hedefInput alanına yazdırmak için bir olay dinleyici ekleyin.
-document
-  .getElementById("balanceTag")
-  .addEventListener("click", function (event) {
-    event.preventDefault(); // Sayfanın yeniden yüklenmesini engellemek için kullanılır.
-    // a etiketinin içeriğini alın ve hedefInput alanına yazın.
-    var aEtiketiIcerik = this.innerHTML;
-    document.getElementById("amount").value = aEtiketiIcerik;
-  });
+let currentURL = window.location.href;
+if (currentURL.includes("transfer.html")) {
+  document
+    .getElementById("balanceTag")
+    .addEventListener("click", function (event) {
+      event.preventDefault(); // Sayfanın yeniden yüklenmesini engellemek için kullanılır.
+      // a etiketinin içeriğini alın ve hedefInput alanına yazın.
+      var aEtiketiIcerik = this.innerHTML;
+      document.getElementById("amount").value = aEtiketiIcerik;
+    });
+}

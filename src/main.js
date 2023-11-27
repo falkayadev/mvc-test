@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggle.addEventListener("click", function () {
       // İlgili cevabı (dd) seç
       let content = document.getElementById(
-        toggle.getAttribute("aria-controls")
+        toggle.getAttribute("aria-controls"),
       );
 
       if (toggle.getAttribute("aria-expanded") === "false") {
@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //Modal Login
 document.addEventListener("DOMContentLoaded", function () {
+  let currentURL = window.location.href;
   const modal = document.getElementById("modal");
   const openModalBtn = document.getElementById("openModal");
   const openModalFooter = document.getElementById("openModalFooter");
@@ -118,7 +119,7 @@ function checkCredentialsRegister() {
   }
 }
 
-document.getElementById("myForm").addEventListener("submit", function (e) {
+document.getElementById("loginForm").addEventListener("submit", function (e) {
   const password1 = document.getElementById("password1").value;
   const password2 = document.getElementById("password2").value;
   const errorMessage = document.querySelector("#error-messagePass");
@@ -131,17 +132,6 @@ document.getElementById("myForm").addEventListener("submit", function (e) {
     // Şifreler uyuşuyorsa form gönderilecektir.
   }
 });
-
-// Textarea'nın yazdıkça büyümesi için
-let textarea = document.getElementById("autoGrowingTextarea");
-
-textarea.addEventListener("input", function () {
-  this.style.height = "auto"; // İlk olarak yüksekliği otomatik olarak ayarla
-  this.style.height = this.scrollHeight + "px"; // Sonra scroll yüksekliğini kullanarak yüksekliği ayarla
-});
-
-// Başlangıçta metin alanını doğru yükseklikte başlat
-textarea.style.height = textarea.scrollHeight + "px";
 
 function feeChange() {
   const feeTab = document.getElementById("feeTab");

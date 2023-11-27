@@ -42,7 +42,7 @@ function cssFuncStatus() {
   }
 }
 
-const statusContent = document.getElementById(
+const statusContent = document.querySelector(
   "toggleSwitchStatusContainer",
 ).innerHTML;
 const roleContent = document.getElementById("toggleSwitchContainer").innerHTML;
